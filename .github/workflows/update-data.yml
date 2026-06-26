@@ -1,0 +1,64 @@
+name: Update remote data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "tools/**"
+      - "data/manual/**"
+      - ".github/workflows/update-data.yml"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: genshin-toolbox-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate public data
+        run: |
+          python3 tools/update_remote_data.py \
+            --source official-manual \
+            --manual-dir data/manual \
+            --fetch-official-announcements \
+            --public-dir data/public \
+            --release-dir data/releases
+
+      - name: Commit generated data
+        run: |
+          if ! git diff --quiet -- data/public data/manual data/releases; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/public data/manual data/releases
+            git commit -m "chore: update generated data"
+            git push
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: data/public
+
+      - name: Deploy Pages
+        uses: actions/deploy-pages@v4

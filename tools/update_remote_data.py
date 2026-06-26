@@ -1,0 +1,635 @@
+#!/usr/bin/env python3
+"""Generate public remote-data JSON and an offline data-pack zip."""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import shutil
+import ssl
+import subprocess
+import sys
+import urllib.error
+import urllib.request
+import zipfile
+from dataclasses import dataclass
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+
+REPO_URL = "https://github.com/SnapHutaoRemasteringProject/Snap.Metadata.git"
+ASSET_BASE_URL = "https://enka.network/ui"
+OFFICIAL_ANNOUNCEMENTS_URL = "https://hk4e-ann-api.mihoyo.com/common/hk4e_cn/announcement/api/getAnnList?game=hk4e&game_biz=hk4e_cn&lang=zh-cn&bundle_id=hk4e_cn&platform=pc&region=cn_gf01&level=55&uid=100000000"
+WEAPON_TYPES = {
+    1: "单手剑",
+    10: "双手剑",
+    11: "弓",
+    12: "法器",
+    13: "长柄武器",
+}
+ASSOCIATIONS = {
+    1: "蒙德",
+    2: "璃月",
+    3: "稻妻",
+    4: "须弥",
+    5: "稻妻",
+    6: "枫丹",
+    7: "纳塔",
+    8: "至冬",
+}
+STAT_TYPES = {
+    1: "生命值",
+    4: "攻击力",
+    7: "防御力",
+    20: "暴击率",
+    22: "暴击伤害",
+    23: "元素充能效率",
+    26: "元素精通",
+    28: "治疗加成",
+}
+
+
+@dataclass(frozen=True)
+class GeneratedFile:
+    path: str
+    kind: str
+
+
+@dataclass(frozen=True)
+class RemoteDataPayload:
+    source: str
+    version_prefix: str
+    characters: list[dict[str, Any]]
+    weapons: list[dict[str, Any]]
+    materials: list[dict[str, Any]]
+    gacha_events: list[dict[str, Any]]
+    announcements: dict[str, Any] | None = None
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Update GenshinToolbox remote data artifacts.")
+    parser.add_argument(
+        "--source",
+        choices=["snap-metadata", "official-manual"],
+        default="snap-metadata",
+        help="data source provider, default: snap-metadata",
+    )
+    parser.add_argument("--locale", default="CHS", help="Snap.Metadata locale folder, default: CHS")
+    parser.add_argument("--source-cache", default=".cache/Snap.Metadata", help="local Snap.Metadata checkout")
+    parser.add_argument("--manual-dir", default="data/manual", help="manual patch directory for official-manual source")
+    parser.add_argument(
+        "--official-announcements-json",
+        default="",
+        help="optional local official announcement JSON to merge into announcements.json",
+    )
+    parser.add_argument(
+        "--fetch-official-announcements",
+        action="store_true",
+        help="fetch official announcement list from miHoYo and cache it under manual-dir",
+    )
+    parser.add_argument("--public-dir", default="data/public", help="output directory for GitHub Pages JSON")
+    parser.add_argument("--release-dir", default="data/releases", help="output directory for data-pack zip")
+    parser.add_argument("--base-url", default="", help="optional public base URL written into config files")
+    parser.add_argument("--skip-fetch", action="store_true", help="use existing source-cache without git fetch")
+    parser.add_argument("--push", action="store_true", help="commit and push generated files")
+    parser.add_argument("--commit-message", default="chore: update remote data", help="git commit message for --push")
+    parser.add_argument("--self-test", action="store_true", help="run converter self tests")
+    args = parser.parse_args()
+
+    if args.self_test:
+        run_self_test()
+        print("self-test passed")
+        return 0
+
+    root = Path.cwd()
+    source_cache = root / args.source_cache
+    manual_dir = root / args.manual_dir
+    public_dir = root / args.public_dir
+    release_dir = root / args.release_dir
+
+    if args.source == "snap-metadata":
+        ensure_source_checkout(source_cache, skip_fetch=args.skip_fetch)
+        locale_dir = source_cache / "Genshin" / args.locale
+        if not locale_dir.exists():
+            raise SystemExit(f"Missing locale directory: {locale_dir}")
+        payload = build_snap_metadata_payload(locale_dir)
+    else:
+        payload = build_official_manual_payload(
+            manual_dir,
+            official_announcements_json=Path(args.official_announcements_json) if args.official_announcements_json else None,
+            fetch_official_announcements=args.fetch_official_announcements,
+        )
+
+    generated = generate_public_data(payload, public_dir, args.base_url)
+    zip_path = package_release(public_dir, release_dir, generated)
+    print(f"wrote {public_dir}")
+    print(f"wrote {zip_path}")
+
+    if args.push:
+        commit_and_push([public_dir, zip_path], args.commit_message)
+
+    return 0
+
+
+def ensure_source_checkout(source_cache: Path, skip_fetch: bool) -> None:
+    if skip_fetch:
+        if not source_cache.exists():
+            raise SystemExit(f"{source_cache} does not exist; rerun without --skip-fetch")
+        return
+
+    source_cache.parent.mkdir(parents=True, exist_ok=True)
+    if (source_cache / ".git").exists():
+        run(["git", "-C", str(source_cache), "fetch", "--depth", "1", "origin", "main"])
+        run(["git", "-C", str(source_cache), "reset", "--hard", "origin/main"])
+        return
+
+    run(["git", "clone", "--depth", "1", REPO_URL, str(source_cache)])
+
+
+def build_snap_metadata_payload(locale_dir: Path) -> RemoteDataPayload:
+    materials_raw = read_json(locale_dir / "Material.json")
+    material_names = {item["Id"]: item.get("Name", str(item["Id"])) for item in materials_raw}
+
+    return RemoteDataPayload(
+        source="snap-metadata",
+        version_prefix="snap",
+        characters=convert_characters(locale_dir / "Avatar", material_names),
+        weapons=convert_weapons(read_json(locale_dir / "Weapon.json"), material_names),
+        materials=convert_materials(materials_raw),
+        gacha_events=convert_gacha_events(read_json(locale_dir / "GachaEvent.json")),
+    )
+
+
+def build_official_manual_payload(
+    manual_dir: Path,
+    official_announcements_json: Path | None,
+    fetch_official_announcements: bool,
+) -> RemoteDataPayload:
+    required = [
+        "characters.json",
+        "weapons.json",
+        "materials.json",
+        "gacha-events.json",
+    ]
+    missing = [name for name in required if not (manual_dir / name).exists()]
+    if missing:
+        raise SystemExit(f"Missing manual patch files in {manual_dir}: {', '.join(missing)}")
+
+    announcements = read_json_if_exists(manual_dir / "announcements.json") or empty_announcements()
+    official_json_path = official_announcements_json
+    if fetch_official_announcements:
+        official_json_path = fetch_official_announcements_json(manual_dir)
+    if official_json_path is not None:
+        announcements = convert_official_announcements(read_json(official_json_path))
+
+    return RemoteDataPayload(
+        source="official-manual",
+        version_prefix="manual",
+        characters=read_json(manual_dir / "characters.json"),
+        weapons=read_json(manual_dir / "weapons.json"),
+        materials=read_json(manual_dir / "materials.json"),
+        gacha_events=read_json(manual_dir / "gacha-events.json"),
+        announcements=announcements,
+    )
+
+
+def generate_public_data(payload: RemoteDataPayload, public_dir: Path, base_url: str) -> list[GeneratedFile]:
+    public_dir.mkdir(parents=True, exist_ok=True)
+    now = datetime.now(timezone.utc)
+    announcements = payload.announcements or empty_announcements()
+    previous_metadata = read_json_if_exists(public_dir / "metadata.json") or {}
+    previous_announcements = read_json_if_exists(public_dir / "announcements.json") or {}
+    previous_gacha_events = read_json_if_exists(public_dir / "gacha-events.json") or []
+    data_changed = (
+        previous_metadata.get("characters") != payload.characters
+        or previous_metadata.get("weapons") != payload.weapons
+        or previous_metadata.get("materials") != payload.materials
+        or previous_gacha_events != payload.gacha_events
+        or previous_announcements.get("items") != announcements.get("items")
+    )
+    previous_version = previous_metadata.get("version")
+    previous_updated_at = previous_metadata.get("updatedAt")
+    if not data_changed and isinstance(previous_version, str) and isinstance(previous_updated_at, str):
+        version = previous_version
+        updated_at = previous_updated_at
+    else:
+        version = f"{payload.version_prefix}-{now.strftime('%Y.%m.%d')}"
+        updated_at = isoformat_z(now)
+
+    metadata = {
+        "version": version,
+        "updatedAt": updated_at,
+        "characters": payload.characters,
+        "weapons": payload.weapons,
+        "materials": payload.materials,
+    }
+    config = {
+        "schemaVersion": 1,
+        "baseURL": base_url.rstrip("/"),
+        "preferredUpdateChannel": "github-pages",
+        "dataSource": payload.source,
+        "offlinePackageName": f"data-pack-{now.strftime('%Y.%m.%d')}.zip",
+    }
+    latest = {
+        "schemaVersion": 1,
+        "dataVersion": metadata["version"],
+        "updatedAt": metadata["updatedAt"],
+        "required": False,
+        "notes": "资料库数据更新",
+    }
+    announcements["updatedAt"] = metadata["updatedAt"]
+
+    files = [
+        ("metadata.json", "metadata", metadata),
+        ("characters.json", "characters", payload.characters),
+        ("weapons.json", "weapons", payload.weapons),
+        ("materials.json", "materials", payload.materials),
+        ("gacha-events.json", "gachaEvents", payload.gacha_events),
+        ("config.json", "config", config),
+        ("latest.json", "latest", latest),
+        ("announcements.json", "announcements", announcements),
+    ]
+
+    generated: list[GeneratedFile] = []
+    for file_name, kind, payload in files:
+        write_json(public_dir / file_name, payload)
+        generated.append(GeneratedFile(file_name, kind))
+
+    manifest = {
+        "schemaVersion": 1,
+        "generatedAt": metadata["updatedAt"],
+        "files": [
+            {
+                "path": item.path,
+                "sha256": sha256_file(public_dir / item.path),
+                "kind": item.kind,
+            }
+            for item in generated
+        ],
+    }
+    write_json(public_dir / "manifest.json", manifest)
+    generated.append(GeneratedFile("manifest.json", "manifest"))
+    return generated
+
+
+def convert_characters(avatar_dir: Path, material_names: dict[int, str]) -> list[dict[str, Any]]:
+    characters: list[dict[str, Any]] = []
+    for avatar_file in sorted(avatar_dir.glob("*.json")):
+        avatar = read_json(avatar_file)
+        if not avatar.get("Name"):
+            continue
+
+        fetter = avatar.get("FetterInfo") or {}
+        item = {
+            "id": avatar["Id"],
+            "name": avatar["Name"],
+            "element": fetter.get("VisionBefore") or "无",
+            "weaponType": WEAPON_TYPES.get(avatar.get("Weapon"), "未知"),
+            "rarity": avatar.get("Quality", 0),
+            "region": ASSOCIATIONS.get(fetter.get("Association"), fetter.get("Native") or "未知"),
+            "materials": resolve_materials(avatar.get("CultivationItems", []), material_names),
+        }
+        cultivation = resolve_character_cultivation_materials(avatar.get("CultivationItems", []), material_names)
+        if cultivation:
+            item["cultivation"] = cultivation
+        add_asset_url(item, "iconURL", first_string(avatar, "Icon", "IconName", "AvatarIcon", "SideIconName"))
+        add_asset_url(
+            item,
+            "portraitURL",
+            first_string(avatar, "GachaCard", "GachaCardName", "GachaImageName", "Card", "Portrait", "SideIcon", "SideIconName"),
+        )
+        characters.append(item)
+    return sorted(characters, key=lambda item: (item["rarity"], item["id"]), reverse=True)
+
+
+def convert_weapons(weapons_raw: list[dict[str, Any]], material_names: dict[int, str]) -> list[dict[str, Any]]:
+    weapons: list[dict[str, Any]] = []
+    for weapon in weapons_raw:
+        if not weapon.get("Name"):
+            continue
+        item = {
+            "id": weapon["Id"],
+            "name": weapon["Name"],
+            "type": WEAPON_TYPES.get(weapon.get("WeaponType"), "未知"),
+            "rarity": weapon.get("RankLevel", 0),
+            "stat": weapon_stat(weapon),
+            "materials": resolve_materials(weapon.get("CultivationItems", []), material_names),
+        }
+        add_asset_url(item, "iconURL", first_string(weapon, "Icon", "IconName"))
+        weapons.append(item)
+    return sorted(weapons, key=lambda item: (item["rarity"], item["id"]), reverse=True)
+
+
+def convert_materials(materials_raw: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    materials: list[dict[str, Any]] = []
+    for material in materials_raw:
+        if not material.get("Name"):
+            continue
+        item = {
+            "id": material["Id"],
+            "name": material["Name"],
+            "category": material.get("TypeDescription") or material.get("MaterialType", "材料"),
+            "source": material.get("Description") or material.get("TypeDescription") or "",
+        }
+        add_asset_url(item, "iconURL", first_string(material, "Icon", "IconName"))
+        materials.append(item)
+    return sorted(materials, key=lambda item: item["id"])
+
+
+def convert_gacha_events(events_raw: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    events: list[dict[str, Any]] = []
+    for event in events_raw:
+        events.append(
+            {
+                "name": event.get("Name", ""),
+                "version": event.get("Version", ""),
+                "type": event.get("Type", 0),
+                "from": event.get("From", ""),
+                "to": event.get("To", ""),
+                "upOrangeList": event.get("UpOrangeList", []),
+                "upPurpleList": event.get("UpPurpleList", []),
+                "banner": event.get("Banner", ""),
+            }
+        )
+    return events
+
+
+def convert_official_announcements(payload: dict[str, Any]) -> dict[str, Any]:
+    items: list[dict[str, Any]] = []
+    data = payload.get("data") or {}
+    lists = data.get("list") or []
+    for group in lists:
+        for announcement in group.get("list", []):
+            title = announcement.get("title") or announcement.get("subtitle") or ""
+            if not title:
+                continue
+            items.append(
+                {
+                    "id": str(announcement.get("ann_id") or announcement.get("id") or title),
+                    "title": title,
+                    "subtitle": announcement.get("subtitle", ""),
+                    "type": announcement.get("type_label") or group.get("type_label") or "",
+                    "startTime": announcement.get("start_time", ""),
+                    "endTime": announcement.get("end_time", ""),
+                    "banner": announcement.get("banner", ""),
+                    "contentURL": announcement.get("content_url", ""),
+                }
+            )
+    return {
+        "schemaVersion": 1,
+        "updatedAt": isoformat_z(datetime.now(timezone.utc)),
+        "items": items,
+    }
+
+
+def resolve_materials(ids: list[int], material_names: dict[int, str]) -> list[str]:
+    names: list[str] = []
+    for item_id in ids:
+        name = material_names.get(item_id)
+        if name and name not in names:
+            names.append(name)
+    return names
+
+
+def resolve_character_cultivation_materials(ids: list[int], material_names: dict[int, str]) -> dict[str, Any] | None:
+    if len(ids) < 6:
+        return None
+    gem_id, boss_id, local_id, common_id, talent_book_id, weekly_id = ids[:6]
+    cultivation = {
+        "ascensionGemNames": resolve_tier_names(gem_id, 4, material_names),
+        "bossMaterialName": material_names.get(boss_id, ""),
+        "localSpecialtyName": material_names.get(local_id, ""),
+        "commonMaterialNames": resolve_tier_names(common_id, 3, material_names),
+        "talentBookNames": resolve_tier_names(talent_book_id, 3, material_names),
+        "weeklyBossMaterialName": material_names.get(weekly_id, ""),
+    }
+    if (
+        len(cultivation["ascensionGemNames"]) < 4
+        or not cultivation["bossMaterialName"]
+        or not cultivation["localSpecialtyName"]
+        or len(cultivation["commonMaterialNames"]) < 3
+        or len(cultivation["talentBookNames"]) < 3
+        or not cultivation["weeklyBossMaterialName"]
+    ):
+        return None
+    return cultivation
+
+
+def resolve_tier_names(highest_id: int, tier_count: int, material_names: dict[int, str]) -> list[str]:
+    start = highest_id - tier_count + 1
+    return [
+        material_names[item_id]
+        for item_id in range(start, highest_id + 1)
+        if item_id in material_names
+    ]
+
+
+def weapon_stat(weapon: dict[str, Any]) -> str:
+    grow_curves = weapon.get("GrowCurves") or []
+    if len(grow_curves) < 2:
+        return "基础攻击力"
+    return STAT_TYPES.get(grow_curves[1].get("Type"), "副属性")
+
+
+def first_string(payload: dict[str, Any], *keys: str) -> str:
+    for key in keys:
+        value = payload.get(key)
+        if isinstance(value, str) and value:
+            return value
+    return ""
+
+
+def add_asset_url(item: dict[str, Any], field: str, asset_name: str) -> None:
+    if not asset_name:
+        return
+    if asset_name.startswith("http://") or asset_name.startswith("https://"):
+        item[field] = asset_name
+        return
+    item[field] = f"{ASSET_BASE_URL}/{asset_name.removesuffix('.png')}.png"
+
+
+def fetch_official_announcements_json(manual_dir: Path) -> Path:
+    manual_dir.mkdir(parents=True, exist_ok=True)
+    target = manual_dir / "official-announcements.raw.json"
+    request = urllib.request.Request(
+        OFFICIAL_ANNOUNCEMENTS_URL,
+        headers={"User-Agent": "GenshinToolboxDataUpdater/1.0"},
+    )
+    with urlopen_with_certifi_fallback(request, timeout=20) as response:
+        target.write_bytes(response.read())
+    return target
+
+
+def urlopen_with_certifi_fallback(request: urllib.request.Request, timeout: int):
+    try:
+        return urllib.request.urlopen(request, timeout=timeout)
+    except urllib.error.URLError as error:
+        reason = getattr(error, "reason", None)
+        if not isinstance(reason, ssl.SSLCertVerificationError):
+            raise
+        try:
+            import certifi  # type: ignore[import-not-found]
+        except ImportError:
+            raise
+        context = ssl.create_default_context(cafile=certifi.where())
+        return urllib.request.urlopen(request, timeout=timeout, context=context)
+
+
+def empty_announcements(updated_at: str | None = None) -> dict[str, Any]:
+    return {
+        "schemaVersion": 1,
+        "updatedAt": updated_at or isoformat_z(datetime.now(timezone.utc)),
+        "items": [],
+    }
+
+
+def package_release(public_dir: Path, release_dir: Path, generated: list[GeneratedFile]) -> Path:
+    release_dir.mkdir(parents=True, exist_ok=True)
+    manifest = read_json(public_dir / "manifest.json")
+    stamp = (manifest.get("generatedAt") or isoformat_z(datetime.now(timezone.utc)))[:10].replace("-", ".")
+    zip_path = release_dir / f"data-pack-{stamp}.zip"
+    if zip_path.exists():
+        zip_path.unlink()
+
+    allowed = {item.path for item in generated}
+    with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
+        for path in sorted(allowed):
+            info = zipfile.ZipInfo(path)
+            info.date_time = (1980, 1, 1, 0, 0, 0)
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.external_attr = 0o644 << 16
+            archive.writestr(info, (public_dir / path).read_bytes())
+    return zip_path
+
+
+def commit_and_push(paths: list[Path], message: str) -> None:
+    run(["git", "add", *[str(path) for path in paths]])
+    diff = subprocess.run(["git", "diff", "--cached", "--quiet"], check=False)
+    if diff.returncode == 0:
+        print("no generated data changes to commit")
+        return
+    run(["git", "commit", "-m", message])
+    run(["git", "push"])
+
+
+def run_self_test() -> None:
+    material_names = {
+        104161: "哀叙冰玉碎屑",
+        104162: "哀叙冰玉断片",
+        104163: "哀叙冰玉块",
+        104164: "哀叙冰玉",
+        101202: "绯樱绣球",
+        113023: "恒常机关之心",
+        112044: "破旧的刀镡",
+        112045: "影打刀镡",
+        112046: "名刀镡",
+        104323: "「风雅」的教导",
+        104324: "「风雅」的指引",
+        104325: "「风雅」的哲学",
+        113018: "血玉之枝",
+        114003: "远海夷地的瑚枝",
+    }
+    avatar = {
+        "Id": 10000002,
+        "Name": "神里绫华",
+        "Quality": 5,
+        "Weapon": 1,
+        "Icon": "UI_AvatarIcon_Ayaka",
+        "GachaCard": "UI_Gacha_AvatarImg_Ayaka",
+        "CultivationItems": [104164, 113023, 101202, 112046, 104325, 113018],
+        "FetterInfo": {"VisionBefore": "冰", "Association": 5},
+    }
+    weapon = {
+        "Id": 11502,
+        "Name": "雾切之回光",
+        "WeaponType": 1,
+        "RankLevel": 5,
+        "Icon": "UI_EquipIcon_Sword_Narukami",
+        "GrowCurves": [{"Type": 4}, {"Type": 22}],
+        "CultivationItems": [114003],
+    }
+    assert convert_weapons([weapon], material_names)[0]["stat"] == "暴击伤害"
+    assert convert_weapons([weapon], material_names)[0]["iconURL"].endswith("/UI_EquipIcon_Sword_Narukami.png")
+    temp = Path(".cache/self-test-avatar")
+    if temp.exists():
+        shutil.rmtree(temp)
+    temp.mkdir(parents=True)
+    try:
+        write_json(temp / "10000002.json", avatar)
+        character = convert_characters(temp, material_names)[0]
+        assert character["element"] == "冰"
+        assert character["weaponType"] == "单手剑"
+        assert character["iconURL"].endswith("/UI_AvatarIcon_Ayaka.png")
+        assert character["portraitURL"].endswith("/UI_Gacha_AvatarImg_Ayaka.png")
+        assert character["materials"] == ["哀叙冰玉", "恒常机关之心", "绯樱绣球", "名刀镡", "「风雅」的哲学", "血玉之枝"]
+        assert character["cultivation"]["ascensionGemNames"] == ["哀叙冰玉碎屑", "哀叙冰玉断片", "哀叙冰玉块", "哀叙冰玉"]
+        assert character["cultivation"]["commonMaterialNames"] == ["破旧的刀镡", "影打刀镡", "名刀镡"]
+        assert character["cultivation"]["talentBookNames"] == ["「风雅」的教导", "「风雅」的指引", "「风雅」的哲学"]
+    finally:
+        shutil.rmtree(temp)
+
+    official_announcements = convert_official_announcements(
+        {
+            "data": {
+                "list": [
+                    {
+                        "type_label": "活动",
+                        "list": [
+                            {
+                                "ann_id": 1,
+                                "title": "祈愿活动开启",
+                                "subtitle": "角色活动祈愿",
+                                "start_time": "2026-06-24 10:00:00",
+                                "end_time": "2026-07-15 17:59:59",
+                            }
+                        ],
+                    }
+                ]
+            }
+        }
+    )
+    assert official_announcements["items"][0]["title"] == "祈愿活动开启"
+
+
+def read_json(path: Path) -> Any:
+    with path.open("r", encoding="utf-8") as file:
+        return json.load(file)
+
+
+def read_json_if_exists(path: Path) -> Any | None:
+    if not path.exists():
+        return None
+    return read_json(path)
+
+
+def write_json(path: Path, payload: Any) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as file:
+        json.dump(payload, file, ensure_ascii=False, indent=2, sort_keys=True)
+        file.write("\n")
+
+
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as file:
+        for chunk in iter(lambda: file.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def isoformat_z(value: datetime) -> str:
+    return value.astimezone(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+
+def run(command: list[str]) -> None:
+    print("+", " ".join(command))
+    subprocess.run(command, check=True)
+
+
+if __name__ == "__main__":
+    try:
+        raise SystemExit(main())
+    except subprocess.CalledProcessError as error:
+        raise SystemExit(error.returncode) from error

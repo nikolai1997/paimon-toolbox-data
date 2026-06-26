@@ -1,0 +1,7 @@
+{
+  "baseURL": "",
+  "dataSource": "official-manual",
+  "offlinePackageName": "data-pack-2026.06.26.zip",
+  "preferredUpdateChannel": "github-pages",
+  "schemaVersion": 1
+}

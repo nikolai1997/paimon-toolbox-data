@@ -1,0 +1,46 @@
+{
+  "files": [
+    {
+      "kind": "metadata",
+      "path": "metadata.json",
+      "sha256": "a9b0e7246bb7fbe829ad3e98b2ea36276556bcc4dd6870097ea5696e903a9a26"
+    },
+    {
+      "kind": "characters",
+      "path": "characters.json",
+      "sha256": "dd3484278990c077264ca1dca8e46e08926e5e01b369fec10adf46ded4148241"
+    },
+    {
+      "kind": "weapons",
+      "path": "weapons.json",
+      "sha256": "2013b0b11433f22b4859a2dd2696bf1a414b5c7bcccee3d40a6dde1d313676a4"
+    },
+    {
+      "kind": "materials",
+      "path": "materials.json",
+      "sha256": "9ca2fc5753b304e1c6c5d9efaffbc68639f4d5d9eb11c36cfeae3b50a375e5b7"
+    },
+    {
+      "kind": "gachaEvents",
+      "path": "gacha-events.json",
+      "sha256": "4da36d28cd90ac3c8681b56201983024ac10d733ea5ef9521073a08b4cd00657"
+    },
+    {
+      "kind": "config",
+      "path": "config.json",
+      "sha256": "0a821edd416151d42709daf35b0a5a92023a00fae1bb884f0a84e5bc90414fcf"
+    },
+    {
+      "kind": "latest",
+      "path": "latest.json",
+      "sha256": "bea61e5bb79fc94b957430b3ad504d6ddf51717ddc20267d7a8a4a7dce178d88"
+    },
+    {
+      "kind": "announcements",
+      "path": "announcements.json",
+      "sha256": "c6790ad05210f15b5bc39967a9950aa0cc65eb171331a2f0bbfe2eff4c15fd83"
+    }
+  ],
+  "generatedAt": "2026-06-26T03:08:03Z",
+  "schemaVersion": 1
+}
