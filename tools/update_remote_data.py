@@ -180,7 +180,7 @@ def build_official_manual_payload(
     announcements = read_json_if_exists(manual_dir / "announcements.json") or empty_announcements()
     official_json_path = official_announcements_json
     if fetch_official_announcements:
-        official_json_path = fetch_official_announcements_json(manual_dir)
+        official_json_path = fetch_official_announcements_json_if_available(manual_dir)
     if official_json_path is not None:
         announcements = convert_official_announcements(read_json(official_json_path))
 
@@ -460,6 +460,18 @@ def fetch_official_announcements_json(manual_dir: Path) -> Path:
     with urlopen_with_certifi_fallback(request, timeout=20) as response:
         target.write_bytes(response.read())
     return target
+
+
+def fetch_official_announcements_json_if_available(manual_dir: Path) -> Path | None:
+    cached = manual_dir / "official-announcements.raw.json"
+    try:
+        return fetch_official_announcements_json(manual_dir)
+    except Exception as error:
+        if cached.exists():
+            print(f"warning: official announcement fetch failed, using cached {cached}: {error}", file=sys.stderr)
+            return cached
+        print(f"warning: official announcement fetch failed, using manual announcements.json: {error}", file=sys.stderr)
+        return None
 
 
 def urlopen_with_certifi_fallback(request: urllib.request.Request, timeout: int):
