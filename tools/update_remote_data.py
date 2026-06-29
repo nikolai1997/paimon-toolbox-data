@@ -80,6 +80,12 @@ def main() -> int:
     parser.add_argument("--source-cache", default=".cache/Snap.Metadata", help="local Snap.Metadata checkout")
     parser.add_argument("--manual-dir", default="data/manual", help="manual patch directory for official-manual source")
     parser.add_argument(
+        "--gacha-source",
+        choices=["manual", "snap-metadata"],
+        default="manual",
+        help="gacha event source for official-manual mode, default: manual",
+    )
+    parser.add_argument(
         "--official-announcements-json",
         default="",
         help="optional local official announcement JSON to merge into announcements.json",
@@ -116,10 +122,17 @@ def main() -> int:
             raise SystemExit(f"Missing locale directory: {locale_dir}")
         payload = build_snap_metadata_payload(locale_dir)
     else:
+        gacha_events_override = None
+        if args.gacha_source == "snap-metadata":
+            try:
+                gacha_events_override = load_snap_gacha_events(source_cache, args.locale, args.skip_fetch)
+            except Exception as error:
+                print(f"warning: Snap.Metadata gacha fetch failed, using manual gacha-events.json: {error}", file=sys.stderr)
         payload = build_official_manual_payload(
             manual_dir,
             official_announcements_json=Path(args.official_announcements_json) if args.official_announcements_json else None,
             fetch_official_announcements=args.fetch_official_announcements,
+            gacha_events_override=gacha_events_override,
         )
 
     generated = generate_public_data(payload, public_dir, args.base_url)
@@ -162,10 +175,19 @@ def build_snap_metadata_payload(locale_dir: Path) -> RemoteDataPayload:
     )
 
 
+def load_snap_gacha_events(source_cache: Path, locale: str, skip_fetch: bool) -> list[dict[str, Any]]:
+    ensure_source_checkout(source_cache, skip_fetch=skip_fetch)
+    locale_dir = source_cache / "Genshin" / locale
+    if not locale_dir.exists():
+        raise FileNotFoundError(f"Missing locale directory: {locale_dir}")
+    return convert_gacha_events(read_json(locale_dir / "GachaEvent.json"))
+
+
 def build_official_manual_payload(
     manual_dir: Path,
     official_announcements_json: Path | None,
     fetch_official_announcements: bool,
+    gacha_events_override: list[dict[str, Any]] | None = None,
 ) -> RemoteDataPayload:
     required = [
         "characters.json",
@@ -190,7 +212,7 @@ def build_official_manual_payload(
         characters=read_json(manual_dir / "characters.json"),
         weapons=read_json(manual_dir / "weapons.json"),
         materials=read_json(manual_dir / "materials.json"),
-        gacha_events=read_json(manual_dir / "gacha-events.json"),
+        gacha_events=gacha_events_override if gacha_events_override is not None else read_json(manual_dir / "gacha-events.json"),
         announcements=announcements,
     )
     asset_overrides = read_json_if_exists(manual_dir / "assets.json")
@@ -665,6 +687,27 @@ def run_self_test() -> None:
     assert manual_payload.characters[0]["iconURL"].endswith("/UI_AvatarIcon_Ayaka.png")
     assert manual_payload.weapons[0]["iconURL"].endswith("/UI_EquipIcon_Sword_Narukami.png")
     assert manual_payload.materials[0]["iconURL"].endswith("/UI_ItemIcon_114003.png")
+
+    temp_manual = Path(".cache/self-test-manual")
+    if temp_manual.exists():
+        shutil.rmtree(temp_manual)
+    temp_manual.mkdir(parents=True)
+    try:
+        write_json(temp_manual / "characters.json", [{"id": 10000002, "name": "神里绫华"}])
+        write_json(temp_manual / "weapons.json", [{"id": 11502, "name": "雾切之回光"}])
+        write_json(temp_manual / "materials.json", [{"id": 114003, "name": "远海夷地的瑚枝"}])
+        write_json(temp_manual / "gacha-events.json", [{"name": "手动卡池", "type": 301}])
+        snap_gacha_events = [{"name": "Snap 卡池", "type": 301}]
+        manual_with_snap_gacha = build_official_manual_payload(
+            temp_manual,
+            official_announcements_json=None,
+            fetch_official_announcements=False,
+            gacha_events_override=snap_gacha_events,
+        )
+        assert manual_with_snap_gacha.characters[0]["name"] == "神里绫华"
+        assert manual_with_snap_gacha.gacha_events == snap_gacha_events
+    finally:
+        shutil.rmtree(temp_manual)
 
 
 def read_json(path: Path) -> Any:
