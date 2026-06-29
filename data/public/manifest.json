@@ -3,12 +3,12 @@
     {
       "kind": "metadata",
       "path": "metadata.json",
-      "sha256": "a05a8bb76ff18e4aa974322c921c7366f9a4d1b8f9fbc7c5d99474c786fcacff"
+      "sha256": "620a7a91863386d2a0943a8ee15c010aa54527fdcaf801b6e1226e04ae1c08ec"
     },
     {
       "kind": "characters",
       "path": "characters.json",
-      "sha256": "f7cdd5b047a81e22990a544544aa914e38509672b7851aa52fe47f1983811b33"
+      "sha256": "82d0664b46824411b89b08f0036755851fe121c26fb4244eab1d8240920cc213"
     },
     {
       "kind": "weapons",
@@ -33,14 +33,14 @@
     {
       "kind": "latest",
       "path": "latest.json",
-      "sha256": "1a257f3ec2f85ed678ece2b410ede60da783f4d6037d9d9bc5125e385048d2d3"
+      "sha256": "9d428cad77ba9b8a8be3133c75966697ad1d71bb7eec7f54ed872ec4286c6bcb"
     },
     {
       "kind": "announcements",
       "path": "announcements.json",
-      "sha256": "338e02c0afd98bd6032c840befae7d5cfdc2c21262ccb9329fe0c3732615f977"
+      "sha256": "cf87d8ded3f44a0d78c1f4f2ebd6b3645a386cb9003167da741ab18bc1b4ecf9"
     }
   ],
-  "generatedAt": "2026-06-29T03:42:07Z",
+  "generatedAt": "2026-06-29T04:12:50Z",
   "schemaVersion": 1
 }

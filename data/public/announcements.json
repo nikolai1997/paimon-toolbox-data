@@ -141,6 +141,126 @@
       "type": "游戏公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/e3291fbde4889a6b5c6f498fe10d3f25_5202897138544319925_transformed.jpg",
+      "contentURL": "",
+      "endTime": "2026-07-21 17:59:00",
+      "id": "21743",
+      "startTime": "2026-06-29 12:00:00",
+      "subtitle": "「镜中的茶宴」祈愿",
+      "title": "「镜中的茶宴」祈愿：「镜水析谬·桑多涅(冰)」概率UP！",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/224b737812e20929c4485452a2f1e1bc_7347526875978743745_transformed.jpg",
+      "contentURL": "",
+      "endTime": "2026-07-21 17:59:00",
+      "id": "21744",
+      "startTime": "2026-06-29 12:00:00",
+      "subtitle": "「星边夜语」祈愿",
+      "title": "「星边夜语」祈愿：「白星黑曜·茜特菈莉(冰)」概率UP！",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/331e1ba3b0d467685cc70edce96fd72c_5362978686770159579_transformed.jpg",
+      "contentURL": "",
+      "endTime": "2026-07-21 17:59:00",
+      "id": "21745",
+      "startTime": "2026-06-29 12:00:00",
+      "subtitle": "「神铸赋形」祈愿",
+      "title": "「神铸赋形」祈愿：「双手剑·超越之匙」「法器·祭星者之望」概率UP！",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/1d5156638949b67cf0d1e5bc192c8b9e_2860105966740958802_transformed.jpg",
+      "contentURL": "",
+      "endTime": "2026-07-21 17:59:00",
+      "id": "21748",
+      "startTime": "2026-06-29 12:00:00",
+      "subtitle": "「辉天的星告」祈愿",
+      "title": "「辉天的星告」祈愿：溯光祈愿开启！",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/32089a62e0861cf0328ec28a1be4e3d9_101648368039217662_transformed.jpg",
+      "contentURL": "",
+      "endTime": "2026-08-11 03:59:59",
+      "id": "21749",
+      "startTime": "2026-06-29 12:00:00",
+      "subtitle": "「映夏！归乡？千灵节！」",
+      "title": "「映夏！归乡？千灵节！」活动：参与获取夏洛蒂衣装、邀请「朗镜索真·夏洛蒂(冰)」",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/7134e2de2f662c060d0d5fde264f9718_1671630651746040981_transformed.jpg",
+      "contentURL": "",
+      "endTime": "2026-09-22 14:59:59",
+      "id": "21750",
+      "startTime": "2026-06-29 12:00:00",
+      "subtitle": "「当我们抬头望月亮」",
+      "title": "「当我们抬头望月亮」时限内完成探索任务，可额外获得原石*400奖励",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/1cbcae8bc08d9124e9c77f2a3926ff52_3492556159172542842_transformed.jpg",
+      "contentURL": "",
+      "endTime": "2026-08-12 07:00:00",
+      "id": "21751",
+      "startTime": "2026-06-29 12:00:00",
+      "subtitle": "「魔女的谕示」",
+      "title": "「魔女的谕示」玩法说明",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/349b3bc859698684c1177c73c880cb0a_5097501849452954715_transformed.jpg",
+      "contentURL": "",
+      "endTime": "2026-08-10 03:59:59",
+      "id": "21752",
+      "startTime": "2026-06-29 12:00:00",
+      "subtitle": "「星与烟帷的夜语」",
+      "title": "「星与烟帷的夜语」衣装限时折扣",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/1ecdc2a45c9e184f8ca614c80b287ad7_1427890017369015893_transformed.jpg",
+      "contentURL": "",
+      "endTime": "2026-08-11 14:59:59",
+      "id": "21753",
+      "startTime": "2026-06-29 12:00:00",
+      "subtitle": "「挪德卡莱·朔望凝待之庭」",
+      "title": "「挪德卡莱·朔望凝待之庭」：千音雅集更新",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/5b09ebe96612d4559ec1d628391d7496_8319210833736626801_transformed.jpg",
+      "contentURL": "",
+      "endTime": "2026-07-15 23:59:59",
+      "id": "21754",
+      "startTime": "2026-06-29 12:00:00",
+      "subtitle": "「冒险助力礼包」",
+      "title": "「冒险助力礼包」第50期限时上架",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/18/4f93119de08c1f4c9df1a2ad825fd983_1254502696276269506_transformed.jpg",
+      "contentURL": "",
+      "endTime": "2026-08-10 03:59:59",
+      "id": "21755",
+      "startTime": "2026-06-29 12:00:00",
+      "subtitle": "「映夏纪行」",
+      "title": "「映夏纪行」活动说明",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2024/11/05/b4bce45d1b78ce5aef4399d8aa2a51da_6095647547673851587.jpg",
+      "contentURL": "",
+      "endTime": "2026-08-12 07:00:00",
+      "id": "20834",
+      "startTime": "2026-06-29 12:00:00",
+      "subtitle": "「七圣召唤」铸境研炼",
+      "title": "「七圣召唤」铸境研炼：无量疾战",
+      "type": "活动公告"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/05/26/c2a3b8cc3cf10224c248a781325ce2e3_5629417702843428147_transformed.jpg",
       "contentURL": "",
       "endTime": "2026-06-30 14:59:59",
@@ -251,11 +371,11 @@
       "type": "活动公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/10/10/c37b7eb5cb7dcb7dafcc5273797fd124_7132926859369047800_transformed.jpg",
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/05/07/c37b7eb5cb7dcb7dafcc5273797fd124_8370928033296917257_transformed.jpg",
       "contentURL": "",
-      "endTime": "2026-06-29 11:59:59",
-      "id": "21364",
-      "startTime": "2025-10-20 12:00:00",
+      "endTime": "2026-09-23 07:00:00",
+      "id": "21707",
+      "startTime": "2026-06-29 12:00:00",
       "subtitle": "「解探月域，琢炼宵晖」",
       "title": "「解探月域，琢炼宵晖」活动：新手自选邀约「奔行世间」常驻祈愿5星角色",
       "type": "活动公告"
@@ -292,5 +412,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-06-29T03:42:07Z"
+  "updatedAt": "2026-06-29T04:12:50Z"
 }

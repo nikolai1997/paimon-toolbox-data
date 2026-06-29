@@ -25,6 +25,7 @@ ASSET_BASE_URL = "https://enka.network/ui"
 OFFICIAL_ANNOUNCEMENTS_URL = "https://hk4e-ann-api.mihoyo.com/common/hk4e_cn/announcement/api/getAnnList?game=hk4e&game_biz=hk4e_cn&lang=zh-cn&bundle_id=hk4e_cn&platform=pc&region=cn_gf01&level=55&uid=100000000"
 GENSHIN_DB_SPARSE_PATHS = [
     "src/data/ChineseSimplified/characters",
+    "src/data/ChineseSimplified/talents",
     "src/data/ChineseSimplified/weapons",
     "src/data/ChineseSimplified/materials",
     "src/data/image",
@@ -229,7 +230,7 @@ def build_genshin_db_payload(
     return RemoteDataPayload(
         source="genshin-db",
         version_prefix="genshin-db",
-        characters=convert_genshin_db_characters(locale_dir / "characters", character_images),
+        characters=convert_genshin_db_characters(locale_dir / "characters", locale_dir / "talents", character_images),
         weapons=convert_genshin_db_weapons(locale_dir / "weapons", weapon_images),
         materials=convert_genshin_db_materials(locale_dir / "materials", material_images),
         gacha_events=gacha_events,
@@ -413,10 +414,11 @@ def merge_asset_fields(items: list[dict[str, Any]], asset_items: Any, fields: li
                 item[field] = value
 
 
-def convert_genshin_db_characters(character_dir: Path, image_index: dict[str, Any]) -> list[dict[str, Any]]:
+def convert_genshin_db_characters(character_dir: Path, talent_dir: Path, image_index: dict[str, Any]) -> list[dict[str, Any]]:
     characters: list[dict[str, Any]] = []
     for path in sorted(character_dir.glob("*.json")):
         character = read_json(path)
+        talent = read_json_if_exists(talent_dir / path.name) or {}
         name = character.get("name")
         if not name:
             continue
@@ -428,9 +430,12 @@ def convert_genshin_db_characters(character_dir: Path, image_index: dict[str, An
             "weaponType": character.get("weaponText") or "未知",
             "rarity": character.get("rarity", 0),
             "region": character.get("region") or character.get("affiliation") or "未知",
-            "materials": collect_cost_names(character.get("costs")),
+            "materials": merge_unique_names(
+                collect_cost_names(character.get("costs")),
+                collect_cost_names(talent.get("costs")),
+            ),
         }
-        cultivation = infer_genshin_db_character_cultivation(character.get("costs"))
+        cultivation = infer_genshin_db_character_cultivation(character.get("costs"), talent.get("costs"))
         if cultivation:
             item["cultivation"] = cultivation
         image_payload = image_index.get(path.stem) if isinstance(image_index, dict) else None
@@ -507,26 +512,35 @@ def collect_cost_names(costs: Any) -> list[str]:
     return names
 
 
-def infer_genshin_db_character_cultivation(costs: Any) -> dict[str, Any] | None:
-    if not isinstance(costs, dict):
+def merge_unique_names(*groups: list[str]) -> list[str]:
+    names: list[str] = []
+    for group in groups:
+        for name in group:
+            if name not in names:
+                names.append(name)
+    return names
+
+
+def infer_genshin_db_character_cultivation(ascension_costs: Any, talent_costs: Any = None) -> dict[str, Any] | None:
+    if not isinstance(ascension_costs, dict):
         return None
     ascend_entries: list[dict[str, Any]] = []
     talent_entries: list[dict[str, Any]] = []
-    for key, entries in costs.items():
+    for key, entries in ascension_costs.items():
         if not isinstance(entries, list):
             continue
         if str(key).startswith("ascend"):
             ascend_entries.extend(entry for entry in entries if isinstance(entry, dict))
-        elif str(key).startswith("talent"):
-            talent_entries.extend(entry for entry in entries if isinstance(entry, dict))
+    if isinstance(talent_costs, dict):
+        for key, entries in talent_costs.items():
+            if isinstance(entries, list) and str(key).startswith("lvl"):
+                talent_entries.extend(entry for entry in entries if isinstance(entry, dict))
 
-    ascension_names = collect_names_from_entries(ascend_entries)
-    talent_names = collect_names_from_entries(talent_entries)
-    gems = [name for name in ascension_names if any(suffix in name for suffix in ["碎屑", "断片", "块", "玉", "石"])]
+    gems = names_by_id_range(ascend_entries, 104100, 104199)
     boss = first_matching_entry_name(ascend_entries, exclude=set(gems), min_id=113000, max_id=113999)
     local = first_matching_entry_name(ascend_entries, exclude=set(gems + ([boss] if boss else [])), min_id=100000, max_id=101999)
     common_names = names_by_id_range(ascend_entries, 112000, 112999)
-    talent_book_names = [name for name in talent_names if "「" in name and "」" in name]
+    talent_book_names = names_by_id_range(talent_entries, 104300, 104999, name_filter=is_talent_book_name)
     weekly = first_matching_entry_name(talent_entries, exclude=set(talent_book_names), min_id=113000, max_id=113999)
     cultivation = {
         "ascensionGemNames": gems[:4],
@@ -550,14 +564,27 @@ def collect_names_from_entries(entries: list[dict[str, Any]]) -> list[str]:
     return names
 
 
-def names_by_id_range(entries: list[dict[str, Any]], min_id: int, max_id: int) -> list[str]:
+def names_by_id_range(
+    entries: list[dict[str, Any]],
+    min_id: int,
+    max_id: int,
+    name_filter: Any | None = None,
+) -> list[str]:
     names: list[str] = []
     for entry in sorted(entries, key=lambda value: value.get("id", 0)):
         item_id = entry.get("id")
         name = entry.get("name")
-        if isinstance(item_id, int) and min_id <= item_id <= max_id and isinstance(name, str) and name not in names:
+        if not isinstance(item_id, int) or not isinstance(name, str):
+            continue
+        if name_filter is not None and not name_filter(name):
+            continue
+        if min_id <= item_id <= max_id and name not in names:
             names.append(name)
     return names
+
+
+def is_talent_book_name(name: str) -> bool:
+    return "「" in name and "」" in name
 
 
 def first_matching_entry_name(entries: list[dict[str, Any]], exclude: set[str], min_id: int, max_id: int) -> str:
@@ -949,19 +976,65 @@ def run_self_test() -> None:
         locale_dir = temp_genshin_db / "src" / "data" / "ChineseSimplified"
         image_dir = temp_genshin_db / "src" / "data" / "image"
         (locale_dir / "characters").mkdir(parents=True)
+        (locale_dir / "talents").mkdir(parents=True)
         (locale_dir / "weapons").mkdir(parents=True)
         (locale_dir / "materials").mkdir(parents=True)
         image_dir.mkdir(parents=True)
         write_json(
-            locale_dir / "characters" / "ayaka.json",
+            locale_dir / "characters" / "hutao.json",
             {
-                "id": 10000002,
-                "name": "神里绫华",
-                "elementText": "冰",
-                "weaponText": "单手剑",
+                "id": 10000046,
+                "name": "胡桃",
+                "elementText": "火",
+                "weaponText": "长柄武器",
                 "rarity": 5,
-                "region": "稻妻",
-                "costs": {"ascend6": [{"id": 113023, "name": "恒常机关之心", "count": 20}]},
+                "region": "璃月",
+                "costs": {
+                    "ascend1": [
+                        {"id": 104111, "name": "燃愿玛瑙碎屑", "count": 1},
+                        {"id": 100029, "name": "霓裳花", "count": 3},
+                        {"id": 112038, "name": "骗骗花蜜", "count": 3},
+                    ],
+                    "ascend2": [
+                        {"id": 104112, "name": "燃愿玛瑙断片", "count": 3},
+                        {"id": 113016, "name": "未熟之玉", "count": 2},
+                        {"id": 112039, "name": "微光花蜜", "count": 12},
+                    ],
+                    "ascend5": [
+                        {"id": 104113, "name": "燃愿玛瑙块", "count": 6},
+                        {"id": 112040, "name": "原素花蜜", "count": 12},
+                    ],
+                    "ascend6": [
+                        {"id": 104114, "name": "燃愿玛瑙", "count": 6},
+                    ],
+                },
+            },
+        )
+        write_json(
+            locale_dir / "talents" / "hutao.json",
+            {
+                "id": 4601,
+                "name": "胡桃",
+                "costs": {
+                    "lvl2": [
+                        {"id": 104313, "name": "「勤劳」的教导", "count": 3},
+                        {"id": 112038, "name": "骗骗花蜜", "count": 6},
+                    ],
+                    "lvl3": [
+                        {"id": 104314, "name": "「勤劳」的指引", "count": 2},
+                        {"id": 112039, "name": "微光花蜜", "count": 3},
+                    ],
+                    "lvl7": [
+                        {"id": 104315, "name": "「勤劳」的哲学", "count": 4},
+                        {"id": 112040, "name": "原素花蜜", "count": 4},
+                        {"id": 113014, "name": "魔王之刃·残片", "count": 1},
+                    ],
+                    "lvl10": [
+                        {"id": 104315, "name": "「勤劳」的哲学", "count": 16},
+                        {"id": 113014, "name": "魔王之刃·残片", "count": 2},
+                        {"id": 104319, "name": "智识之冕", "count": 1},
+                    ],
+                },
             },
         )
         write_json(
@@ -984,7 +1057,7 @@ def run_self_test() -> None:
                 "description": "恒常机关阵列掉落的核心。",
             },
         )
-        write_json(image_dir / "characters.json", {"ayaka": {"filename_icon": "UI_AvatarIcon_Ayaka", "filename_sideIcon": "UI_AvatarIcon_Side_Ayaka"}})
+        write_json(image_dir / "characters.json", {"hutao": {"filename_icon": "UI_AvatarIcon_Hutao", "filename_sideIcon": "UI_AvatarIcon_Side_Hutao"}})
         write_json(image_dir / "weapons.json", {"mistsplitterreforged": {"filename_icon": "UI_EquipIcon_Sword_Narukami"}})
         write_json(image_dir / "materials.json", {"perpetualheart": {"filename_icon": "UI_ItemIcon_113023"}})
 
@@ -994,7 +1067,16 @@ def run_self_test() -> None:
             announcements=empty_announcements("2026-06-29T00:00:00Z"),
         )
         assert genshin_payload.source == "genshin-db"
-        assert genshin_payload.characters[0]["iconURL"].endswith("/UI_AvatarIcon_Ayaka.png")
+        hu_tao = genshin_payload.characters[0]
+        assert hu_tao["iconURL"].endswith("/UI_AvatarIcon_Hutao.png")
+        assert hu_tao["cultivation"]["ascensionGemNames"] == ["燃愿玛瑙碎屑", "燃愿玛瑙断片", "燃愿玛瑙块", "燃愿玛瑙"]
+        assert hu_tao["cultivation"]["bossMaterialName"] == "未熟之玉"
+        assert hu_tao["cultivation"]["localSpecialtyName"] == "霓裳花"
+        assert hu_tao["cultivation"]["commonMaterialNames"] == ["骗骗花蜜", "微光花蜜", "原素花蜜"]
+        assert hu_tao["cultivation"]["talentBookNames"] == ["「勤劳」的教导", "「勤劳」的指引", "「勤劳」的哲学"]
+        assert "智识之冕" not in hu_tao["cultivation"]["talentBookNames"]
+        assert hu_tao["cultivation"]["weeklyBossMaterialName"] == "魔王之刃·残片"
+        assert "魔王之刃·残片" in hu_tao["materials"]
         assert genshin_payload.weapons[0]["iconURL"].endswith("/UI_EquipIcon_Sword_Narukami.png")
         assert genshin_payload.materials[0]["iconURL"].endswith("/UI_ItemIcon_113023.png")
         assert genshin_payload.gacha_events[0]["name"] == "Snap 卡池"
