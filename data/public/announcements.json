@@ -291,16 +291,6 @@
       "type": "活动公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/10/23/d030bb81196ef3fff410d9f9c4d6120d_5245917935282258365_transformed.jpg",
-      "contentURL": "",
-      "endTime": "2026-06-30 03:59:59",
-      "id": "21168",
-      "startTime": "2026-05-25 12:00:00",
-      "subtitle": "「幽境危战」",
-      "title": "「幽境危战」活动：紊乱地脉挑战",
-      "type": "活动公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/05/07/fc3125591be087e07d055eac80e07f3e_2009005969921407207_transformed.jpg",
       "contentURL": "",
       "endTime": "2026-06-30 14:59:59",
@@ -402,5 +392,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-06-29T17:47:52Z"
+  "updatedAt": "2026-06-29T20:16:05Z"
 }
