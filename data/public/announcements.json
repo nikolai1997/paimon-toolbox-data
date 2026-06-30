@@ -11,36 +11,6 @@
       "type": "游戏公告"
     },
     {
-      "banner": "",
-      "contentURL": "",
-      "endTime": "2026-07-01 06:00:00",
-      "id": "21724",
-      "startTime": "2026-05-20 08:00:00",
-      "subtitle": "「月之七」版本现已开启",
-      "title": "全新内容一览：角色·祈愿·装备·剧情·版本活动等",
-      "type": "游戏公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/05/09/e42e377f7784c4117568c38a686b842f_6166416106958984039_transformed.jpg",
-      "contentURL": "",
-      "endTime": "2026-07-01 06:00:00",
-      "id": "21708",
-      "startTime": "2026-05-20 07:00:00",
-      "subtitle": "「月之七」版本更新说明",
-      "title": "「『空月之歌·行律』虚空劫灰往世书」「月之七」版本更新说明",
-      "type": "游戏公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/announcement/2020/11/11/a539394edc88c73effd030507be02681_8843944720719944518.jpg",
-      "contentURL": "",
-      "endTime": "2026-07-01 06:00:00",
-      "id": "21739",
-      "startTime": "2026-05-20 08:00:00",
-      "subtitle": "更新内容汇总",
-      "title": "游戏更新修复与优化说明",
-      "type": "游戏公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2023/01/31/ab26bd549f42e9994d6946ae0f286b2e_6457522219866312059.jpg",
       "contentURL": "",
       "endTime": "2026-07-01 12:00:00",
@@ -352,5 +322,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-06-30T18:14:35Z"
+  "updatedAt": "2026-06-30T22:39:46Z"
 }
