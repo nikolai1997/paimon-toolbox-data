@@ -371,6 +371,36 @@
       "type": "活动公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/22/17c6d428e44f5ceb4ed3258696be617f_6855733728874232505_transformed.jpg",
+      "contentURL": "",
+      "endTime": "2026-08-10 03:59:59",
+      "id": "21765",
+      "startTime": "2026-06-30 12:00:00",
+      "subtitle": "「奇域秘藏·煦风缘海」",
+      "title": "「奇域秘藏·煦风缘海」奇偶装扮上新",
+      "type": "千星奇域"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/22/352d1d8f998084d9e0990b83e832ea62_8168000054212855993_transformed.jpg",
+      "contentURL": "",
+      "endTime": "2026-08-12 07:00:00",
+      "id": "21763",
+      "startTime": "2026-06-30 12:00:00",
+      "subtitle": "「缘海赛季」",
+      "title": "「缘海赛季」赛季开启公告说明",
+      "type": "千星奇域"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/22/e4550adc445d71cf3343223fd7da25c1_6243577439285768461_transformed.jpg",
+      "contentURL": "",
+      "endTime": "2026-08-12 07:00:00",
+      "id": "21762",
+      "startTime": "2026-06-30 12:00:00",
+      "subtitle": "「绮衣珍赏·暄和」",
+      "title": "「绮衣珍赏·暄和」参与获得自选奇偶装扮套装「悠暇梦夏」一套",
+      "type": "千星奇域"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/05/11/5579f0481705fe1715789c31c8f55230_4904625013664315921_transformed.jpg",
       "contentURL": "",
       "endTime": "2026-07-01 07:00:00",
@@ -392,5 +422,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-06-29T20:16:05Z"
+  "updatedAt": "2026-06-30T06:32:44Z"
 }
