@@ -5002,5 +5002,56 @@
       15412
     ],
     "version": "6.6"
+  },
+  {
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/05/26/c2a3b8cc3cf10224c248a781325ce2e3_5629417702843428147_transformed.jpg",
+    "from": "2026-06-05T18:00:00+08:00",
+    "name": "霜锋夜白",
+    "to": "2026-06-30T14:59:00+08:00",
+    "type": 301,
+    "upOrangeList": [
+      10000129
+    ],
+    "upPurpleList": [
+      10000023,
+      10000032,
+      10000080
+    ],
+    "version": "6.6"
+  },
+  {
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/05/26/e92b6dbc10613a757f7c775919ae346c_5720336689852618885_transformed.jpg",
+    "from": "2026-06-05T18:00:00+08:00",
+    "name": "宿古的赫炎",
+    "to": "2026-06-30T14:59:00+08:00",
+    "type": 400,
+    "upOrangeList": [
+      10000106
+    ],
+    "upPurpleList": [
+      10000023,
+      10000032,
+      10000080
+    ],
+    "version": "6.6"
+  },
+  {
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/05/26/f648f6212812b4aa1f5fbf53409470a2_3354070259740915076_transformed.jpg",
+    "from": "2026-06-05T18:00:00+08:00",
+    "name": "神铸赋形",
+    "to": "2026-06-30T14:59:00+08:00",
+    "type": 302,
+    "upOrangeList": [
+      12514,
+      13517
+    ],
+    "upPurpleList": [
+      11410,
+      12405,
+      13407,
+      14410,
+      15410
+    ],
+    "version": "6.6"
   }
 ]

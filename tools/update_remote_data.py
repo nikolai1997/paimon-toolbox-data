@@ -133,9 +133,16 @@ def main() -> int:
         payload = build_snap_metadata_payload(locale_dir)
     elif args.source == "official-manual":
         gacha_events_override = None
+        manual_gacha_events = read_json_if_exists(manual_dir / "gacha-events.json") or []
         if args.gacha_source == "snap-metadata":
             try:
-                gacha_events_override = load_snap_gacha_events(source_cache, args.locale, args.skip_fetch)
+                snap_gacha_events = load_snap_gacha_events(source_cache, args.locale, args.skip_fetch)
+                gacha_events_override = select_fresher_gacha_events(
+                    snap_gacha_events,
+                    manual_gacha_events,
+                    primary_label="Snap.Metadata",
+                    fallback_label="manual gacha-events.json",
+                )
             except Exception as error:
                 print(f"warning: Snap.Metadata gacha fetch failed, using manual gacha-events.json: {error}", file=sys.stderr)
         payload = build_official_manual_payload(
@@ -153,7 +160,13 @@ def main() -> int:
         gacha_events = read_json(manual_dir / "gacha-events.json")
         if args.gacha_source == "snap-metadata":
             try:
-                gacha_events = load_snap_gacha_events(source_cache, args.locale, args.skip_fetch)
+                snap_gacha_events = load_snap_gacha_events(source_cache, args.locale, args.skip_fetch)
+                gacha_events = select_fresher_gacha_events(
+                    snap_gacha_events,
+                    gacha_events,
+                    primary_label="Snap.Metadata",
+                    fallback_label="manual gacha-events.json",
+                )
             except Exception as error:
                 print(f"warning: Snap.Metadata gacha fetch failed, using manual gacha-events.json: {error}", file=sys.stderr)
         ensure_genshin_db_checkout(genshin_db_cache, skip_fetch=args.skip_fetch)
@@ -244,6 +257,45 @@ def load_snap_gacha_events(source_cache: Path, locale: str, skip_fetch: bool) ->
     if not locale_dir.exists():
         raise FileNotFoundError(f"Missing locale directory: {locale_dir}")
     return convert_gacha_events(read_json(locale_dir / "GachaEvent.json"))
+
+
+def select_fresher_gacha_events(
+    primary: list[dict[str, Any]],
+    fallback: list[dict[str, Any]],
+    primary_label: str,
+    fallback_label: str,
+) -> list[dict[str, Any]]:
+    if not fallback:
+        return primary
+    primary_key = gacha_freshness_key(primary)
+    fallback_key = gacha_freshness_key(fallback)
+    if fallback_key > primary_key:
+        print(
+            f"warning: {primary_label} gacha data looks older than {fallback_label}; using fallback",
+            file=sys.stderr,
+        )
+        return fallback
+    return primary
+
+
+def gacha_freshness_key(events: list[dict[str, Any]]) -> tuple[datetime, int]:
+    latest = max(
+        (parse_gacha_datetime(event.get("to") or event.get("To")) for event in events),
+        default=datetime.min.replace(tzinfo=timezone.utc),
+    )
+    return latest, len(events)
+
+
+def parse_gacha_datetime(value: Any) -> datetime:
+    if not isinstance(value, str) or not value:
+        return datetime.min.replace(tzinfo=timezone.utc)
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return datetime.min.replace(tzinfo=timezone.utc)
+    if parsed.tzinfo is None:
+        return parsed.replace(tzinfo=timezone.utc)
+    return parsed
 
 
 def load_announcements(
@@ -966,6 +1018,31 @@ def run_self_test() -> None:
         )
         assert manual_with_snap_gacha.characters[0]["name"] == "神里绫华"
         assert manual_with_snap_gacha.gacha_events == snap_gacha_events
+
+        stale_snap_gacha_events = [
+            {"name": "旧 Snap 卡池", "type": 301, "to": "2026-06-09T17:59:00+08:00"}
+        ]
+        newer_manual_gacha_events = [
+            {"name": "新手动卡池", "type": 301, "to": "2026-06-30T14:59:00+08:00"}
+        ]
+        assert (
+            select_fresher_gacha_events(
+                stale_snap_gacha_events,
+                newer_manual_gacha_events,
+                primary_label="Snap.Metadata",
+                fallback_label="manual",
+            )
+            == newer_manual_gacha_events
+        )
+        assert (
+            select_fresher_gacha_events(
+                newer_manual_gacha_events,
+                stale_snap_gacha_events,
+                primary_label="Snap.Metadata",
+                fallback_label="manual",
+            )
+            == newer_manual_gacha_events
+        )
     finally:
         shutil.rmtree(temp_manual)
 
