@@ -66,6 +66,7 @@ jobs:
 
           latest_package="$(ls -t data/releases/data-pack-*.zip | head -n 1)"
           test -n "$latest_package"
+          latest_package_name="$(basename "$latest_package")"
 
           curl --fail --silent --show-error \
             --user "$JIANGUOYUN_USERNAME:$JIANGUOYUN_APP_PASSWORD" \
@@ -75,6 +76,44 @@ jobs:
             --user "$JIANGUOYUN_USERNAME:$JIANGUOYUN_APP_PASSWORD" \
             --upload-file "$latest_package" \
             "$JIANGUOYUN_WEBDAV_BASE_URL/data-pack-latest.zip"
+
+          curl --fail --silent --show-error \
+            --user "$JIANGUOYUN_USERNAME:$JIANGUOYUN_APP_PASSWORD" \
+            --upload-file "$latest_package" \
+            "$JIANGUOYUN_WEBDAV_BASE_URL/$latest_package_name"
+
+          for remote_name in data-pack-latest.zip "$latest_package_name"; do
+            propfind_response="$(mktemp)"
+            curl --fail --silent --show-error \
+              --user "$JIANGUOYUN_USERNAME:$JIANGUOYUN_APP_PASSWORD" \
+              --request PROPFIND \
+              --header "Depth: 0" \
+              "$JIANGUOYUN_WEBDAV_BASE_URL/$remote_name" \
+              --output "$propfind_response"
+            python3 - "$remote_name" "$propfind_response" <<'PY'
+import sys
+import xml.etree.ElementTree as ET
+
+remote_name = sys.argv[1]
+response_path = sys.argv[2]
+root = ET.parse(response_path).getroot()
+ns = {"d": "DAV:"}
+prop = root.find(".//d:prop", ns)
+if prop is None:
+    raise SystemExit(f"Could not verify remote package: {remote_name}")
+
+def text_for(tag: str) -> str:
+    element = prop.find(f"d:{tag}", ns)
+    return (element.text or "").strip() if element is not None else ""
+
+print(
+    "Verified Jianguoyun package:",
+    remote_name,
+    "size=" + text_for("getcontentlength"),
+    "modified=" + text_for("getlastmodified"),
+)
+PY
+          done
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
