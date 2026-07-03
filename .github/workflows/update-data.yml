@@ -90,29 +90,7 @@ jobs:
               --header "Depth: 0" \
               "$JIANGUOYUN_WEBDAV_BASE_URL/$remote_name" \
               --output "$propfind_response"
-            python3 - "$remote_name" "$propfind_response" <<'PY'
-import sys
-import xml.etree.ElementTree as ET
-
-remote_name = sys.argv[1]
-response_path = sys.argv[2]
-root = ET.parse(response_path).getroot()
-ns = {"d": "DAV:"}
-prop = root.find(".//d:prop", ns)
-if prop is None:
-    raise SystemExit(f"Could not verify remote package: {remote_name}")
-
-def text_for(tag: str) -> str:
-    element = prop.find(f"d:{tag}", ns)
-    return (element.text or "").strip() if element is not None else ""
-
-print(
-    "Verified Jianguoyun package:",
-    remote_name,
-    "size=" + text_for("getcontentlength"),
-    "modified=" + text_for("getlastmodified"),
-)
-PY
+            python3 -c 'import sys, xml.etree.ElementTree as ET; remote=sys.argv[1]; prop=ET.parse(sys.argv[2]).getroot().find(".//{DAV:}prop"); get=lambda tag: ((prop.find("{DAV:}"+tag).text or "").strip() if prop is not None and prop.find("{DAV:}"+tag) is not None else ""); print("Verified Jianguoyun package:", remote, "size="+get("getcontentlength"), "modified="+get("getlastmodified")); sys.exit(0 if prop is not None else 1)' "$remote_name" "$propfind_response"
           done
 
       - name: Configure Pages
