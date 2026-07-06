@@ -43,15 +43,29 @@ jobs:
             --public-dir data/public \
             --release-dir data/releases
 
-      - name: Commit generated data
+      - name: Check generated changes
+        id: changes
         run: |
-          if ! git diff --quiet -- data/public data/manual data/releases; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/public data/manual data/releases
-            git commit -m "chore: update generated data"
-            git push
+          if git diff --quiet -- data/public; then
+            echo "public_changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "public_changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+          if git diff --quiet -- data/public data/manual data/releases; then
+            echo "generated_changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "generated_changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit generated data
+        if: steps.changes.outputs.generated_changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/public data/manual data/releases
+          git commit -m "chore: update generated data"
+          git push
 
       - name: Upload offline package to Jianguoyun
         env:
@@ -94,12 +108,15 @@ jobs:
           done
 
       - name: Configure Pages
+        if: steps.changes.outputs.public_changed == 'true'
         uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
+        if: steps.changes.outputs.public_changed == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: data/public
 
       - name: Deploy Pages
+        if: steps.changes.outputs.public_changed == 'true'
         uses: actions/deploy-pages@v4
