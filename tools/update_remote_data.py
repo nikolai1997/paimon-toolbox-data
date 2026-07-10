@@ -12,6 +12,7 @@ import ssl
 import subprocess
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 import zipfile
 from dataclasses import dataclass, replace
@@ -363,7 +364,8 @@ def build_official_manual_payload(
 def generate_public_data(payload: RemoteDataPayload, public_dir: Path, base_url: str) -> list[GeneratedFile]:
     public_dir.mkdir(parents=True, exist_ok=True)
     now = datetime.now(timezone.utc)
-    announcements = payload.announcements or empty_announcements()
+    announcements = normalize_announcement_feed(payload.announcements or empty_announcements())
+    validate_announcement_feed(announcements)
     previous_metadata = read_json_if_exists(public_dir / "metadata.json") or {}
     apply_asset_overrides(payload, previous_metadata)
     previous_announcements = read_json_if_exists(public_dir / "announcements.json") or {}
@@ -760,8 +762,8 @@ def convert_official_announcements(payload: dict[str, Any]) -> dict[str, Any]:
                     "type": announcement.get("type_label") or group.get("type_label") or "",
                     "startTime": announcement.get("start_time", ""),
                     "endTime": announcement.get("end_time", ""),
-                    "banner": announcement.get("banner", ""),
-                    "contentURL": announcement.get("content_url", ""),
+                    "banner": normalize_optional_http_url(announcement.get("banner")),
+                    "contentURL": normalize_optional_http_url(announcement.get("content_url")),
                 }
             )
     return {
@@ -769,6 +771,52 @@ def convert_official_announcements(payload: dict[str, Any]) -> dict[str, Any]:
         "updatedAt": isoformat_z(datetime.now(timezone.utc)),
         "items": items,
     }
+
+
+def normalize_announcement_feed(feed: dict[str, Any]) -> dict[str, Any]:
+    normalized = dict(feed)
+    items = feed.get("items")
+    if not isinstance(items, list):
+        return normalized
+
+    normalized_items: list[Any] = []
+    for item in items:
+        if not isinstance(item, dict):
+            normalized_items.append(item)
+            continue
+        normalized_item = dict(item)
+        for field in ("banner", "contentURL", "url"):
+            if field in normalized_item:
+                normalized_item[field] = normalize_optional_http_url(normalized_item.get(field))
+        normalized_items.append(normalized_item)
+    normalized["items"] = normalized_items
+    return normalized
+
+
+def normalize_optional_http_url(value: Any) -> str | None:
+    if not isinstance(value, str):
+        return None
+    normalized = value.strip()
+    if not normalized:
+        return None
+    parsed = urllib.parse.urlsplit(normalized)
+    if parsed.scheme.lower() not in {"http", "https"} or not parsed.netloc:
+        return None
+    return normalized
+
+
+def validate_announcement_feed(feed: Any) -> None:
+    if not isinstance(feed, dict) or not isinstance(feed.get("items"), list):
+        raise RuntimeError("announcement feed items must be a list")
+    for index, item in enumerate(feed["items"]):
+        if not isinstance(item, dict):
+            raise RuntimeError(f"announcement item is invalid: {index}")
+        for field in ("banner", "contentURL", "url"):
+            if field not in item or item[field] is None:
+                continue
+            value = item[field]
+            if not isinstance(value, str) or normalize_optional_http_url(value) != value:
+                raise RuntimeError(f"announcement url field is invalid: items[{index}].{field}")
 
 
 def merge_official_gacha_events(
@@ -1077,6 +1125,28 @@ def commit_and_push(paths: list[Path], message: str) -> None:
 
 
 def run_self_test() -> None:
+    empty_url_announcements = convert_official_announcements(
+        {
+            "data": {
+                "list": [
+                    {
+                        "type_label": "游戏公告",
+                        "list": [
+                            {
+                                "ann_id": 21788,
+                                "title": "全新内容一览",
+                                "banner": "   ",
+                                "content_url": "",
+                            }
+                        ],
+                    }
+                ]
+            }
+        }
+    )
+    assert empty_url_announcements["items"][0]["banner"] is None
+    assert empty_url_announcements["items"][0]["contentURL"] is None
+
     material_names = {
         104161: "哀叙冰玉碎屑",
         104162: "哀叙冰玉断片",
