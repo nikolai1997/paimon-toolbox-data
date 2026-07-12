@@ -31,16 +31,6 @@
       "type": "游戏公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/07/09/674108edc23d03e12b1aa2a7548625e6_8216392147963785102_transformed.png",
-      "contentURL": null,
-      "endTime": "2026-09-01 00:00:00",
-      "id": "21810",
-      "startTime": "2026-07-10 12:20:00",
-      "subtitle": "「奇域校园星」校园企划",
-      "title": "「奇域校园星」校园企划正式启动！",
-      "type": "游戏公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2023/01/31/ab26bd549f42e9994d6946ae0f286b2e_6457522219866312059.jpg",
       "contentURL": null,
       "endTime": "2026-08-01 12:00:00",
@@ -129,16 +119,6 @@
       "subtitle": "公平运营声明",
       "title": "《原神》公平运营声明",
       "type": "游戏公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/10/23/d030bb81196ef3fff410d9f9c4d6120d_5245917935282258365_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-08-11 03:59:59",
-      "id": "21168",
-      "startTime": "2026-07-06 12:00:00",
-      "subtitle": "「幽境危战」",
-      "title": "「幽境危战」活动：紊乱地脉挑战",
-      "type": "活动公告"
     },
     {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/e3291fbde4889a6b5c6f498fe10d3f25_5202897138544319925_transformed.jpg",
@@ -322,5 +302,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-07-12T13:57:41Z"
+  "updatedAt": "2026-07-12T19:33:19Z"
 }
