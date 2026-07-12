@@ -831,12 +831,36 @@ def merge_official_gacha_events(
 
     merged: dict[tuple[int, str, str], dict[str, Any]] = {}
     order: list[tuple[int, str, str]] = []
-    for event in [*events, *official_events]:
-        key = (int(event.get("type") or 0), str(event.get("name") or ""), str(event.get("from") or ""))
+    for event in events:
+        key = gacha_event_merge_key(event)
         if key not in merged:
             order.append(key)
         merged[key] = event
+    for event in official_events:
+        key = gacha_event_merge_key(event)
+        if key not in merged:
+            order.append(key)
+            merged[key] = event
+        else:
+            merged[key] = merge_gacha_event_fields(merged[key], event)
     return [merged[key] for key in order]
+
+
+def gacha_event_merge_key(event: dict[str, Any]) -> tuple[int, str, str]:
+    return (int(event.get("type") or 0), str(event.get("name") or ""), str(event.get("to") or ""))
+
+
+def merge_gacha_event_fields(existing: dict[str, Any], fallback: dict[str, Any]) -> dict[str, Any]:
+    merged = dict(existing)
+    list_fields = {"upOrangeList", "upPurpleList"}
+    for field, value in fallback.items():
+        current = merged.get(field)
+        if field in list_fields:
+            if (not isinstance(current, list) or not current) and isinstance(value, list):
+                merged[field] = value
+        elif (current is None or current == "") and value not in (None, ""):
+            merged[field] = value
+    return merged
 
 
 def official_gacha_events_from_announcements(
@@ -1289,6 +1313,34 @@ def run_self_test() -> None:
     assert official_gacha_events[0]["version"] == "月之八"
     assert official_gacha_events[0]["upOrangeList"] == [10002001]
     assert official_gacha_events[2]["upOrangeList"] == [12517, 14517]
+
+    complete_snap_event = {
+        "name": "镜中的茶宴",
+        "version": "6.7",
+        "type": 301,
+        "from": "2026-07-01T06:00:00+08:00",
+        "to": "2026-07-21T17:59:00+08:00",
+        "upOrangeList": [10002001],
+        "upPurpleList": [10000020, 10000031, 10000064],
+        "banner": "https://snap.example/banner.jpg",
+    }
+    merged_complete_events = merge_official_gacha_events(
+        [complete_snap_event],
+        official_gacha_announcements,
+        characters=[
+            {"id": 10002001, "name": "桑多涅"},
+            {"id": 10000107, "name": "茜特菈莉"},
+        ],
+        weapons=[
+            {"id": 12517, "name": "超越之匙"},
+            {"id": 14517, "name": "祭星者之望"},
+        ],
+    )
+    matching_mirror_events = [event for event in merged_complete_events if event["name"] == "镜中的茶宴"]
+    assert len(matching_mirror_events) == 1
+    assert matching_mirror_events[0]["version"] == "6.7"
+    assert matching_mirror_events[0]["upPurpleList"] == [10000020, 10000031, 10000064]
+    assert matching_mirror_events[0]["banner"] == "https://snap.example/banner.jpg"
 
     manual_payload = RemoteDataPayload(
         source="official-manual",
