@@ -31,6 +31,26 @@
       "type": "游戏公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/29/6067484330acf17542dce5712f863140_1233677281897665486_transformed.png",
+      "contentURL": null,
+      "endTime": "2026-07-28 23:59:59",
+      "id": "21785",
+      "startTime": "2026-07-15 12:00:00",
+      "subtitle": "「来奇域，快乐一夏！」——《原神》网页活动上线！",
+      "title": "「来奇域，快乐一夏！」7月15日 参与千星奇域夏日主题网页活动得奖励！",
+      "type": "游戏公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/07/09/674108edc23d03e12b1aa2a7548625e6_8216392147963785102_transformed.png",
+      "contentURL": null,
+      "endTime": "2026-09-01 00:00:00",
+      "id": "21810",
+      "startTime": "2026-07-10 12:20:00",
+      "subtitle": "「奇域校园星」校园企划",
+      "title": "「奇域校园星」校园企划正式启动！",
+      "type": "游戏公告"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2023/01/31/ab26bd549f42e9994d6946ae0f286b2e_6457522219866312059.jpg",
       "contentURL": null,
       "endTime": "2026-08-01 12:00:00",
@@ -119,6 +139,66 @@
       "subtitle": "公平运营声明",
       "title": "《原神》公平运营声明",
       "type": "游戏公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/07/07/c8fb39c62c6a8ec60faab54c67e5f025_4328241174560449438_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-08-11 14:59:59",
+      "id": "21757",
+      "startTime": "2026-07-16 16:00:00",
+      "subtitle": "「伴月同眠」祈愿",
+      "title": "「伴月同眠」祈愿：「空月归乡·哥伦比娅(水)」概率UP！",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/07/07/5e7a7348730900c4b4cf210f5c061693_2349137515764696348_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-08-11 14:59:59",
+      "id": "21758",
+      "startTime": "2026-07-16 16:00:00",
+      "subtitle": "「影寂天下人」祈愿",
+      "title": "「影寂天下人」祈愿：「一心净土·雷电将军(雷)」概率UP！",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/07/07/d5fdbf8997d440f25848244365596855_6259960005832090377_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-08-11 14:59:59",
+      "id": "21759",
+      "startTime": "2026-07-16 16:00:00",
+      "subtitle": "「神铸赋形」祈愿",
+      "title": "「神铸赋形」祈愿：「法器·帷间夜曲」「长柄武器·薙草之稻光」概率UP！",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/10/10/7bad7669e665163f74fc9f99c638b116_8030821634329851065_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-08-03 03:59:59",
+      "id": "21368",
+      "startTime": "2026-07-16 12:00:00",
+      "subtitle": "「七圣召唤」热斗模式",
+      "title": "「七圣召唤」热斗模式：自行巧局",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/18/c2e21b02361d9d2d48354ba9f3988a85_2981037097085728322_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-07-27 03:59:59",
+      "id": "21756",
+      "startTime": "2026-07-15 12:00:00",
+      "subtitle": "「最终远射瞄准线」",
+      "title": "「最终远射瞄准线」活动：射击规划挑战",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/10/23/d030bb81196ef3fff410d9f9c4d6120d_5245917935282258365_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-08-11 03:59:59",
+      "id": "21168",
+      "startTime": "2026-07-06 12:00:00",
+      "subtitle": "「幽境危战」",
+      "title": "「幽境危战」活动：紊乱地脉挑战",
+      "type": "活动公告"
     },
     {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/e3291fbde4889a6b5c6f498fe10d3f25_5202897138544319925_transformed.jpg",
@@ -211,16 +291,6 @@
       "type": "活动公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/5b09ebe96612d4559ec1d628391d7496_8319210833736626801_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-07-15 23:59:59",
-      "id": "21754",
-      "startTime": "2026-06-29 12:00:00",
-      "subtitle": "「冒险助力礼包」",
-      "title": "「冒险助力礼包」第50期限时上架",
-      "type": "活动公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/18/4f93119de08c1f4c9df1a2ad825fd983_1254502696276269506_transformed.jpg",
       "contentURL": null,
       "endTime": "2026-08-10 03:59:59",
@@ -302,5 +372,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-07-20T18:21:32Z"
+  "updatedAt": "2026-07-20T20:41:49Z"
 }
