@@ -201,46 +201,6 @@
       "type": "活动公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/e3291fbde4889a6b5c6f498fe10d3f25_5202897138544319925_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-07-21 17:59:00",
-      "id": "21743",
-      "startTime": "2026-06-29 12:00:00",
-      "subtitle": "「镜中的茶宴」祈愿",
-      "title": "「镜中的茶宴」祈愿：「镜水析谬·桑多涅(冰)」概率UP！",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/224b737812e20929c4485452a2f1e1bc_7347526875978743745_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-07-21 17:59:00",
-      "id": "21744",
-      "startTime": "2026-06-29 12:00:00",
-      "subtitle": "「星边夜语」祈愿",
-      "title": "「星边夜语」祈愿：「白星黑曜·茜特菈莉(冰)」概率UP！",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/331e1ba3b0d467685cc70edce96fd72c_5362978686770159579_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-07-21 17:59:00",
-      "id": "21745",
-      "startTime": "2026-06-29 12:00:00",
-      "subtitle": "「神铸赋形」祈愿",
-      "title": "「神铸赋形」祈愿：「双手剑·超越之匙」「法器·祭星者之望」概率UP！",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/1d5156638949b67cf0d1e5bc192c8b9e_2860105966740958802_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-07-21 17:59:00",
-      "id": "21748",
-      "startTime": "2026-06-29 12:00:00",
-      "subtitle": "「辉天的星告」祈愿",
-      "title": "「辉天的星告」祈愿：溯光祈愿开启！",
-      "type": "活动公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/32089a62e0861cf0328ec28a1be4e3d9_101648368039217662_transformed.jpg",
       "contentURL": null,
       "endTime": "2026-08-11 03:59:59",
@@ -372,5 +332,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-07-20T20:41:49Z"
+  "updatedAt": "2026-07-21T12:01:55Z"
 }
