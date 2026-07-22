@@ -31,6 +31,26 @@
       "type": "游戏公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/07/21/104f792deb89e5ed17cc916bba8912a3_5012540746870819369_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-07-29 13:00:00",
+      "id": "21833",
+      "startTime": "2026-07-22 13:00:00",
+      "subtitle": "空月之歌回顾主题OST上线",
+      "title": "《原神》空月之歌回顾主题OST《珍珠之歌6 The Shimmering Voyage Vol. 6》正式上线",
+      "type": "游戏公告"
+    },
+    {
+      "banner": null,
+      "contentURL": null,
+      "endTime": "2026-07-30 23:59:59",
+      "id": "21834",
+      "startTime": "2026-07-22 12:00:00",
+      "subtitle": "桑多涅多款周边开售 星稚梦旅系列上架",
+      "title": "桑多涅多款周边开售 星稚梦旅系列上架",
+      "type": "游戏公告"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/29/6067484330acf17542dce5712f863140_1233677281897665486_transformed.png",
       "contentURL": null,
       "endTime": "2026-07-28 23:59:59",
@@ -139,6 +159,16 @@
       "subtitle": "公平运营声明",
       "title": "《原神》公平运营声明",
       "type": "游戏公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/07/07/eb8e11720ae23583995e149dba4743d6_2707082151735327288_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-08-03 03:59:59",
+      "id": "21760",
+      "startTime": "2026-07-22 12:00:00",
+      "subtitle": "「悠悠律动舞力聚会」",
+      "title": "「悠悠律动舞力聚会」活动：共舞挑战",
+      "type": "活动公告"
     },
     {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/07/07/c8fb39c62c6a8ec60faab54c67e5f025_4328241174560449438_transformed.jpg",
@@ -332,5 +362,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-07-21T12:01:55Z"
+  "updatedAt": "2026-07-22T06:43:34Z"
 }
