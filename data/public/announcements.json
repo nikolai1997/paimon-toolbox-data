@@ -31,46 +31,6 @@
       "type": "游戏公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/07/21/104f792deb89e5ed17cc916bba8912a3_5012540746870819369_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-07-29 13:00:00",
-      "id": "21833",
-      "startTime": "2026-07-22 13:00:00",
-      "subtitle": "空月之歌回顾主题OST上线",
-      "title": "《原神》空月之歌回顾主题OST《珍珠之歌6 The Shimmering Voyage Vol. 6》正式上线",
-      "type": "游戏公告"
-    },
-    {
-      "banner": null,
-      "contentURL": null,
-      "endTime": "2026-07-30 23:59:59",
-      "id": "21834",
-      "startTime": "2026-07-22 12:00:00",
-      "subtitle": "桑多涅多款周边开售 星稚梦旅系列上架",
-      "title": "桑多涅多款周边开售 星稚梦旅系列上架",
-      "type": "游戏公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/29/6067484330acf17542dce5712f863140_1233677281897665486_transformed.png",
-      "contentURL": null,
-      "endTime": "2026-07-28 23:59:59",
-      "id": "21785",
-      "startTime": "2026-07-15 12:00:00",
-      "subtitle": "「来奇域，快乐一夏！」——《原神》网页活动上线！",
-      "title": "「来奇域，快乐一夏！」7月15日 参与千星奇域夏日主题网页活动得奖励！",
-      "type": "游戏公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/07/09/674108edc23d03e12b1aa2a7548625e6_8216392147963785102_transformed.png",
-      "contentURL": null,
-      "endTime": "2026-09-01 00:00:00",
-      "id": "21810",
-      "startTime": "2026-07-10 12:20:00",
-      "subtitle": "「奇域校园星」校园企划",
-      "title": "「奇域校园星」校园企划正式启动！",
-      "type": "游戏公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2023/01/31/ab26bd549f42e9994d6946ae0f286b2e_6457522219866312059.jpg",
       "contentURL": null,
       "endTime": "2026-08-01 12:00:00",
@@ -161,73 +121,43 @@
       "type": "游戏公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/07/07/eb8e11720ae23583995e149dba4743d6_2707082151735327288_transformed.jpg",
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/e3291fbde4889a6b5c6f498fe10d3f25_5202897138544319925_transformed.jpg",
       "contentURL": null,
-      "endTime": "2026-08-03 03:59:59",
-      "id": "21760",
-      "startTime": "2026-07-22 12:00:00",
-      "subtitle": "「悠悠律动舞力聚会」",
-      "title": "「悠悠律动舞力聚会」活动：共舞挑战",
+      "endTime": "2026-07-21 17:59:00",
+      "id": "21743",
+      "startTime": "2026-06-29 12:00:00",
+      "subtitle": "「镜中的茶宴」祈愿",
+      "title": "「镜中的茶宴」祈愿：「镜水析谬·桑多涅(冰)」概率UP！",
       "type": "活动公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/07/07/c8fb39c62c6a8ec60faab54c67e5f025_4328241174560449438_transformed.jpg",
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/224b737812e20929c4485452a2f1e1bc_7347526875978743745_transformed.jpg",
       "contentURL": null,
-      "endTime": "2026-08-11 14:59:59",
-      "id": "21757",
-      "startTime": "2026-07-16 16:00:00",
-      "subtitle": "「伴月同眠」祈愿",
-      "title": "「伴月同眠」祈愿：「空月归乡·哥伦比娅(水)」概率UP！",
+      "endTime": "2026-07-21 17:59:00",
+      "id": "21744",
+      "startTime": "2026-06-29 12:00:00",
+      "subtitle": "「星边夜语」祈愿",
+      "title": "「星边夜语」祈愿：「白星黑曜·茜特菈莉(冰)」概率UP！",
       "type": "活动公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/07/07/5e7a7348730900c4b4cf210f5c061693_2349137515764696348_transformed.jpg",
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/331e1ba3b0d467685cc70edce96fd72c_5362978686770159579_transformed.jpg",
       "contentURL": null,
-      "endTime": "2026-08-11 14:59:59",
-      "id": "21758",
-      "startTime": "2026-07-16 16:00:00",
-      "subtitle": "「影寂天下人」祈愿",
-      "title": "「影寂天下人」祈愿：「一心净土·雷电将军(雷)」概率UP！",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/07/07/d5fdbf8997d440f25848244365596855_6259960005832090377_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-08-11 14:59:59",
-      "id": "21759",
-      "startTime": "2026-07-16 16:00:00",
+      "endTime": "2026-07-21 17:59:00",
+      "id": "21745",
+      "startTime": "2026-06-29 12:00:00",
       "subtitle": "「神铸赋形」祈愿",
-      "title": "「神铸赋形」祈愿：「法器·帷间夜曲」「长柄武器·薙草之稻光」概率UP！",
+      "title": "「神铸赋形」祈愿：「双手剑·超越之匙」「法器·祭星者之望」概率UP！",
       "type": "活动公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/10/10/7bad7669e665163f74fc9f99c638b116_8030821634329851065_transformed.jpg",
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/1d5156638949b67cf0d1e5bc192c8b9e_2860105966740958802_transformed.jpg",
       "contentURL": null,
-      "endTime": "2026-08-03 03:59:59",
-      "id": "21368",
-      "startTime": "2026-07-16 12:00:00",
-      "subtitle": "「七圣召唤」热斗模式",
-      "title": "「七圣召唤」热斗模式：自行巧局",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/18/c2e21b02361d9d2d48354ba9f3988a85_2981037097085728322_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-07-27 03:59:59",
-      "id": "21756",
-      "startTime": "2026-07-15 12:00:00",
-      "subtitle": "「最终远射瞄准线」",
-      "title": "「最终远射瞄准线」活动：射击规划挑战",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/10/23/d030bb81196ef3fff410d9f9c4d6120d_5245917935282258365_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-08-11 03:59:59",
-      "id": "21168",
-      "startTime": "2026-07-06 12:00:00",
-      "subtitle": "「幽境危战」",
-      "title": "「幽境危战」活动：紊乱地脉挑战",
+      "endTime": "2026-07-21 17:59:00",
+      "id": "21748",
+      "startTime": "2026-06-29 12:00:00",
+      "subtitle": "「辉天的星告」祈愿",
+      "title": "「辉天的星告」祈愿：溯光祈愿开启！",
       "type": "活动公告"
     },
     {
@@ -278,6 +208,16 @@
       "startTime": "2026-06-29 12:00:00",
       "subtitle": "「挪德卡莱·朔望凝待之庭」",
       "title": "「挪德卡莱·朔望凝待之庭」：千音雅集更新",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/5b09ebe96612d4559ec1d628391d7496_8319210833736626801_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-07-15 23:59:59",
+      "id": "21754",
+      "startTime": "2026-06-29 12:00:00",
+      "subtitle": "「冒险助力礼包」",
+      "title": "「冒险助力礼包」第50期限时上架",
       "type": "活动公告"
     },
     {
@@ -362,5 +302,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-07-23T06:41:22Z"
+  "updatedAt": "2026-07-23T14:36:42Z"
 }
