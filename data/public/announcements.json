@@ -91,16 +91,6 @@
       "type": "游戏公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2024/08/29/27fe3687d1903484c758316793c9368d_4232439781597639085.jpg",
-      "contentURL": null,
-      "endTime": "2034-04-24 00:00:00",
-      "id": "20472",
-      "startTime": "2024-04-24 12:00:00",
-      "subtitle": "七圣召唤端外天梯上线",
-      "title": "《原神》七圣召唤端外天梯上线",
-      "type": "游戏公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2023/05/22/2acee18eb152a35f81b4a4b0ebaee157_2557195767746719807.jpg",
       "contentURL": null,
       "endTime": "2030-06-01 00:00:00",
@@ -342,5 +332,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-08-05T19:56:18Z"
+  "updatedAt": "2026-08-06T06:47:19Z"
 }
