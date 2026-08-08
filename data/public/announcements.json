@@ -31,16 +31,6 @@
       "type": "游戏公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/07/30/50a1d80e5f105616f740db6c0eef5789_4208875322241181558_transformed.png",
-      "contentURL": null,
-      "endTime": "2026-08-08 12:00:00",
-      "id": "21845",
-      "startTime": "2026-08-01 12:00:00",
-      "subtitle": "至冬交响音乐现场正式上线",
-      "title": "《原神》至冬交响音乐现场正式上线",
-      "type": "游戏公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2022/10/24/0a59babf7a59cca3ba8e7d3083fb8f15_5110808616473819596.jpg",
       "contentURL": null,
       "endTime": "2026-08-10 23:59:59",
@@ -149,6 +139,16 @@
       "subtitle": "公平运营声明",
       "title": "《原神》公平运营声明",
       "type": "游戏公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/05/28/9d9818e0badc0b90e9c6d7e10a9023ce_7914250625094827580_transformed.png",
+      "contentURL": null,
+      "endTime": "2026-11-02 03:59:00",
+      "id": "21761",
+      "startTime": "2026-08-08 12:00:00",
+      "subtitle": "「砺行修远」",
+      "title": "「砺行修远」：勤修馈赠",
+      "type": "活动公告"
     },
     {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2022/12/07/e2c3f903679858d612bab9b391191da7_4620723103386718323.jpg",
@@ -342,5 +342,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-08-07T16:09:31Z"
+  "updatedAt": "2026-08-08T04:29:29Z"
 }
