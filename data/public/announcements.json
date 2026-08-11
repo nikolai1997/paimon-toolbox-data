@@ -341,6 +341,16 @@
       "type": "活动公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/06/93a952fc8a17a8fc81101766ca5bb045_9209317039995714824_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-09-21 03:59:59",
+      "id": "21828",
+      "startTime": "2026-08-11 12:00:00",
+      "subtitle": "「奇域秘藏·裁论幻演」",
+      "title": "「奇域秘藏·裁论幻演」奇偶装扮上新",
+      "type": "千星奇域"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/22/352d1d8f998084d9e0990b83e832ea62_8168000054212855993_transformed.jpg",
       "contentURL": null,
       "endTime": "2026-08-12 07:00:00",
@@ -359,8 +369,28 @@
       "subtitle": "「绮衣珍赏·暄和」",
       "title": "「绮衣珍赏·暄和」参与获得自选奇偶装扮套装「悠暇梦夏」一套",
       "type": "千星奇域"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/06/bb3bc85680cbf3fe33a1f31e603d1bc7_8522465568370593073_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-09-23 07:00:00",
+      "id": "21832",
+      "startTime": "2026-08-11 12:00:00",
+      "subtitle": "「幻演赛季」",
+      "title": "「幻演赛季」赛季开启公告说明",
+      "type": "千星奇域"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/06/c5ba27620c834559c236386d71da3183_2392511044781496362_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-09-23 07:00:00",
+      "id": "21830",
+      "startTime": "2026-08-11 12:00:00",
+      "subtitle": "「绮衣珍赏·温煦」",
+      "title": "「绮衣珍赏·温煦」参与获得自选奇偶装扮套装「琥色蜜酿」一套",
+      "type": "千星奇域"
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-08-11T02:28:32Z"
+  "updatedAt": "2026-08-11T04:41:23Z"
 }
