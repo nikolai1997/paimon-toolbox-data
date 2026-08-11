@@ -11,36 +11,6 @@
       "type": "游戏公告"
     },
     {
-      "banner": null,
-      "contentURL": null,
-      "endTime": "2026-08-12 06:00:00",
-      "id": "21788",
-      "startTime": "2026-07-01 07:00:00",
-      "subtitle": "「月之八」版本现已开启",
-      "title": "全新内容一览：地区·角色·祈愿·武器·衣装·剧情等",
-      "type": "游戏公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/15/5b08bcdcb9fcbd89c3626fa31f09d270_41779795138763876_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-08-12 06:00:00",
-      "id": "21766",
-      "startTime": "2026-07-01 07:00:00",
-      "subtitle": "「月之八」版本更新说明",
-      "title": "「『空月之歌·谐谑』映夏！归乡？千灵节！」「月之八」版本更新说明",
-      "type": "游戏公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/announcement/2020/11/11/a539394edc88c73effd030507be02681_8843944720719944518.jpg",
-      "contentURL": null,
-      "endTime": "2026-08-12 06:00:00",
-      "id": "21797",
-      "startTime": "2026-07-01 08:00:00",
-      "subtitle": "更新内容汇总",
-      "title": "游戏更新修复与优化说明",
-      "type": "游戏公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2023/01/31/ab26bd549f42e9994d6946ae0f286b2e_6457522219866312059.jpg",
       "contentURL": null,
       "endTime": "2026-09-01 12:00:00",
@@ -342,5 +312,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-08-11T21:05:41Z"
+  "updatedAt": "2026-08-11T22:06:08Z"
 }
