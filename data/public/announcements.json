@@ -251,36 +251,6 @@
       "type": "活动公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/07/07/c8fb39c62c6a8ec60faab54c67e5f025_4328241174560449438_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-08-11 14:59:59",
-      "id": "21757",
-      "startTime": "2026-07-16 16:00:00",
-      "subtitle": "「伴月同眠」祈愿",
-      "title": "「伴月同眠」祈愿：「空月归乡·哥伦比娅(水)」概率UP！",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/07/07/5e7a7348730900c4b4cf210f5c061693_2349137515764696348_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-08-11 14:59:59",
-      "id": "21758",
-      "startTime": "2026-07-16 16:00:00",
-      "subtitle": "「影寂天下人」祈愿",
-      "title": "「影寂天下人」祈愿：「一心净土·雷电将军(雷)」概率UP！",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/07/07/d5fdbf8997d440f25848244365596855_6259960005832090377_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-08-11 14:59:59",
-      "id": "21759",
-      "startTime": "2026-07-16 16:00:00",
-      "subtitle": "「神铸赋形」祈愿",
-      "title": "「神铸赋形」祈愿：「法器·帷间夜曲」「长柄武器·薙草之稻光」概率UP！",
-      "type": "活动公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/7134e2de2f662c060d0d5fde264f9718_1671630651746040981_transformed.jpg",
       "contentURL": null,
       "endTime": "2026-09-22 14:59:59",
@@ -298,16 +268,6 @@
       "startTime": "2026-06-29 12:00:00",
       "subtitle": "「魔女的谕示」",
       "title": "「魔女的谕示」玩法说明",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/1ecdc2a45c9e184f8ca614c80b287ad7_1427890017369015893_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-08-11 14:59:59",
-      "id": "21753",
-      "startTime": "2026-06-29 12:00:00",
-      "subtitle": "「挪德卡莱·朔望凝待之庭」",
-      "title": "「挪德卡莱·朔望凝待之庭」：千音雅集更新",
       "type": "活动公告"
     },
     {
@@ -392,5 +352,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-08-11T04:41:23Z"
+  "updatedAt": "2026-08-11T07:38:55Z"
 }
