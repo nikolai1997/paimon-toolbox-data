@@ -31,6 +31,16 @@
       "type": "游戏公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/07/28/d0007108fef1f35e6f4b8f8ff1af0e33_3389384883456274698_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-08-25 23:59:59",
+      "id": "21840",
+      "startTime": "2026-08-12 12:00:00",
+      "subtitle": "「至冬漫游手册」网页活动开启，参与活动必得原石！",
+      "title": "「至冬漫游手册」网页活动开启，参与活动必得原石！",
+      "type": "游戏公告"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/announcement/2022/08/17/327eae0272f12b7104cfa472cfee0568_3991050071173177124.jpg",
       "contentURL": null,
       "endTime": "2027-12-31 00:00:00",
@@ -282,5 +292,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-08-12T05:04:07Z"
+  "updatedAt": "2026-08-12T06:43:45Z"
 }
