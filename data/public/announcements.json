@@ -211,16 +211,6 @@
       "type": "活动公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/04/6049af5b9d8252526e64dbc64b4c96dc_6333926412711236553_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-08-26 23:59:59",
-      "id": "21817",
-      "startTime": "2026-08-10 12:00:00",
-      "subtitle": "「冒险助力礼包」",
-      "title": "「冒险助力礼包」第51期限时上架",
-      "type": "活动公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/05/bf3083e4a9312386a1b1ef218d133d10_8161836688658904706_transformed.jpg",
       "contentURL": null,
       "endTime": "2026-09-21 03:59:59",
@@ -312,5 +302,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-08-26T04:57:04Z"
+  "updatedAt": "2026-08-26T17:13:20Z"
 }
