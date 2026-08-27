@@ -131,6 +131,46 @@
       "type": "游戏公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/18/ea633682a29be769b52d32744d6d9b8a_5416475972197875744_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-09-22 14:59:59",
+      "id": "21805",
+      "startTime": "2026-08-27 16:00:00",
+      "subtitle": "「孤灯夜访」祈愿",
+      "title": "「孤灯夜访」祈愿：「诡灯陌影·菲林斯(雷)」概率UP！",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/18/1a55332fb785a86c501a69918ea52844_7466642129189982555_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-09-22 14:59:59",
+      "id": "21806",
+      "startTime": "2026-08-27 16:00:00",
+      "subtitle": "「聚星源动」祈愿",
+      "title": "「聚星源动」祈愿：「轰隆雷鸣波·伊涅芙(雷)」概率UP！",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/18/81c378b75443f31b4f94d24462b8e10c_963347245316198726_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-09-22 14:59:59",
+      "id": "21808",
+      "startTime": "2026-08-27 16:00:00",
+      "subtitle": "「神铸赋形」祈愿",
+      "title": "「神铸赋形」祈愿：「长柄武器·血染荒城」「长柄武器·支离轮光」概率UP！",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2024/09/19/23c15f9e70bc326b477ae92e295c205d_2737809860351449967.jpg",
+      "contentURL": null,
+      "endTime": "2026-09-14 03:59:59",
+      "id": "20748",
+      "startTime": "2026-08-27 12:00:00",
+      "subtitle": "「七圣召唤」热斗模式",
+      "title": "「七圣召唤」热斗模式：列阵斗巧",
+      "type": "活动公告"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/04/db10d48a01e2f7fb9da5bf296b777a65_9000723323909021112_transformed.jpg",
       "contentURL": null,
       "endTime": "2026-09-14 03:59:59",
@@ -302,5 +342,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-08-26T17:13:20Z"
+  "updatedAt": "2026-08-27T09:52:31Z"
 }
