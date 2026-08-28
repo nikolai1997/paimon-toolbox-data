@@ -31,16 +31,6 @@
       "type": "游戏公告"
     },
     {
-      "banner": null,
-      "contentURL": null,
-      "endTime": "2026-08-28 23:59:59",
-      "id": "21873",
-      "startTime": "2026-08-20 13:30:00",
-      "subtitle": "哥伦比娅印象服登场 至冬周边上架",
-      "title": "哥伦比娅印象服登场 至冬周边上架",
-      "type": "游戏公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/announcement/2022/08/17/327eae0272f12b7104cfa472cfee0568_3991050071173177124.jpg",
       "contentURL": null,
       "endTime": "2027-12-31 00:00:00",
@@ -342,5 +332,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-08-27T09:52:31Z"
+  "updatedAt": "2026-08-28T18:44:57Z"
 }
