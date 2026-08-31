@@ -5227,5 +5227,93 @@
       15405
     ],
     "version": "7.0"
+  },
+  {
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/18/ea633682a29be769b52d32744d6d9b8a_5416475972197875744_transformed.jpg",
+    "from": "2026-08-29T18:00:00+08:00",
+    "name": "孤灯夜访",
+    "to": "2026-09-22T14:59:00+08:00",
+    "type": 301,
+    "upOrangeList": [
+      10000120
+    ],
+    "upPurpleList": [
+      10000108,
+      10000110,
+      10000121
+    ],
+    "version": "7.0"
+  },
+  {
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/18/1a55332fb785a86c501a69918ea52844_7466642129189982555_transformed.jpg",
+    "from": "2026-08-29T18:00:00+08:00",
+    "name": "聚星源动",
+    "to": "2026-09-22T14:59:00+08:00",
+    "type": 400,
+    "upOrangeList": [
+      10000116
+    ],
+    "upPurpleList": [
+      10000108,
+      10000110,
+      10000121
+    ],
+    "version": "7.0"
+  },
+  {
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/18/81c378b75443f31b4f94d24462b8e10c_963347245316198726_transformed.jpg",
+    "from": "2026-08-29T18:00:00+08:00",
+    "name": "神铸赋形",
+    "to": "2026-09-22T14:59:00+08:00",
+    "type": 302,
+    "upOrangeList": [
+      13515,
+      13516
+    ],
+    "upPurpleList": [
+      11402,
+      12401,
+      13407,
+      14409,
+      15402
+    ],
+    "version": "7.0"
+  },
+  {
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/18/ea633682a29be769b52d32744d6d9b8a_5416475972197875744_transformed.jpg",
+    "from": "2026-08-27T16:00:00+08:00",
+    "name": "孤灯夜访",
+    "to": "2026-09-22T14:59:59+08:00",
+    "type": 301,
+    "upOrangeList": [
+      10000120
+    ],
+    "upPurpleList": [],
+    "version": ""
+  },
+  {
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/18/1a55332fb785a86c501a69918ea52844_7466642129189982555_transformed.jpg",
+    "from": "2026-08-27T16:00:00+08:00",
+    "name": "聚星源动",
+    "to": "2026-09-22T14:59:59+08:00",
+    "type": 400,
+    "upOrangeList": [
+      10000116
+    ],
+    "upPurpleList": [],
+    "version": ""
+  },
+  {
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/18/81c378b75443f31b4f94d24462b8e10c_963347245316198726_transformed.jpg",
+    "from": "2026-08-27T16:00:00+08:00",
+    "name": "神铸赋形",
+    "to": "2026-09-22T14:59:59+08:00",
+    "type": 302,
+    "upOrangeList": [
+      13516,
+      13515
+    ],
+    "upPurpleList": [],
+    "version": ""
   }
 ]
