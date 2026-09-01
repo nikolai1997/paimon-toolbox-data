@@ -31,6 +31,16 @@
       "type": "游戏公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2023/01/31/ab26bd549f42e9994d6946ae0f286b2e_6457522219866312059.jpg",
+      "contentURL": null,
+      "endTime": "2026-10-01 12:00:00",
+      "id": "21904",
+      "startTime": "2026-09-01 12:00:01",
+      "subtitle": "「每日签到」有奖活动",
+      "title": "米游社原神区「每日签到」有奖活动开启 ",
+      "type": "游戏公告"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/announcement/2022/08/17/327eae0272f12b7104cfa472cfee0568_3991050071173177124.jpg",
       "contentURL": null,
       "endTime": "2027-12-31 00:00:00",
@@ -38,16 +48,6 @@
       "startTime": "2026-08-12 08:00:00",
       "subtitle": "填写问卷领取原石奖励",
       "title": "游戏调研",
-      "type": "游戏公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2023/01/31/ab26bd549f42e9994d6946ae0f286b2e_6457522219866312059.jpg",
-      "contentURL": null,
-      "endTime": "2026-09-01 12:00:00",
-      "id": "21839",
-      "startTime": "2026-08-01 12:00:01",
-      "subtitle": "「每日签到」有奖活动",
-      "title": "米游社原神区「每日签到」有奖活动开启 ",
       "type": "游戏公告"
     },
     {
@@ -322,5 +322,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-08-31T20:07:41Z"
+  "updatedAt": "2026-09-01T05:13:04Z"
 }
