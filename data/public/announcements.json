@@ -171,36 +171,6 @@
       "type": "活动公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/05/4162840e0955f9c39dce2bfd6959509a_5472030932343604302_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-09-01 17:59:00",
-      "id": "21803",
-      "startTime": "2026-08-10 12:00:00",
-      "subtitle": "「冰绡鹄影」祈愿",
-      "title": "「冰绡鹄影」祈愿：「翾风回雪·奥黛塔(冰)」概率UP！",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/04/63006e3c4f92fb7fa4986657a23f1210_7782385828351251329_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-09-01 17:59:00",
-      "id": "21804",
-      "startTime": "2026-08-10 12:00:00",
-      "subtitle": "「炉边烬影」祈愿",
-      "title": "「炉边烬影」祈愿：「孤暝厄月·阿蕾奇诺(火)」概率UP！",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/04/d5e3aec4eeecbaaaeea500ea682b7a7b_2648436946302119594_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-09-01 17:59:00",
-      "id": "21807",
-      "startTime": "2026-08-10 12:00:00",
-      "subtitle": "「神铸赋形」祈愿",
-      "title": "「神铸赋形」祈愿：「单手剑·白湖冬羽」「长柄武器·赤月之形」概率UP！",
-      "type": "活动公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/04/8ccf9de7bd2104845c36eee6729bdfe9_6530527266543858835_transformed.jpg",
       "contentURL": null,
       "endTime": "2026-09-22 14:59:59",
@@ -322,5 +292,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-09-01T05:13:04Z"
+  "updatedAt": "2026-09-01T10:10:11Z"
 }
