@@ -111,6 +111,16 @@
       "type": "游戏公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/18/ece3ceae6b8382d01864659c07869547_5391114862227309955_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-09-17 03:59:59",
+      "id": "21816",
+      "startTime": "2026-09-05 12:00:00",
+      "subtitle": "「禁界拟想阵地战」",
+      "title": "「禁界拟想阵地战」活动：阵地保卫挑战",
+      "type": "活动公告"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/18/ea633682a29be769b52d32744d6d9b8a_5416475972197875744_transformed.jpg",
       "contentURL": null,
       "endTime": "2026-09-22 14:59:59",
@@ -271,6 +281,16 @@
       "type": "千星奇域"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/06/e023b0ada4fd2e3da9ab947798afc57e_8730111518355986934_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-09-21 03:59:59",
+      "id": "21831",
+      "startTime": "2026-09-05 12:00:00",
+      "subtitle": "「游赏耀星·恬乐」",
+      "title": "「游赏耀星·恬乐」参与获得缤纷惊喜礼盒代币「奇丽凝晶」",
+      "type": "千星奇域"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/06/c5ba27620c834559c236386d71da3183_2392511044781496362_transformed.jpg",
       "contentURL": null,
       "endTime": "2026-09-23 07:00:00",
@@ -292,5 +312,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-09-04T22:22:02Z"
+  "updatedAt": "2026-09-05T05:46:56Z"
 }
