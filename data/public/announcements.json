@@ -111,6 +111,16 @@
       "type": "游戏公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/18/09f82a26d261b4da2e26ae3b2eccd06b_880482125883082433_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-09-21 03:59:59",
+      "id": "20888",
+      "startTime": "2026-09-12 12:00:00",
+      "subtitle": "「盛材移涌」",
+      "title": "「盛材移涌」活动：天赋培养素材、武器突破素材双倍掉落",
+      "type": "活动公告"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/18/ece3ceae6b8382d01864659c07869547_5391114862227309955_transformed.jpg",
       "contentURL": null,
       "endTime": "2026-09-17 03:59:59",
@@ -312,5 +322,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-09-12T00:19:56Z"
+  "updatedAt": "2026-09-12T05:49:06Z"
 }
