@@ -181,26 +181,6 @@
       "type": "活动公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2024/09/19/23c15f9e70bc326b477ae92e295c205d_2737809860351449967.jpg",
-      "contentURL": null,
-      "endTime": "2026-09-14 03:59:59",
-      "id": "20748",
-      "startTime": "2026-08-27 12:00:00",
-      "subtitle": "「七圣召唤」热斗模式",
-      "title": "「七圣召唤」热斗模式：列阵斗巧",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/04/db10d48a01e2f7fb9da5bf296b777a65_9000723323909021112_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-09-14 03:59:59",
-      "id": "21813",
-      "startTime": "2026-08-26 12:00:00",
-      "subtitle": "「险境征者竞锋大赛」",
-      "title": "「险境征者竞锋大赛」活动：参与邀请「猫尾特调·迪奥娜(冰)」",
-      "type": "活动公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/04/d030bb81196ef3fff410d9f9c4d6120d_72547075229534431_transformed.jpg",
       "contentURL": null,
       "endTime": "2026-09-22 03:59:59",
@@ -342,5 +322,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-09-13T11:56:37Z"
+  "updatedAt": "2026-09-13T22:25:46Z"
 }
