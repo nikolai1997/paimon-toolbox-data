@@ -3,7 +3,7 @@
     {
       "kind": "metadata",
       "path": "metadata.json",
-      "sha256": "f375cec50bf87cddbb33d656ace65adb8647f8673d81b073c5e5ffeb99a626c3"
+      "sha256": "9895ee6177badece3ee4c886f5aa1454642c6fec06beb6fbcb257b63f056e9b3"
     },
     {
       "kind": "characters",
@@ -23,24 +23,24 @@
     {
       "kind": "gachaEvents",
       "path": "gacha-events.json",
-      "sha256": "dbe97ed3e003a4c8f0277c6e8422969f85c0bd92f07705c9edd214fdd0a6fdd1"
+      "sha256": "f779f7a050a946f76f21ea64cfa321d9627079450ff60e89b8362e3206c61f3a"
     },
     {
       "kind": "config",
       "path": "config.json",
-      "sha256": "889dc28076f57bbbfadb54fbe59ce05be422e0f50148a6a6ff0848dbe086b837"
+      "sha256": "cb0c4481e24f244d9c7fb9c7a910a4617def401ae099ec07ee1e28edec26ed99"
     },
     {
       "kind": "latest",
       "path": "latest.json",
-      "sha256": "4a515a8ac2f37dc44e457aa5b146fc81fb9436c6dec13bfc3403efe2683ca7ac"
+      "sha256": "0c2674fd0787f13c3b3d688d9f61ed984769a59314efc9240a8dbe4ae9be0837"
     },
     {
       "kind": "announcements",
       "path": "announcements.json",
-      "sha256": "897e4e4908eda0bda50a7e6c698eedf569ec424de3dd3523f4dc257306e0adf6"
+      "sha256": "bb8a4fefb9f0e2abc0d7378a5275351a5f9d5976e7a5ee62e7540f94836be585"
     }
   ],
-  "generatedAt": "2026-09-18T22:38:34Z",
+  "generatedAt": "2026-09-19T01:12:00Z",
   "schemaVersion": 1
 }
