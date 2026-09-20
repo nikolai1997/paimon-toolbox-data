@@ -41,6 +41,16 @@
       "type": "游戏公告"
     },
     {
+      "banner": null,
+      "contentURL": null,
+      "endTime": "2026-09-30 23:59:59",
+      "id": "21934",
+      "startTime": "2026-09-20 12:00:00",
+      "subtitle": "六周年多款周边开售 诸神盛宴玩偶登场",
+      "title": "六周年多款周边开售 诸神盛宴玩偶登场",
+      "type": "游戏公告"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2022/10/24/0a59babf7a59cca3ba8e7d3083fb8f15_5110808616473819596.jpg",
       "contentURL": null,
       "endTime": "2026-09-21 23:59:59",
@@ -332,5 +342,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-09-19T20:43:21Z"
+  "updatedAt": "2026-09-20T06:19:56Z"
 }
