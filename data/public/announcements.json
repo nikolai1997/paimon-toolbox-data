@@ -61,26 +61,6 @@
       "type": "游戏公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2022/10/24/0a59babf7a59cca3ba8e7d3083fb8f15_5110808616473819596.jpg",
-      "contentURL": null,
-      "endTime": "2026-09-21 23:59:59",
-      "id": "21925",
-      "startTime": "2026-09-18 10:00:00",
-      "subtitle": "版本满意度调研问卷",
-      "title": "版本满意度调研问卷开启",
-      "type": "游戏公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/09/90213f0c51d28fafb4b1bc6167f99160_6602566363398561281_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-09-21 23:59:59",
-      "id": "21916",
-      "startTime": "2026-09-14 13:00:00",
-      "subtitle": "至冬篇OST上线",
-      "title": "《原神》至冬篇OST《悯宥慈怜之垠 Where Mercy Endures》正式上线",
-      "type": "游戏公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2023/01/31/ab26bd549f42e9994d6946ae0f286b2e_6457522219866312059.jpg",
       "contentURL": null,
       "endTime": "2026-10-01 12:00:00",
@@ -401,6 +381,16 @@
       "type": "活动公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/17/7dc412754c505f7b09e800b98b0f9a27_3564084152862419406_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-11-03 04:00:00",
+      "id": "21897",
+      "startTime": "2026-09-22 00:00:00",
+      "subtitle": "「绮星盛会」",
+      "title": "「绮星盛会」",
+      "type": "千星奇域"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/06/bb3bc85680cbf3fe33a1f31e603d1bc7_8522465568370593073_transformed.jpg",
       "contentURL": null,
       "endTime": "2026-09-23 07:00:00",
@@ -422,5 +412,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-09-21T14:12:44Z"
+  "updatedAt": "2026-09-21T19:30:50Z"
 }
