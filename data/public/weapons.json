@@ -240,6 +240,26 @@
     "type": "弓"
   },
   {
+    "iconURL": "https://enka.network/ui/UI_EquipIcon_Catalyst_Bludnye.png",
+    "id": 14524,
+    "materials": [
+      "藏窖灵浆的斟酌",
+      "沉积残片",
+      "幻造萤屑",
+      "藏窖灵浆的酩酊",
+      "沉积结块",
+      "幻造裂晶",
+      "藏窖灵浆的酣畅",
+      "沉积增生物",
+      "幻造晶鳞石",
+      "藏窖灵浆的恣意"
+    ],
+    "name": "漩流颂歌",
+    "rarity": 5,
+    "stat": "生命值",
+    "type": "法器"
+  },
+  {
     "iconURL": "https://enka.network/ui/UI_EquipIcon_Catalyst_FairyGarden.png",
     "id": 14523,
     "materials": [
@@ -1100,20 +1120,29 @@
     "type": "双手剑"
   },
   {
+    "iconURL": "https://enka.network/ui/UI_EquipIcon_Sword_Samosvist.png",
+    "id": 11522,
+    "materials": [
+      "苍星军势的始动",
+      "灵生空根",
+      "嵌合种",
+      "苍星军势的集结",
+      "灵生分蘖节",
+      "并生嵌合胞",
+      "苍星军势的鸣令",
+      "灵生盘枝心",
+      "源生嵌合体",
+      "苍星军势的征服"
+    ],
+    "name": "蝶变",
+    "rarity": 5,
+    "stat": "暴击伤害",
+    "type": "单手剑"
+  },
+  {
     "iconURL": "https://enka.network/ui/UI_EquipIcon_Sword_WeaponQuestSnezhnaya.png",
     "id": 11521,
-    "materials": [
-      "凛雪帝皇的复生",
-      "沉积残片",
-      "幻造萤屑",
-      "凛雪帝皇的庆仪",
-      "沉积结块",
-      "幻造裂晶",
-      "凛雪帝皇的悲恤",
-      "沉积增生物",
-      "幻造晶鳞石",
-      "凛雪帝皇的辞决"
-    ],
+    "materials": [],
     "name": "星锋剑",
     "rarity": 5,
     "stat": "暴击率",
@@ -1458,6 +1487,26 @@
     "rarity": 5,
     "stat": "物理伤害加成",
     "type": "单手剑"
+  },
+  {
+    "iconURL": "https://enka.network/ui/UI_EquipIcon_Bow_Windtalker.png",
+    "id": 15437,
+    "materials": [
+      "凛雪帝皇的复生",
+      "沉积残片",
+      "嵌合种",
+      "凛雪帝皇的庆仪",
+      "沉积结块",
+      "并生嵌合胞",
+      "凛雪帝皇的悲恤",
+      "沉积增生物",
+      "源生嵌合体",
+      "凛雪帝皇的辞决"
+    ],
+    "name": "柔风游弦",
+    "rarity": 4,
+    "stat": "暴击率",
+    "type": "弓"
   },
   {
     "iconURL": "https://enka.network/ui/UI_EquipIcon_Bow_GlintstoneBow.png",
@@ -2058,6 +2107,26 @@
     "rarity": 4,
     "stat": "元素充能效率",
     "type": "弓"
+  },
+  {
+    "iconURL": "https://enka.network/ui/UI_EquipIcon_Catalyst_FrostScepter.png",
+    "id": 14437,
+    "materials": [
+      "凛雪帝皇的复生",
+      "灵生空根",
+      "幻造萤屑",
+      "凛雪帝皇的庆仪",
+      "灵生分蘖节",
+      "幻造裂晶",
+      "凛雪帝皇的悲恤",
+      "灵生盘枝心",
+      "幻造晶鳞石",
+      "凛雪帝皇的辞决"
+    ],
+    "name": "凝雪沉心",
+    "rarity": 4,
+    "stat": "暴击伤害",
+    "type": "法器"
   },
   {
     "iconURL": "https://enka.network/ui/UI_EquipIcon_Catalyst_GlintstoneCatalyst.png",
@@ -3638,6 +3707,46 @@
     "rarity": 4,
     "stat": "元素充能效率",
     "type": "双手剑"
+  },
+  {
+    "iconURL": "https://enka.network/ui/UI_EquipIcon_Sword_Fajian.png",
+    "id": 11438,
+    "materials": [
+      "漆黑陨铁的一粒",
+      "脆弱的骨片",
+      "新兵的徽记",
+      "漆黑陨铁的一片",
+      "结实的骨片",
+      "士官的徽记",
+      "漆黑陨铁的一角",
+      "石化的骨片",
+      "尉官的徽记",
+      "漆黑陨铁的一块"
+    ],
+    "name": "银釭",
+    "rarity": 4,
+    "stat": "攻击力",
+    "type": "单手剑"
+  },
+  {
+    "iconURL": "https://enka.network/ui/UI_EquipIcon_Sword_SpikedStake.png",
+    "id": 11437,
+    "materials": [
+      "藏窖灵浆的斟酌",
+      "灵生空根",
+      "嵌合种",
+      "藏窖灵浆的酩酊",
+      "灵生分蘖节",
+      "并生嵌合胞",
+      "藏窖灵浆的酣畅",
+      "灵生盘枝心",
+      "源生嵌合体",
+      "藏窖灵浆的恣意"
+    ],
+    "name": "新枝",
+    "rarity": 4,
+    "stat": "暴击伤害",
+    "type": "单手剑"
   },
   {
     "iconURL": "https://enka.network/ui/UI_EquipIcon_Sword_GlintstoneSword.png",

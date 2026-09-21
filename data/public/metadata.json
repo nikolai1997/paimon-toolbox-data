@@ -50,6 +50,100 @@
     {
       "cultivation": {
         "ascensionGemNames": [
+          "自在松石碎屑",
+          "自在松石断片",
+          "自在松石块",
+          "自在松石"
+        ],
+        "bossMaterialName": "游离者的裂甲",
+        "commonMaterialNames": [
+          "幻造萤屑",
+          "幻造裂晶",
+          "幻造晶鳞石"
+        ],
+        "localSpecialtyName": "金蕨",
+        "talentBookNames": [
+          "「荣光」的教导",
+          "「荣光」的指引",
+          "「荣光」的哲学"
+        ],
+        "weeklyBossMaterialName": "亵渎的新芽"
+      },
+      "element": "风",
+      "iconURL": "https://enka.network/ui/UI_AvatarIcon_Vesna.png",
+      "id": 10000143,
+      "materials": [
+        "自在松石碎屑",
+        "金蕨",
+        "幻造萤屑",
+        "自在松石断片",
+        "游离者的裂甲",
+        "幻造裂晶",
+        "自在松石块",
+        "幻造晶鳞石",
+        "自在松石",
+        "「荣光」的哲学",
+        "亵渎的新芽",
+        "智识之冕",
+        "「荣光」的教导",
+        "「荣光」的指引"
+      ],
+      "name": "薇斯纳",
+      "portraitURL": "https://enka.network/ui/UI_AvatarIcon_Side_Vesna.png",
+      "rarity": 5,
+      "region": "冬契军",
+      "weaponType": "单手剑"
+    },
+    {
+      "cultivation": {
+        "ascensionGemNames": [
+          "涤净青金碎屑",
+          "涤净青金断片",
+          "涤净青金块",
+          "涤净青金"
+        ],
+        "bossMaterialName": "焰中不灭花枝",
+        "commonMaterialNames": [
+          "嵌合种",
+          "并生嵌合胞",
+          "源生嵌合体"
+        ],
+        "localSpecialtyName": "霜仙花",
+        "talentBookNames": [
+          "「坚忍」的教导",
+          "「坚忍」的指引",
+          "「坚忍」的哲学"
+        ],
+        "weeklyBossMaterialName": "狂人的约束"
+      },
+      "element": "水",
+      "iconURL": "https://enka.network/ui/UI_AvatarIcon_Vodyanitsa.png",
+      "id": 10000140,
+      "materials": [
+        "涤净青金碎屑",
+        "霜仙花",
+        "嵌合种",
+        "涤净青金断片",
+        "焰中不灭花枝",
+        "并生嵌合胞",
+        "涤净青金块",
+        "源生嵌合体",
+        "涤净青金",
+        "「坚忍」的哲学",
+        "狂人的约束",
+        "智识之冕",
+        "「坚忍」的教导",
+        "「坚忍」的指引"
+      ],
+      "name": "沃雅妮莎",
+      "portraitURL": "https://enka.network/ui/UI_AvatarIcon_Side_Vodyanitsa.png",
+      "rarity": 5,
+      "region": "科洛列夫茨基剧团",
+      "weaponType": "法器"
+    },
+    {
+      "cultivation": {
+        "ascensionGemNames": [
           "哀叙冰玉碎屑",
           "哀叙冰玉断片",
           "哀叙冰玉块",
@@ -7179,14 +7273,14 @@
     },
     {
       "category": "素材",
-      "iconURL": "https://enka.network/ui/UI_ItemIcon_101332.png",
+      "iconURL": "https://enka.network/ui/UI_ItemIcon_101331.png",
       "id": 101331,
       "name": "雪杨木",
       "source": "野外采集\n推荐：至冬砍伐\n洞天百宝·木材购买获取\n木材转化"
     },
     {
       "category": "素材",
-      "iconURL": "https://enka.network/ui/UI_ItemIcon_101331.png",
+      "iconURL": "https://enka.network/ui/UI_ItemIcon_101332.png",
       "id": 101332,
       "name": "白桦木",
       "source": "野外采集\n推荐：至冬砍伐\n洞天百宝·木材购买获取\n木材转化"
@@ -10181,6 +10275,13 @@
       "source": "30级以上嵌合翼骏狮掉落"
     },
     {
+      "category": "角色培养素材",
+      "iconURL": "https://enka.network/ui/UI_ItemIcon_113092.png",
+      "id": 113092,
+      "name": "游离者的裂甲",
+      "source": "30级以上游雪的护刃掉落"
+    },
+    {
       "category": "武器突破素材",
       "iconURL": "https://enka.network/ui/UI_ItemIcon_114001.png",
       "id": 114001,
@@ -11952,6 +12053,13 @@
       "source": "「虹蛇的雨弦」专用的精炼道具。\n被弓手长期佩戴的护指，色彩鲜艳，制作精良。\n箭矢的准头有赖于弓手的经验，其人凝息拨弦的次数越多，弓与箭越能随心而动。搭弦挽弓便是练心，护指有多破损，心就有多锐利。"
     },
     {
+      "category": "精炼材料",
+      "iconURL": "https://enka.network/ui/UI_ItemIcon_200129.png",
+      "id": 200129,
+      "name": "青翦垂缨",
+      "source": "「银釭」的精炼材料。\n有着初采新茶香气的缨络，深蕴着「万象风角灵官」的灵力。轻拂秘银的剑身时，似能令其再焕锋锐。"
+    },
+    {
       "category": "鱼竿",
       "iconURL": "https://enka.network/ui/UI_ItemIcon_200900.png",
       "id": 200900,
@@ -12078,7 +12186,7 @@
       "source": "具有播放音乐与制造炫丽光效功能的挪德卡莱月矩力机关球，是周游壶灵阿嘟从挪德卡莱带回的纪念品。\n注视机关球上放出的光影，脑海中似乎就有某种意象浮现而出。借由「外景之能」，方可在壶中洞天构筑奇妙的挪德卡莱景致…"
     }
   ],
-  "updatedAt": "2026-09-21T19:30:50Z",
+  "updatedAt": "2026-09-21T23:21:33Z",
   "version": "genshin-db-2026.09.21",
   "weapons": [
     {
@@ -12320,6 +12428,26 @@
       "rarity": 5,
       "stat": "暴击率",
       "type": "弓"
+    },
+    {
+      "iconURL": "https://enka.network/ui/UI_EquipIcon_Catalyst_Bludnye.png",
+      "id": 14524,
+      "materials": [
+        "藏窖灵浆的斟酌",
+        "沉积残片",
+        "幻造萤屑",
+        "藏窖灵浆的酩酊",
+        "沉积结块",
+        "幻造裂晶",
+        "藏窖灵浆的酣畅",
+        "沉积增生物",
+        "幻造晶鳞石",
+        "藏窖灵浆的恣意"
+      ],
+      "name": "漩流颂歌",
+      "rarity": 5,
+      "stat": "生命值",
+      "type": "法器"
     },
     {
       "iconURL": "https://enka.network/ui/UI_EquipIcon_Catalyst_FairyGarden.png",
@@ -13182,20 +13310,29 @@
       "type": "双手剑"
     },
     {
+      "iconURL": "https://enka.network/ui/UI_EquipIcon_Sword_Samosvist.png",
+      "id": 11522,
+      "materials": [
+        "苍星军势的始动",
+        "灵生空根",
+        "嵌合种",
+        "苍星军势的集结",
+        "灵生分蘖节",
+        "并生嵌合胞",
+        "苍星军势的鸣令",
+        "灵生盘枝心",
+        "源生嵌合体",
+        "苍星军势的征服"
+      ],
+      "name": "蝶变",
+      "rarity": 5,
+      "stat": "暴击伤害",
+      "type": "单手剑"
+    },
+    {
       "iconURL": "https://enka.network/ui/UI_EquipIcon_Sword_WeaponQuestSnezhnaya.png",
       "id": 11521,
-      "materials": [
-        "凛雪帝皇的复生",
-        "沉积残片",
-        "幻造萤屑",
-        "凛雪帝皇的庆仪",
-        "沉积结块",
-        "幻造裂晶",
-        "凛雪帝皇的悲恤",
-        "沉积增生物",
-        "幻造晶鳞石",
-        "凛雪帝皇的辞决"
-      ],
+      "materials": [],
       "name": "星锋剑",
       "rarity": 5,
       "stat": "暴击率",
@@ -13540,6 +13677,26 @@
       "rarity": 5,
       "stat": "物理伤害加成",
       "type": "单手剑"
+    },
+    {
+      "iconURL": "https://enka.network/ui/UI_EquipIcon_Bow_Windtalker.png",
+      "id": 15437,
+      "materials": [
+        "凛雪帝皇的复生",
+        "沉积残片",
+        "嵌合种",
+        "凛雪帝皇的庆仪",
+        "沉积结块",
+        "并生嵌合胞",
+        "凛雪帝皇的悲恤",
+        "沉积增生物",
+        "源生嵌合体",
+        "凛雪帝皇的辞决"
+      ],
+      "name": "柔风游弦",
+      "rarity": 4,
+      "stat": "暴击率",
+      "type": "弓"
     },
     {
       "iconURL": "https://enka.network/ui/UI_EquipIcon_Bow_GlintstoneBow.png",
@@ -14140,6 +14297,26 @@
       "rarity": 4,
       "stat": "元素充能效率",
       "type": "弓"
+    },
+    {
+      "iconURL": "https://enka.network/ui/UI_EquipIcon_Catalyst_FrostScepter.png",
+      "id": 14437,
+      "materials": [
+        "凛雪帝皇的复生",
+        "灵生空根",
+        "幻造萤屑",
+        "凛雪帝皇的庆仪",
+        "灵生分蘖节",
+        "幻造裂晶",
+        "凛雪帝皇的悲恤",
+        "灵生盘枝心",
+        "幻造晶鳞石",
+        "凛雪帝皇的辞决"
+      ],
+      "name": "凝雪沉心",
+      "rarity": 4,
+      "stat": "暴击伤害",
+      "type": "法器"
     },
     {
       "iconURL": "https://enka.network/ui/UI_EquipIcon_Catalyst_GlintstoneCatalyst.png",
@@ -15720,6 +15897,46 @@
       "rarity": 4,
       "stat": "元素充能效率",
       "type": "双手剑"
+    },
+    {
+      "iconURL": "https://enka.network/ui/UI_EquipIcon_Sword_Fajian.png",
+      "id": 11438,
+      "materials": [
+        "漆黑陨铁的一粒",
+        "脆弱的骨片",
+        "新兵的徽记",
+        "漆黑陨铁的一片",
+        "结实的骨片",
+        "士官的徽记",
+        "漆黑陨铁的一角",
+        "石化的骨片",
+        "尉官的徽记",
+        "漆黑陨铁的一块"
+      ],
+      "name": "银釭",
+      "rarity": 4,
+      "stat": "攻击力",
+      "type": "单手剑"
+    },
+    {
+      "iconURL": "https://enka.network/ui/UI_EquipIcon_Sword_SpikedStake.png",
+      "id": 11437,
+      "materials": [
+        "藏窖灵浆的斟酌",
+        "灵生空根",
+        "嵌合种",
+        "藏窖灵浆的酩酊",
+        "灵生分蘖节",
+        "并生嵌合胞",
+        "藏窖灵浆的酣畅",
+        "灵生盘枝心",
+        "源生嵌合体",
+        "藏窖灵浆的恣意"
+      ],
+      "name": "新枝",
+      "rarity": 4,
+      "stat": "暴击伤害",
+      "type": "单手剑"
     },
     {
       "iconURL": "https://enka.network/ui/UI_EquipIcon_Sword_GlintstoneSword.png",

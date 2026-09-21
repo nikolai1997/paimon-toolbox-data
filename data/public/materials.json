@@ -1534,14 +1534,14 @@
   },
   {
     "category": "素材",
-    "iconURL": "https://enka.network/ui/UI_ItemIcon_101332.png",
+    "iconURL": "https://enka.network/ui/UI_ItemIcon_101331.png",
     "id": 101331,
     "name": "雪杨木",
     "source": "野外采集\n推荐：至冬砍伐\n洞天百宝·木材购买获取\n木材转化"
   },
   {
     "category": "素材",
-    "iconURL": "https://enka.network/ui/UI_ItemIcon_101331.png",
+    "iconURL": "https://enka.network/ui/UI_ItemIcon_101332.png",
     "id": 101332,
     "name": "白桦木",
     "source": "野外采集\n推荐：至冬砍伐\n洞天百宝·木材购买获取\n木材转化"
@@ -4536,6 +4536,13 @@
     "source": "30级以上嵌合翼骏狮掉落"
   },
   {
+    "category": "角色培养素材",
+    "iconURL": "https://enka.network/ui/UI_ItemIcon_113092.png",
+    "id": 113092,
+    "name": "游离者的裂甲",
+    "source": "30级以上游雪的护刃掉落"
+  },
+  {
     "category": "武器突破素材",
     "iconURL": "https://enka.network/ui/UI_ItemIcon_114001.png",
     "id": 114001,
@@ -6305,6 +6312,13 @@
     "id": 200128,
     "name": "练心",
     "source": "「虹蛇的雨弦」专用的精炼道具。\n被弓手长期佩戴的护指，色彩鲜艳，制作精良。\n箭矢的准头有赖于弓手的经验，其人凝息拨弦的次数越多，弓与箭越能随心而动。搭弦挽弓便是练心，护指有多破损，心就有多锐利。"
+  },
+  {
+    "category": "精炼材料",
+    "iconURL": "https://enka.network/ui/UI_ItemIcon_200129.png",
+    "id": 200129,
+    "name": "青翦垂缨",
+    "source": "「银釭」的精炼材料。\n有着初采新茶香气的缨络，深蕴着「万象风角灵官」的灵力。轻拂秘银的剑身时，似能令其再焕锋锐。"
   },
   {
     "category": "鱼竿",

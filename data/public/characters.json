@@ -49,6 +49,100 @@
   {
     "cultivation": {
       "ascensionGemNames": [
+        "自在松石碎屑",
+        "自在松石断片",
+        "自在松石块",
+        "自在松石"
+      ],
+      "bossMaterialName": "游离者的裂甲",
+      "commonMaterialNames": [
+        "幻造萤屑",
+        "幻造裂晶",
+        "幻造晶鳞石"
+      ],
+      "localSpecialtyName": "金蕨",
+      "talentBookNames": [
+        "「荣光」的教导",
+        "「荣光」的指引",
+        "「荣光」的哲学"
+      ],
+      "weeklyBossMaterialName": "亵渎的新芽"
+    },
+    "element": "风",
+    "iconURL": "https://enka.network/ui/UI_AvatarIcon_Vesna.png",
+    "id": 10000143,
+    "materials": [
+      "自在松石碎屑",
+      "金蕨",
+      "幻造萤屑",
+      "自在松石断片",
+      "游离者的裂甲",
+      "幻造裂晶",
+      "自在松石块",
+      "幻造晶鳞石",
+      "自在松石",
+      "「荣光」的哲学",
+      "亵渎的新芽",
+      "智识之冕",
+      "「荣光」的教导",
+      "「荣光」的指引"
+    ],
+    "name": "薇斯纳",
+    "portraitURL": "https://enka.network/ui/UI_AvatarIcon_Side_Vesna.png",
+    "rarity": 5,
+    "region": "冬契军",
+    "weaponType": "单手剑"
+  },
+  {
+    "cultivation": {
+      "ascensionGemNames": [
+        "涤净青金碎屑",
+        "涤净青金断片",
+        "涤净青金块",
+        "涤净青金"
+      ],
+      "bossMaterialName": "焰中不灭花枝",
+      "commonMaterialNames": [
+        "嵌合种",
+        "并生嵌合胞",
+        "源生嵌合体"
+      ],
+      "localSpecialtyName": "霜仙花",
+      "talentBookNames": [
+        "「坚忍」的教导",
+        "「坚忍」的指引",
+        "「坚忍」的哲学"
+      ],
+      "weeklyBossMaterialName": "狂人的约束"
+    },
+    "element": "水",
+    "iconURL": "https://enka.network/ui/UI_AvatarIcon_Vodyanitsa.png",
+    "id": 10000140,
+    "materials": [
+      "涤净青金碎屑",
+      "霜仙花",
+      "嵌合种",
+      "涤净青金断片",
+      "焰中不灭花枝",
+      "并生嵌合胞",
+      "涤净青金块",
+      "源生嵌合体",
+      "涤净青金",
+      "「坚忍」的哲学",
+      "狂人的约束",
+      "智识之冕",
+      "「坚忍」的教导",
+      "「坚忍」的指引"
+    ],
+    "name": "沃雅妮莎",
+    "portraitURL": "https://enka.network/ui/UI_AvatarIcon_Side_Vodyanitsa.png",
+    "rarity": 5,
+    "region": "科洛列夫茨基剧团",
+    "weaponType": "法器"
+  },
+  {
+    "cultivation": {
+      "ascensionGemNames": [
         "哀叙冰玉碎屑",
         "哀叙冰玉断片",
         "哀叙冰玉块",
