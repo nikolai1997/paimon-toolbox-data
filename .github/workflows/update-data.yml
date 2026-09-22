@@ -46,10 +46,10 @@ jobs:
       - name: Check generated changes
         id: changes
         run: |
-          if git diff --quiet -- data/public; then
-            echo "public_changed=false" >> "$GITHUB_OUTPUT"
-          else
+          if [ "$GITHUB_EVENT_NAME" = "push" ] || ! git diff --quiet -- data/public; then
             echo "public_changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "public_changed=false" >> "$GITHUB_OUTPUT"
           fi
 
           if git diff --quiet -- data/public data/releases data/manual/official-announcements.raw.json; then
