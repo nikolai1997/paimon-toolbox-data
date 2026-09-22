@@ -11,6 +11,7 @@ import shutil
 import ssl
 import subprocess
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -25,6 +26,7 @@ SNAP_METADATA_REPO_URL = "https://github.com/SnapHutaoRemasteringProject/Snap.Me
 GENSHIN_DB_REPO_URL = "https://github.com/theBowja/genshin-db.git"
 ASSET_BASE_URL = "https://enka.network/ui"
 OFFICIAL_ANNOUNCEMENTS_URL = "https://hk4e-ann-api.mihoyo.com/common/hk4e_cn/announcement/api/getAnnList?game=hk4e&game_biz=hk4e_cn&lang=zh-cn&bundle_id=hk4e_cn&platform=pc&region=cn_gf01&level=55&uid=100000000"
+MIYOUSHE_RECOMMENDED_URL = "https://bbs-api.miyoushe.com/post/wapi/getOfficialRecommendedPosts?gids=2"
 GENSHIN_DB_SPARSE_PATHS = [
     "src/data/ChineseSimplified/characters",
     "src/data/ChineseSimplified/talents",
@@ -152,12 +154,14 @@ def main() -> int:
             official_announcements_json=Path(args.official_announcements_json) if args.official_announcements_json else None,
             fetch_official_announcements=args.fetch_official_announcements,
             gacha_events_override=gacha_events_override,
+            current_public_announcements=public_dir / "announcements.json",
         )
     else:
         announcements = load_announcements(
             manual_dir,
             official_announcements_json=Path(args.official_announcements_json) if args.official_announcements_json else None,
             fetch_official_announcements=args.fetch_official_announcements,
+            current_public_announcements=public_dir / "announcements.json",
         )
         gacha_events = read_json(manual_dir / "gacha-events.json")
         if args.gacha_source == "snap-metadata":
@@ -314,14 +318,35 @@ def load_announcements(
     manual_dir: Path,
     official_announcements_json: Path | None,
     fetch_official_announcements: bool,
+    current_public_announcements: Path | None = None,
 ) -> dict[str, Any]:
-    announcements = read_json_if_exists(manual_dir / "announcements.json") or empty_announcements()
+    manual = read_json_if_exists(manual_dir / "announcements.json") or empty_announcements()
+    current = read_json_if_exists(current_public_announcements) if current_public_announcements else None
     official_json_path = official_announcements_json
     if fetch_official_announcements:
         official_json_path = fetch_official_announcements_json_if_available(manual_dir)
     if official_json_path is not None:
-        return convert_official_announcements(read_json(official_json_path))
-    return announcements
+        official = convert_announcement_payload(read_json(official_json_path))
+        return select_announcement_feed(official, current, manual)
+    return select_announcement_feed(current, manual)
+
+
+def select_announcement_feed(*feeds: dict[str, Any] | None) -> dict[str, Any]:
+    valid = [feed for feed in feeds if isinstance(feed, dict) and isinstance(feed.get("items"), list)]
+    if not valid:
+        raise RuntimeError("no valid announcement feed is available")
+    nonempty = [feed for feed in valid if feed.get("items")]
+    candidates = nonempty or valid
+    return max(candidates, key=announcement_freshness_key)
+
+
+def announcement_freshness_key(feed: dict[str, Any]) -> tuple[datetime, int, datetime]:
+    item_dates = []
+    for item in feed.get("items", []):
+        if isinstance(item, dict):
+            item_dates.append(parse_gacha_datetime(item.get("startsAt") or item.get("startTime")))
+    latest_item = max(item_dates, default=datetime.min.replace(tzinfo=timezone.utc))
+    return latest_item, len(feed.get("items", [])), parse_gacha_datetime(feed.get("updatedAt"))
 
 
 def build_official_manual_payload(
@@ -329,6 +354,7 @@ def build_official_manual_payload(
     official_announcements_json: Path | None,
     fetch_official_announcements: bool,
     gacha_events_override: list[dict[str, Any]] | None = None,
+    current_public_announcements: Path | None = None,
 ) -> RemoteDataPayload:
     required = [
         "characters.json",
@@ -344,6 +370,7 @@ def build_official_manual_payload(
         manual_dir,
         official_announcements_json=official_announcements_json,
         fetch_official_announcements=fetch_official_announcements,
+        current_public_announcements=current_public_announcements,
     )
 
     payload = RemoteDataPayload(
@@ -773,6 +800,50 @@ def convert_official_announcements(payload: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def convert_announcement_payload(payload: dict[str, Any]) -> dict[str, Any]:
+    items = (payload.get("data") or {}).get("list") or []
+    if items and isinstance(items[0], dict) and "subject" in items[0]:
+        return convert_miyoushe_recommended(payload)
+    return convert_official_announcements(payload)
+
+
+def convert_miyoushe_recommended(payload: dict[str, Any]) -> dict[str, Any]:
+    items: list[dict[str, Any]] = []
+    type_labels = {1: "公告", 2: "活动", 3: "资讯"}
+    for post in (payload.get("data") or {}).get("list") or []:
+        title = post.get("subject") or ""
+        post_id = str(post.get("post_id") or "")
+        if not title or not post_id:
+            continue
+        banner = normalize_optional_http_url(post.get("banner"))
+        items.append(
+            {
+                "id": f"miyoushe-{post_id}",
+                "title": title,
+                "subtitle": "",
+                "type": type_labels.get(post.get("official_type"), "官方资讯"),
+                "startTime": miyoushe_banner_date(banner),
+                "endTime": "",
+                "banner": banner,
+                "contentURL": f"https://www.miyoushe.com/ys/article/{post_id}",
+            }
+        )
+    return {
+        "schemaVersion": 1,
+        "updatedAt": isoformat_z(datetime.now(timezone.utc)),
+        "items": items,
+    }
+
+
+def miyoushe_banner_date(banner: str | None) -> str:
+    if not banner:
+        return ""
+    match = re.search(r"/upload/(\d{4})/(\d{2})/(\d{2})/", banner)
+    if not match:
+        return ""
+    return f"{match.group(1)}-{match.group(2)}-{match.group(3)} 00:00:00"
+
+
 def normalize_announcement_feed(feed: dict[str, Any]) -> dict[str, Any]:
     normalized = dict(feed)
     items = feed.get("items")
@@ -1075,13 +1146,34 @@ def add_asset_url(item: dict[str, Any], field: str, asset_name: str) -> None:
 def fetch_official_announcements_json(manual_dir: Path) -> Path:
     manual_dir.mkdir(parents=True, exist_ok=True)
     target = manual_dir / "official-announcements.raw.json"
-    request = urllib.request.Request(
-        OFFICIAL_ANNOUNCEMENTS_URL,
-        headers={"User-Agent": "GenshinToolboxDataUpdater/1.0"},
-    )
-    with urlopen_with_certifi_fallback(request, timeout=20) as response:
-        target.write_bytes(response.read())
-    return target
+    sources = [
+        (OFFICIAL_ANNOUNCEMENTS_URL, convert_official_announcements),
+        (MIYOUSHE_RECOMMENDED_URL, convert_miyoushe_recommended),
+    ]
+    failures: list[str] = []
+    for source_url, converter in sources:
+        for attempt in range(2):
+            request = urllib.request.Request(
+                source_url,
+                headers={
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
+                    "Referer": "https://www.miyoushe.com/ys/",
+                    "Origin": "https://www.miyoushe.com",
+                },
+            )
+            try:
+                with urlopen_with_certifi_fallback(request, timeout=20) as response:
+                    raw = response.read()
+                payload = json.loads(raw)
+                if not converter(payload).get("items"):
+                    raise RuntimeError("source returned an empty announcement feed")
+                target.write_bytes(raw)
+                return target
+            except Exception as error:
+                failures.append(f"{urllib.parse.urlparse(source_url).netloc}: {error}")
+                if attempt == 0:
+                    time.sleep(1)
+    raise RuntimeError("; ".join(failures))
 
 
 def fetch_official_announcements_json_if_available(manual_dir: Path) -> Path | None:
