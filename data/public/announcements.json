@@ -21,6 +21,16 @@
       "type": "游戏公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/announcement/2020/11/11/a539394edc88c73effd030507be02681_8843944720719944518.jpg",
+      "contentURL": null,
+      "endTime": "2026-11-04 06:00:00",
+      "id": "21956",
+      "startTime": "2026-09-23 08:00:00",
+      "subtitle": "更新内容汇总",
+      "title": "游戏更新修复与优化说明",
+      "type": "游戏公告"
+    },
+    {
       "banner": null,
       "contentURL": null,
       "endTime": "2026-11-03 00:00:00",
@@ -352,5 +362,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-09-23T00:36:37Z"
+  "updatedAt": "2026-09-23T06:00:17Z"
 }
