@@ -1,13 +1,23 @@
 {
   "items": [
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/16/b19883fa2d3942162cc4bbd6fb547124_8131151566715001119_transformed.jpg",
+      "banner": null,
       "contentURL": null,
-      "endTime": "2026-09-23 06:00:00",
-      "id": "21928",
-      "startTime": "2026-09-21 11:10:00",
-      "subtitle": "7.1版本更新维护预告",
-      "title": "7.1版本更新维护预告",
+      "endTime": "2026-11-04 06:00:00",
+      "id": "21947",
+      "startTime": "2026-09-23 07:00:00",
+      "subtitle": "7.1版本现已开启",
+      "title": "全新内容一览：角色·祈愿·武器·剧情·版本活动等",
+      "type": "游戏公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/17/2488a9f907fba435fa2aa1f5711d0ca4_1592596117700879431_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-11-04 06:00:00",
+      "id": "21894",
+      "startTime": "2026-09-23 07:00:00",
+      "subtitle": "7.1版本更新说明",
+      "title": "「往冥府的安魂歌」7.1版本更新说明",
       "type": "游戏公告"
     },
     {
@@ -18,36 +28,6 @@
       "startTime": "2026-09-12 21:15:00",
       "subtitle": "7.1版本《原神》六周年福利速览",
       "title": "7.1版本《原神》六周年福利速览",
-      "type": "游戏公告"
-    },
-    {
-      "banner": null,
-      "contentURL": null,
-      "endTime": "2026-09-23 06:00:00",
-      "id": "21862",
-      "startTime": "2026-08-12 07:00:00",
-      "subtitle": "7.0版本全新内容一览",
-      "title": "「至冬」现已开放！",
-      "type": "游戏公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/07/31/8886b1681db55f19506aebd405c89484_1157374434137217233_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-09-23 06:00:00",
-      "id": "21819",
-      "startTime": "2026-08-12 07:00:00",
-      "subtitle": "7.0版本更新说明",
-      "title": "「无神怜爱的雪国」7.0版本更新说明",
-      "type": "游戏公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/announcement/2020/11/11/a539394edc88c73effd030507be02681_8843944720719944518.jpg",
-      "contentURL": null,
-      "endTime": "2026-09-23 06:00:00",
-      "id": "21867",
-      "startTime": "2026-08-12 08:00:00",
-      "subtitle": "更新内容汇总",
-      "title": "游戏更新修复与优化说明",
       "type": "游戏公告"
     },
     {
@@ -118,16 +98,6 @@
       "startTime": "2021-08-31 00:00:00",
       "subtitle": "防沉迷说明",
       "title": "《原神》防沉迷系统说明",
-      "type": "游戏公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/12/03/07ea55cd37ec7881c25500e101a50c56_1948804034911099900_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2035-12-01 00:00:00",
-      "id": "21456",
-      "startTime": "2025-11-07 00:00:00",
-      "subtitle": "千星奇域声明",
-      "title": "千星奇域声明",
       "type": "游戏公告"
     },
     {
@@ -281,46 +251,6 @@
       "type": "活动公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/18/ea633682a29be769b52d32744d6d9b8a_5416475972197875744_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-09-22 14:59:59",
-      "id": "21805",
-      "startTime": "2026-08-27 16:00:00",
-      "subtitle": "「孤灯夜访」祈愿",
-      "title": "「孤灯夜访」祈愿：「诡灯陌影·菲林斯(雷)」概率UP！",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/18/1a55332fb785a86c501a69918ea52844_7466642129189982555_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-09-22 14:59:59",
-      "id": "21806",
-      "startTime": "2026-08-27 16:00:00",
-      "subtitle": "「聚星源动」祈愿",
-      "title": "「聚星源动」祈愿：「轰隆雷鸣波·伊涅芙(雷)」概率UP！",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/18/81c378b75443f31b4f94d24462b8e10c_963347245316198726_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-09-22 14:59:59",
-      "id": "21808",
-      "startTime": "2026-08-27 16:00:00",
-      "subtitle": "「神铸赋形」祈愿",
-      "title": "「神铸赋形」祈愿：「长柄武器·血染荒城」「长柄武器·支离轮光」概率UP！",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/04/8ccf9de7bd2104845c36eee6729bdfe9_6530527266543858835_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-09-22 14:59:59",
-      "id": "21809",
-      "startTime": "2026-08-10 12:00:00",
-      "subtitle": "「无神怜爱的雪国」",
-      "title": "「无神怜爱的雪国」时限内完成魔神任务，可额外获得原石、角色突破素材等奖励",
-      "type": "活动公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/04/937b3de28b221d596ba6507aff61ba1d_693055535867052384_transformed.jpg",
       "contentURL": null,
       "endTime": "2026-11-03 14:59:59",
@@ -341,16 +271,6 @@
       "type": "活动公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2024/08/15/fe6251f7e7d93e3670d59fa03f4066df_7611091712380344688.jpg",
-      "contentURL": null,
-      "endTime": "2026-09-23 07:00:00",
-      "id": "20661",
-      "startTime": "2026-08-10 12:00:00",
-      "subtitle": "「七圣召唤」铸境研炼",
-      "title": "「七圣召唤」铸境研炼：奕思巧战",
-      "type": "活动公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/05/28/9d9818e0badc0b90e9c6d7e10a9023ce_7914250625094827580_transformed.png",
       "contentURL": null,
       "endTime": "2026-11-02 03:59:00",
@@ -358,26 +278,6 @@
       "startTime": "2026-08-08 12:00:00",
       "subtitle": "「砺行修远」",
       "title": "「砺行修远」：勤修馈赠",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/06/17/7134e2de2f662c060d0d5fde264f9718_1671630651746040981_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-09-22 14:59:59",
-      "id": "21750",
-      "startTime": "2026-06-29 12:00:00",
-      "subtitle": "「当我们抬头望月亮」",
-      "title": "「当我们抬头望月亮」时限内完成探索任务，可额外获得原石*400奖励",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/05/07/c37b7eb5cb7dcb7dafcc5273797fd124_8370928033296917257_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-09-23 07:00:00",
-      "id": "21707",
-      "startTime": "2026-06-29 12:00:00",
-      "subtitle": "「解探月域，琢炼宵晖」",
-      "title": "「解探月域，琢炼宵晖」活动：新手自选邀约「奔行世间」常驻祈愿5星角色",
       "type": "活动公告"
     },
     {
@@ -441,26 +341,16 @@
       "type": "千星奇域"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/06/bb3bc85680cbf3fe33a1f31e603d1bc7_8522465568370593073_transformed.jpg",
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/12/03/07ea55cd37ec7881c25500e101a50c56_1948804034911099900_transformed.jpg",
       "contentURL": null,
-      "endTime": "2026-09-23 07:00:00",
-      "id": "21832",
-      "startTime": "2026-08-11 12:00:00",
-      "subtitle": "「幻演赛季」",
-      "title": "「幻演赛季」赛季开启公告说明",
-      "type": "千星奇域"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/06/c5ba27620c834559c236386d71da3183_2392511044781496362_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-09-23 07:00:00",
-      "id": "21830",
-      "startTime": "2026-08-11 12:00:00",
-      "subtitle": "「绮衣珍赏·温煦」",
-      "title": "「绮衣珍赏·温煦」参与获得自选奇偶装扮套装「琥色蜜酿」一套",
+      "endTime": "2035-12-01 00:00:00",
+      "id": "21456",
+      "startTime": "2025-11-07 00:00:00",
+      "subtitle": "千星奇域声明",
+      "title": "千星奇域声明",
       "type": "千星奇域"
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-09-22T05:00:11Z"
+  "updatedAt": "2026-09-23T00:36:37Z"
 }
