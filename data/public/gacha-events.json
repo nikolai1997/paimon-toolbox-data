@@ -5281,31 +5281,39 @@
   },
   {
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/11/1ac93244f05eebd065627a7d7b06c028_4633734522165510386_transformed.jpg",
-    "from": "2026-09-21T12:00:00+08:00",
+    "from": "2026-09-23T06:00:00+08:00",
     "name": "煦风欢舞时",
     "to": "2026-10-13T17:59:00+08:00",
     "type": 301,
     "upOrangeList": [
       10000143
     ],
-    "upPurpleList": [],
-    "version": ""
+    "upPurpleList": [
+      10000036,
+      10000039,
+      10000076
+    ],
+    "version": "7.1"
   },
   {
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/11/ed5b6858865abee281e907f4bb311338_2361939764776998707_transformed.jpg",
-    "from": "2026-09-21T12:00:00+08:00",
+    "from": "2026-09-23T06:00:00+08:00",
     "name": "涌浪叙歌",
     "to": "2026-10-13T17:59:00+08:00",
     "type": 400,
     "upOrangeList": [
       10000140
     ],
-    "upPurpleList": [],
-    "version": ""
+    "upPurpleList": [
+      10000036,
+      10000039,
+      10000076
+    ],
+    "version": "7.1"
   },
   {
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/11/b3be26ece1baf3366ea495d364a789d2_4898269335729252786_transformed.jpg",
-    "from": "2026-09-21T12:00:00+08:00",
+    "from": "2026-09-23T06:00:00+08:00",
     "name": "神铸赋形",
     "to": "2026-10-13T17:59:00+08:00",
     "type": 302,
@@ -5313,7 +5321,13 @@
       11522,
       14524
     ],
-    "upPurpleList": [],
-    "version": ""
+    "upPurpleList": [
+      11437,
+      12401,
+      13401,
+      14437,
+      15437
+    ],
+    "version": "7.1"
   }
 ]
