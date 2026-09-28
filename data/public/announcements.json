@@ -31,6 +31,16 @@
       "type": "游戏公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/24/964bab2b29fb160d316b31989ae7552a_4606522837066325940_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-10-18 23:59:59",
+      "id": "21965",
+      "startTime": "2026-09-28 12:00:00",
+      "subtitle": "「周年拾光册」——《原神》网页活动上线！",
+      "title": "「周年拾光册」网页活动上线—回顾旅途精彩瞬间还有原石奖励哦！",
+      "type": "游戏公告"
+    },
+    {
       "banner": null,
       "contentURL": null,
       "endTime": "2026-11-03 00:00:00",
@@ -119,6 +129,16 @@
       "subtitle": "公平运营声明",
       "title": "《原神》公平运营声明",
       "type": "游戏公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/10/23/d030bb81196ef3fff410d9f9c4d6120d_5245917935282258365_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-11-03 03:59:59",
+      "id": "21168",
+      "startTime": "2026-09-28 12:00:00",
+      "subtitle": "「幽境危战」",
+      "title": "「幽境危战」活动：紊乱地脉挑战",
+      "type": "活动公告"
     },
     {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/11/6788dbf108de54a3c269127dbd14cef1_3820972780871244293_transformed.jpg",
@@ -362,5 +382,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-09-24T15:11:36Z"
+  "updatedAt": "2026-09-28T06:57:18Z"
 }
