@@ -41,6 +41,16 @@
       "type": "游戏公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/24/d5d12d496f46e403d78177559d8d2ef6_2323066629565843039_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-10-07 12:00:00",
+      "id": "21984",
+      "startTime": "2026-09-28 18:00:00",
+      "subtitle": "社区有奖盖楼活动",
+      "title": "「相伴同行，共赴新章」社区有奖盖楼活动现已开启！",
+      "type": "游戏公告"
+    },
+    {
       "banner": null,
       "contentURL": null,
       "endTime": "2026-11-03 00:00:00",
@@ -382,5 +392,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-09-28T06:57:18Z"
+  "updatedAt": "2026-09-28T15:31:21Z"
 }
