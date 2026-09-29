@@ -51,6 +51,16 @@
       "type": "游戏公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/24/0dd01ee61834d4f7509812f24599a503_5903912206844665048_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-10-06 23:59:59",
+      "id": "21985",
+      "startTime": "2026-09-29 13:00:00",
+      "subtitle": "六周年主题曲PV正式上线",
+      "title": "《原神》六周年主题曲PV正式上线",
+      "type": "游戏公告"
+    },
+    {
       "banner": null,
       "contentURL": null,
       "endTime": "2026-11-03 00:00:00",
@@ -392,5 +402,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-09-28T15:31:21Z"
+  "updatedAt": "2026-09-29T08:34:16Z"
 }
