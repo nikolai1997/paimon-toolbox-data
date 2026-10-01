@@ -41,6 +41,16 @@
       "type": "游戏公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2023/01/31/ab26bd549f42e9994d6946ae0f286b2e_6457522219866312059.jpg",
+      "contentURL": null,
+      "endTime": "2026-11-01 12:00:00",
+      "id": "21987",
+      "startTime": "2026-10-01 12:00:01",
+      "subtitle": "「每日签到」有奖活动",
+      "title": "米游社原神区「每日签到」有奖活动开启 ",
+      "type": "游戏公告"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/24/d5d12d496f46e403d78177559d8d2ef6_2323066629565843039_transformed.jpg",
       "contentURL": null,
       "endTime": "2026-10-07 12:00:00",
@@ -68,26 +78,6 @@
       "startTime": "2026-09-12 21:15:00",
       "subtitle": "7.1版本《原神》六周年福利速览",
       "title": "7.1版本《原神》六周年福利速览",
-      "type": "游戏公告"
-    },
-    {
-      "banner": null,
-      "contentURL": null,
-      "endTime": "2026-09-30 23:59:59",
-      "id": "21934",
-      "startTime": "2026-09-20 12:00:00",
-      "subtitle": "六周年多款周边开售 诸神盛宴玩偶登场",
-      "title": "六周年多款周边开售 诸神盛宴玩偶登场",
-      "type": "游戏公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2023/01/31/ab26bd549f42e9994d6946ae0f286b2e_6457522219866312059.jpg",
-      "contentURL": null,
-      "endTime": "2026-10-01 12:00:00",
-      "id": "21904",
-      "startTime": "2026-09-01 12:00:01",
-      "subtitle": "「每日签到」有奖活动",
-      "title": "米游社原神区「每日签到」有奖活动开启 ",
       "type": "游戏公告"
     },
     {
@@ -402,5 +392,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-09-29T08:34:16Z"
+  "updatedAt": "2026-10-01T05:59:09Z"
 }
