@@ -181,46 +181,6 @@
       "type": "活动公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/11/6788dbf108de54a3c269127dbd14cef1_3820972780871244293_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-10-12 03:59:59",
-      "id": "21886",
-      "startTime": "2026-09-22 12:00:00",
-      "subtitle": "「银翎溯月，玄鸟结璘」",
-      "title": "「银翎溯月，玄鸟结璘」活动：参与获取活动专属武器「单手剑·银釭」",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/11/1ac93244f05eebd065627a7d7b06c028_4633734522165510386_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-10-13 17:59:00",
-      "id": "21876",
-      "startTime": "2026-09-21 12:00:00",
-      "subtitle": "「煦风欢舞时」祈愿",
-      "title": "「煦风欢舞时」祈愿：「雪宴之锋·薇斯纳(风)」概率UP！",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/11/ed5b6858865abee281e907f4bb311338_2361939764776998707_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-10-13 17:59:00",
-      "id": "21877",
-      "startTime": "2026-09-21 12:00:00",
-      "subtitle": "「涌浪叙歌」祈愿",
-      "title": "「涌浪叙歌」祈愿：「幽歌萦渊·沃雅妮莎(水)」概率UP！",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/11/b3be26ece1baf3366ea495d364a789d2_4898269335729252786_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-10-13 17:59:00",
-      "id": "21878",
-      "startTime": "2026-09-21 12:00:00",
-      "subtitle": "「神铸赋形」祈愿",
-      "title": "「神铸赋形」祈愿：「单手剑·蝶变」「法器·漩流颂歌」概率UP！",
-      "type": "活动公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/11/49711c3c83559662867dd7afbbcada3d_2648096710342283050.jpg",
       "contentURL": null,
       "endTime": "2026-11-04 07:00:00",
@@ -341,6 +301,16 @@
       "type": "活动公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/17/031ce2da423f6e90c09635e230664c65_805847157214798459_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-11-02 03:59:59",
+      "id": "21901",
+      "startTime": "2026-10-17 12:00:00",
+      "subtitle": "「游赏耀星·畅怀」",
+      "title": "「游赏耀星·畅怀」参与获得缤纷惊喜礼盒代币「奇丽凝晶」",
+      "type": "千星奇域"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/17/fbad7a44a2f9c44305609ce7d4227dbe_9072169317818755989_transformed.jpg",
       "contentURL": null,
       "endTime": "2026-11-04 07:00:00",
@@ -412,5 +382,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-10-11T15:43:57Z"
+  "updatedAt": "2026-10-17T04:30:55Z"
 }
