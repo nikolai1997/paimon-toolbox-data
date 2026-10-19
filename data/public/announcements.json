@@ -31,16 +31,6 @@
       "type": "游戏公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/24/964bab2b29fb160d316b31989ae7552a_4606522837066325940_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-10-18 23:59:59",
-      "id": "21965",
-      "startTime": "2026-09-28 12:00:00",
-      "subtitle": "「周年拾光册」——《原神》网页活动上线！",
-      "title": "「周年拾光册」网页活动上线—回顾旅途精彩瞬间还有原石奖励哦！",
-      "type": "游戏公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2023/01/31/ab26bd549f42e9994d6946ae0f286b2e_6457522219866312059.jpg",
       "contentURL": null,
       "endTime": "2026-11-01 12:00:00",
@@ -119,6 +109,16 @@
       "subtitle": "公平运营声明",
       "title": "《原神》公平运营声明",
       "type": "游戏公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/23/5432fae80f31b03752909518d41e518e_3779817720445685385_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-11-02 03:59:59",
+      "id": "21891",
+      "startTime": "2026-10-19 12:00:00",
+      "subtitle": "「无忧无虑大雪仗」",
+      "title": "「无忧无虑大雪仗」活动：趣味投掷挑战",
+      "type": "活动公告"
     },
     {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/11/8a2e783cf5044fd8a5b06f65c330f521_3142732053478194844_transformed.jpg",
@@ -382,5 +382,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-10-17T04:30:55Z"
+  "updatedAt": "2026-10-19T07:49:41Z"
 }
