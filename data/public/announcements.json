@@ -31,6 +31,16 @@
       "type": "游戏公告"
     },
     {
+      "banner": null,
+      "contentURL": null,
+      "endTime": "2026-11-06 23:59:59",
+      "id": "22009",
+      "startTime": "2026-10-31 12:00:00",
+      "subtitle": "极光派对系列开售 2027年记事台历上架",
+      "title": "极光派对系列开售 2027年记事台历上架",
+      "type": "游戏公告"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2022/10/24/0a59babf7a59cca3ba8e7d3083fb8f15_5110808616473819596.jpg",
       "contentURL": null,
       "endTime": "2026-11-02 23:59:59",
@@ -119,6 +129,16 @@
       "subtitle": "公平运营声明",
       "title": "《原神》公平运营声明",
       "type": "游戏公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/21/9d9818e0badc0b90e9c6d7e10a9023ce_1052623293537741409_transformed.png",
+      "contentURL": null,
+      "endTime": "2027-01-25 03:59:00",
+      "id": "21892",
+      "startTime": "2026-10-31 12:00:00",
+      "subtitle": "「砺行修远」",
+      "title": "「砺行修远」：勤修馈赠",
+      "type": "活动公告"
     },
     {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/23/4ac49375a79db0eb3f7ea4ba90dedab4_8612740752278895538.jpg",
@@ -392,5 +412,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-10-30T07:12:50Z"
+  "updatedAt": "2026-10-31T05:47:35Z"
 }
