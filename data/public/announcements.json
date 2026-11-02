@@ -11,6 +11,16 @@
       "type": "游戏公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/16/b19883fa2d3942162cc4bbd6fb547124_8131151566715001119_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-11-04 06:00:00",
+      "id": "22003",
+      "startTime": "2026-11-02 11:10:00",
+      "subtitle": "7.2版本更新维护预告",
+      "title": "7.2版本更新维护预告",
+      "type": "游戏公告"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/17/2488a9f907fba435fa2aa1f5711d0ca4_1592596117700879431_transformed.jpg",
       "contentURL": null,
       "endTime": "2026-11-04 06:00:00",
@@ -131,6 +141,116 @@
       "type": "游戏公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/29/20149426001cebe49306d302759c6583_4650607404276568474_transformed.png",
+      "contentURL": null,
+      "endTime": "2026-11-24 17:59:00",
+      "id": "21975",
+      "startTime": "2026-11-02 12:00:00",
+      "subtitle": "「万序衍盈」祈愿",
+      "title": "「万序衍盈」祈愿：「列律名虚·米提亚(雷)」概率UP！",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/22/2172395fdd3f889555cded68cca35375_7593406950524986009_transformed.png",
+      "contentURL": null,
+      "endTime": "2026-11-24 17:59:00",
+      "id": "21976",
+      "startTime": "2026-11-02 12:00:00",
+      "subtitle": "「众水的颂诗」祈愿",
+      "title": "「众水的颂诗」祈愿：「不休独舞·芙宁娜(水)」概率UP！",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/22/1c310d17afae82dd7bb7372cbeaed743_4075456262757058792_transformed.png",
+      "contentURL": null,
+      "endTime": "2026-11-24 17:59:00",
+      "id": "21977",
+      "startTime": "2026-11-02 12:00:00",
+      "subtitle": "「神铸赋形」祈愿",
+      "title": "「神铸赋形」祈愿：「法器·秘星典谕」「单手剑·静水流涌之辉」概率UP！",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/22/e96137014e72837b250c64a0597a499a_3074106729558546171_transformed.png",
+      "contentURL": null,
+      "endTime": "2026-12-16 07:00:00",
+      "id": "21969",
+      "startTime": "2026-11-02 12:00:00",
+      "subtitle": "「全域镇卫·逆捍谬罚」",
+      "title": "「全域镇卫·逆捍谬罚」活动：参与自选邀请4星角色",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/22/a5bbfa72d7fc93255508ca3ff6dc3299_6904764978104179559_transformed.png",
+      "contentURL": null,
+      "endTime": "2026-12-15 14:59:59",
+      "id": "21970",
+      "startTime": "2026-11-02 12:00:00",
+      "subtitle": "「坏灭肇始之时」",
+      "title": "「坏灭肇始之时」时限内完成魔神任务，可额外获得原石、角色突破素材等奖励",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/22/b4e24575d382260288052e37ec73a0d3_6544350286135739473_transformed.png",
+      "contentURL": null,
+      "endTime": "2027-01-26 14:59:59",
+      "id": "21971",
+      "startTime": "2026-11-02 12:00:00",
+      "subtitle": "「晶石如林生长之地」",
+      "title": "「晶石如林生长之地」时限内完成探索任务，可额外获得原石*400奖励",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/22/a90b75f716c911c46537123a923cd93f_6803434933391322474_transformed.png",
+      "contentURL": null,
+      "endTime": "2026-11-18 23:59:59",
+      "id": "21973",
+      "startTime": "2026-11-02 12:00:00",
+      "subtitle": "「冒险助力礼包」",
+      "title": "「冒险助力礼包」第53期限时上架",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/22/aa608d918b4a7dd1e64800924206aca6_3477417027548812705_transformed.png",
+      "contentURL": null,
+      "endTime": "2026-12-15 14:59:59",
+      "id": "21972",
+      "startTime": "2026-11-02 12:00:00",
+      "subtitle": "「相遇·悠久旅途之暇」",
+      "title": "「相遇·悠久旅途之暇」：千音雅集更新",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/22/d963610a533c0845d27c299fc787dee3_7215570413195948473_transformed.png",
+      "contentURL": null,
+      "endTime": "2026-12-14 03:59:59",
+      "id": "21974",
+      "startTime": "2026-11-02 12:00:00",
+      "subtitle": "「灵圣纪行」",
+      "title": "「灵圣纪行」活动说明",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2024/11/05/b4bce45d1b78ce5aef4399d8aa2a51da_6095647547673851587.jpg",
+      "contentURL": null,
+      "endTime": "2026-12-16 07:00:00",
+      "id": "20834",
+      "startTime": "2026-11-02 12:00:00",
+      "subtitle": "「七圣召唤」铸境研炼",
+      "title": "「七圣召唤」铸境研炼：无量疾战",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/22/6789705cb849ecec9928781df92a31a9_1060809419834025345_transformed.png",
+      "contentURL": null,
+      "endTime": "2027-07-14 07:00:00",
+      "id": "21968",
+      "startTime": "2026-11-02 12:00:00",
+      "subtitle": "「巡历雪境，凝铸锋锐」",
+      "title": "「巡历雪境，凝铸锋锐」活动：新手自选邀请「奔行世间」常驻祈愿5星角色",
+      "type": "活动公告"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/21/9d9818e0badc0b90e9c6d7e10a9023ce_1052623293537741409_transformed.png",
       "contentURL": null,
       "endTime": "2027-01-25 03:59:00",
@@ -138,26 +258,6 @@
       "startTime": "2026-10-31 12:00:00",
       "subtitle": "「砺行修远」",
       "title": "「砺行修远」：勤修馈赠",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/23/4ac49375a79db0eb3f7ea4ba90dedab4_8612740752278895538.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-02 03:59:59",
-      "id": "21053",
-      "startTime": "2026-10-24 12:00:00",
-      "subtitle": "「祝圣移涌」",
-      "title": "「祝圣移涌」活动：圣遗物双倍掉落",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/23/5432fae80f31b03752909518d41e518e_3779817720445685385_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-02 03:59:59",
-      "id": "21891",
-      "startTime": "2026-10-19 12:00:00",
-      "subtitle": "「无忧无虑大雪仗」",
-      "title": "「无忧无虑大雪仗」活动：趣味投掷挑战",
       "type": "活动公告"
     },
     {
@@ -261,16 +361,6 @@
       "type": "活动公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/11/2bcd4fd8a5cd40105fabf1e35ede2476_5014797394094273611_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-02 03:59:59",
-      "id": "21884",
-      "startTime": "2026-09-21 12:00:00",
-      "subtitle": "「溯月纪行」",
-      "title": "「溯月纪行」活动说明",
-      "type": "活动公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2024/05/22/555e97a23cedc7a1ad9efc0aefb47a72_2651647058933341596.png",
       "contentURL": null,
       "endTime": "2026-11-04 07:00:00",
@@ -311,14 +401,44 @@
       "type": "活动公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/05/28/9d9818e0badc0b90e9c6d7e10a9023ce_7914250625094827580_transformed.png",
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/26/0d03aa0ea4f39bd2d98456c6c5e4c6de_8154648004225176302_transformed.jpg",
       "contentURL": null,
-      "endTime": "2026-11-02 03:59:00",
-      "id": "21761",
-      "startTime": "2026-08-08 12:00:00",
-      "subtitle": "「砺行修远」",
-      "title": "「砺行修远」：勤修馈赠",
-      "type": "活动公告"
+      "endTime": "2026-12-16 07:00:00",
+      "id": "21993",
+      "startTime": "2026-11-02 12:00:00",
+      "subtitle": "「覆音赛季」",
+      "title": "「覆音赛季」赛季开启公告说明",
+      "type": "千星奇域"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/26/2ac976c16237c9bf2c1062912d4f12ac_2860779115354267693_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-12-16 07:00:00",
+      "id": "21991",
+      "startTime": "2026-11-02 12:00:00",
+      "subtitle": "「绮衣珍赏·赫炽」",
+      "title": "「绮衣珍赏·赫炽」参与获得自选奇偶装扮套装「奇珍缀趣」",
+      "type": "千星奇域"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/26/ab62a3156ec573b0ac4019c52ad92879_8457739668128220446_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-12-14 03:59:59",
+      "id": "21990",
+      "startTime": "2026-11-02 12:00:00",
+      "subtitle": "「奇域秘藏·雪阵霜庭」",
+      "title": "「奇域秘藏·雪阵霜庭」奇偶装扮上架",
+      "type": "千星奇域"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/26/e9314ad5d1f13d7b9152b0a5df67b54b_4927859762068964616_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-12-14 03:59:59",
+      "id": "21989",
+      "startTime": "2026-11-02 12:00:00",
+      "subtitle": "「奇域秘藏·覆音谐度」",
+      "title": "「奇域秘藏·覆音谐度」奇偶装扮上新",
+      "type": "千星奇域"
     },
     {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/15/c70400f6111ee231e6a85646137a21df_895446363729846415_transformed.jpg",
@@ -328,16 +448,6 @@
       "startTime": "2026-10-22 12:00:00",
       "subtitle": "「绮星盛会」——《原神》千星奇域网页活动更新！",
       "title": "前往「绮星盛会」网页活动，解锁奇域回顾报告！",
-      "type": "千星奇域"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/17/031ce2da423f6e90c09635e230664c65_805847157214798459_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-02 03:59:59",
-      "id": "21901",
-      "startTime": "2026-10-17 12:00:00",
-      "subtitle": "「游赏耀星·畅怀」",
-      "title": "「游赏耀星·畅怀」参与获得缤纷惊喜礼盒代币「奇丽凝晶」",
       "type": "千星奇域"
     },
     {
@@ -381,26 +491,6 @@
       "type": "千星奇域"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/18/886cec36d4de617725b7fe04e3c148b3_2097716281692468661_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-02 03:59:59",
-      "id": "21896",
-      "startTime": "2026-09-22 12:00:00",
-      "subtitle": "「奇域秘藏·幻夜游烛」",
-      "title": "「奇域秘藏·幻夜游烛」奇偶装扮上架",
-      "type": "千星奇域"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/17/88faff0163360ab1c1329a58b0d4167c_133883560510509569_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-02 03:59:59",
-      "id": "21895",
-      "startTime": "2026-09-22 12:00:00",
-      "subtitle": "「奇域秘藏·暄霁霄练」",
-      "title": "「奇域秘藏·暄霁霄练」奇偶装扮上新",
-      "type": "千星奇域"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/12/03/07ea55cd37ec7881c25500e101a50c56_1948804034911099900_transformed.jpg",
       "contentURL": null,
       "endTime": "2035-12-01 00:00:00",
@@ -412,5 +502,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-11-01T07:36:19Z"
+  "updatedAt": "2026-11-02T06:13:26Z"
 }

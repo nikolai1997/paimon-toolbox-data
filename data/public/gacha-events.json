@@ -5382,6 +5382,40 @@
     "version": "7.1"
   },
   {
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/29/20149426001cebe49306d302759c6583_4650607404276568474_transformed.png",
+    "from": "2026-11-02T12:00:00+08:00",
+    "name": "万序衍盈",
+    "to": "2026-11-24T17:59:00+08:00",
+    "type": 301,
+    "upOrangeList": [],
+    "upPurpleList": [],
+    "version": ""
+  },
+  {
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/22/2172395fdd3f889555cded68cca35375_7593406950524986009_transformed.png",
+    "from": "2026-11-02T12:00:00+08:00",
+    "name": "众水的颂诗",
+    "to": "2026-11-24T17:59:00+08:00",
+    "type": 400,
+    "upOrangeList": [
+      10000089
+    ],
+    "upPurpleList": [],
+    "version": ""
+  },
+  {
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/22/1c310d17afae82dd7bb7372cbeaed743_4075456262757058792_transformed.png",
+    "from": "2026-11-02T12:00:00+08:00",
+    "name": "神铸赋形",
+    "to": "2026-11-24T17:59:00+08:00",
+    "type": 302,
+    "upOrangeList": [
+      11513
+    ],
+    "upPurpleList": [],
+    "version": ""
+  },
+  {
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/23/92220da84f2e0fbeb5b6ddfd09b22336_6625910379513968240_transformed.jpg",
     "from": "2026-10-08T16:00:00+08:00",
     "name": "虚星临渡",
