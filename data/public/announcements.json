@@ -21,6 +21,16 @@
       "type": "游戏公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/announcement/2020/11/11/a539394edc88c73effd030507be02681_8843944720719944518.jpg",
+      "contentURL": null,
+      "endTime": "2026-12-16 06:00:00",
+      "id": "22031",
+      "startTime": "2026-11-04 08:00:00",
+      "subtitle": "更新内容汇总",
+      "title": "游戏更新修复与优化说明",
+      "type": "游戏公告"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2023/01/31/ab26bd549f42e9994d6946ae0f286b2e_6457522219866312059.jpg",
       "contentURL": null,
       "endTime": "2026-12-01 12:00:00",
@@ -271,6 +281,16 @@
       "type": "千星奇域"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/04/796da341f8ffd47cdc52d424990a57a3_7674172808068838428.png",
+      "contentURL": null,
+      "endTime": "2026-12-08 11:59:59",
+      "id": "22000",
+      "startTime": "2026-11-04 10:00:00",
+      "subtitle": "「千星创作赛·拾光季」活动正式开启！",
+      "title": "「千星创作赛·拾光季」活动正式开启！",
+      "type": "千星奇域"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/12/03/07ea55cd37ec7881c25500e101a50c56_1948804034911099900_transformed.jpg",
       "contentURL": null,
       "endTime": "2035-12-01 00:00:00",
@@ -282,5 +302,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-11-04T01:24:41Z"
+  "updatedAt": "2026-11-04T09:18:15Z"
 }
