@@ -3,41 +3,21 @@
     {
       "banner": null,
       "contentURL": null,
-      "endTime": "2026-11-04 06:00:00",
-      "id": "21947",
-      "startTime": "2026-09-23 07:00:00",
-      "subtitle": "7.1版本现已开启",
-      "title": "全新内容一览：角色·祈愿·武器·剧情·版本活动等",
+      "endTime": "2026-12-16 06:00:00",
+      "id": "22011",
+      "startTime": "2026-11-04 07:00:00",
+      "subtitle": "7.2版本现已开启",
+      "title": "全新内容一览：角色·祈愿·武器·地区·剧情等",
       "type": "游戏公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/16/b19883fa2d3942162cc4bbd6fb547124_8131151566715001119_transformed.jpg",
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/02/d4c93787739cc987c0040d0c1bf850d7_4984864243412680659_transformed.jpg",
       "contentURL": null,
-      "endTime": "2026-11-04 06:00:00",
-      "id": "22003",
-      "startTime": "2026-11-02 11:10:00",
-      "subtitle": "7.2版本更新维护预告",
-      "title": "7.2版本更新维护预告",
-      "type": "游戏公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/17/2488a9f907fba435fa2aa1f5711d0ca4_1592596117700879431_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-04 06:00:00",
-      "id": "21894",
-      "startTime": "2026-09-23 07:00:00",
-      "subtitle": "7.1版本更新说明",
-      "title": "「往冥府的安魂歌」7.1版本更新说明",
-      "type": "游戏公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/announcement/2020/11/11/a539394edc88c73effd030507be02681_8843944720719944518.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-04 06:00:00",
-      "id": "21956",
-      "startTime": "2026-09-23 08:00:00",
-      "subtitle": "更新内容汇总",
-      "title": "游戏更新修复与优化说明",
+      "endTime": "2026-12-16 06:00:00",
+      "id": "22015",
+      "startTime": "2026-11-04 07:00:00",
+      "subtitle": "7.2版本更新说明",
+      "title": "「坏灭肇始之时」7.2版本更新说明",
       "type": "游戏公告"
     },
     {
@@ -58,26 +38,6 @@
       "startTime": "2026-10-31 12:00:00",
       "subtitle": "极光派对系列开售 2027年记事台历上架",
       "title": "极光派对系列开售 2027年记事台历上架",
-      "type": "游戏公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2022/10/24/0a59babf7a59cca3ba8e7d3083fb8f15_5110808616473819596.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-02 23:59:59",
-      "id": "22004",
-      "startTime": "2026-10-30 10:00:00",
-      "subtitle": "版本满意度调研问卷",
-      "title": "版本满意度调研问卷开启",
-      "type": "游戏公告"
-    },
-    {
-      "banner": null,
-      "contentURL": null,
-      "endTime": "2026-11-03 00:00:00",
-      "id": "21922",
-      "startTime": "2026-09-12 21:15:00",
-      "subtitle": "7.1版本《原神》六周年福利速览",
-      "title": "7.1版本《原神》六周年福利速览",
       "type": "游戏公告"
     },
     {
@@ -261,136 +221,6 @@
       "type": "活动公告"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/23/92220da84f2e0fbeb5b6ddfd09b22336_6625910379513968240_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-03 14:59:59",
-      "id": "21888",
-      "startTime": "2026-10-08 16:00:00",
-      "subtitle": "「虚星临渡」祈愿",
-      "title": "「虚星临渡」祈愿：「虚渊暗星·丝柯克(冰)」概率UP！",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/23/e19bead93ab29bcf630303ba0b444cab_1986922250942047135_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-03 14:59:59",
-      "id": "21889",
-      "startTime": "2026-10-08 16:00:00",
-      "subtitle": "「莓色香颂」祈愿",
-      "title": "「莓色香颂」祈愿：「明绚千韵·爱可菲(冰)」概率UP！",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/23/c4c3993da57d8a5aadd361f5258b6c81_7399065482636503040_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-03 14:59:59",
-      "id": "21890",
-      "startTime": "2026-10-08 16:00:00",
-      "subtitle": "「神铸赋形」祈愿",
-      "title": "「神铸赋形」祈愿：「单手剑·苍耀」「长柄武器·香韵奏者」概率UP！",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/10/23/d030bb81196ef3fff410d9f9c4d6120d_5245917935282258365_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-03 03:59:59",
-      "id": "21168",
-      "startTime": "2026-09-28 12:00:00",
-      "subtitle": "「幽境危战」",
-      "title": "「幽境危战」活动：紊乱地脉挑战",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/11/49711c3c83559662867dd7afbbcada3d_2648096710342283050.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-04 07:00:00",
-      "id": "21879",
-      "startTime": "2026-09-21 12:00:00",
-      "subtitle": "「虹旅藏金·耀星烁熠」",
-      "title": "「虹旅藏金·耀星烁熠」活动：登录领取1600原石、纠缠之缘*10等奖励",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/14/5e3ba7cbbbdf0d1324e38159954b66c8_8886340195549811539_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-03 14:59:59",
-      "id": "21924",
-      "startTime": "2026-09-21 12:00:00",
-      "subtitle": "「桌上剧团·冒险的前夜会」",
-      "title": "「桌上剧团·冒险的前夜会」活动：自选邀请限定5星角色",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/11/574aa485c666b903bb6025e743d376c7_1817789394935567935_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-03 14:59:59",
-      "id": "21885",
-      "startTime": "2026-09-21 12:00:00",
-      "subtitle": "「巡历雪境，凝铸锋锐」",
-      "title": "「巡历雪境，凝铸锋锐」活动：自选邀请「奔行世间」常驻祈愿5星角色",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/11/058d997ea7dde68e14f57829ee618b66_5983345789463800921_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-03 14:59:59",
-      "id": "21880",
-      "startTime": "2026-09-21 12:00:00",
-      "subtitle": "「往冥府的安魂歌」",
-      "title": "「往冥府的安魂歌」时限内完成魔神任务，可额外获得原石、角色突破素材等奖励",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/11/96c3652e50bc56c74ad6f0cc7b608054_6172804854900110484_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-04 07:00:00",
-      "id": "21881",
-      "startTime": "2026-09-21 12:00:00",
-      "subtitle": "「风仙亦是仙，古剑通幽玄！」",
-      "title": "「风仙亦是仙，古剑通幽玄！」世界任务说明",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/11/3950da94acf836cb1a15d0c5b8dde5c5_3299769955973429720_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-04 07:00:00",
-      "id": "21882",
-      "startTime": "2026-09-21 12:00:00",
-      "subtitle": "「溯流的变奏曲」",
-      "title": "「溯流的变奏曲」世界任务说明",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2024/05/22/555e97a23cedc7a1ad9efc0aefb47a72_2651647058933341596.png",
-      "contentURL": null,
-      "endTime": "2026-11-04 07:00:00",
-      "id": "20508",
-      "startTime": "2026-09-21 12:00:00",
-      "subtitle": "「七圣召唤」铸境研炼",
-      "title": "「七圣召唤」铸境研炼：巧策进斗",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/21/05d0b9d3b4a60175819a545a5586552e_4068550475025605180_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-04 07:00:00",
-      "id": "3802",
-      "startTime": "2026-09-12 22:00:00",
-      "subtitle": "首充重置",
-      "title": "《原神》首充双倍返利重置说明",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/04/937b3de28b221d596ba6507aff61ba1d_693055535867052384_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-03 14:59:59",
-      "id": "21811",
-      "startTime": "2026-08-10 12:00:00",
-      "subtitle": "「无神怜爱的冻土」",
-      "title": "「无神怜爱的冻土」时限内完成探索任务，可额外获得原石*400奖励",
-      "type": "活动公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/08/04/3b43c2a21d48f43613de022479923566_5437277358768023274_transformed.jpg",
       "contentURL": null,
       "endTime": "2027-07-14 07:00:00",
@@ -441,56 +271,6 @@
       "type": "千星奇域"
     },
     {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/15/c70400f6111ee231e6a85646137a21df_895446363729846415_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-03 04:00:00",
-      "id": "21911",
-      "startTime": "2026-10-22 12:00:00",
-      "subtitle": "「绮星盛会」——《原神》千星奇域网页活动更新！",
-      "title": "前往「绮星盛会」网页活动，解锁奇域回顾报告！",
-      "type": "千星奇域"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/17/fbad7a44a2f9c44305609ce7d4227dbe_9072169317818755989_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-04 07:00:00",
-      "id": "21902",
-      "startTime": "2026-09-22 12:00:00",
-      "subtitle": "「装扮活动颂愿-2」机制说明",
-      "title": "「装扮活动颂愿-2」（新增类型）机制说明",
-      "type": "千星奇域"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/17/26d2f7dcbf02622fbe118151f22e346f_8834818842124406735_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-04 07:00:00",
-      "id": "21900",
-      "startTime": "2026-09-22 12:00:00",
-      "subtitle": "「霄练赛季」",
-      "title": "「霄练赛季」赛季开启公告说明",
-      "type": "千星奇域"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/17/65838b36027a42b17cdf07e8051d6c5f_1113552126232957920_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-04 07:00:00",
-      "id": "21899",
-      "startTime": "2026-09-22 12:00:00",
-      "subtitle": "「绮衣珍赏·晴暖」",
-      "title": "「绮衣珍赏·晴暖」参与获得自选奇偶装扮套装「午后蜜果」",
-      "type": "千星奇域"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/09/17/7dc412754c505f7b09e800b98b0f9a27_3564084152862419406_transformed.jpg",
-      "contentURL": null,
-      "endTime": "2026-11-03 04:00:00",
-      "id": "21897",
-      "startTime": "2026-09-22 00:00:00",
-      "subtitle": "「绮星盛会」",
-      "title": "「绮星盛会」",
-      "type": "千星奇域"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/12/03/07ea55cd37ec7881c25500e101a50c56_1948804034911099900_transformed.jpg",
       "contentURL": null,
       "endTime": "2035-12-01 00:00:00",
@@ -502,5 +282,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-11-02T06:13:26Z"
+  "updatedAt": "2026-11-04T01:24:41Z"
 }
