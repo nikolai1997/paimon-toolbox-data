@@ -43,7 +43,7 @@
     "name": "奥黛塔",
     "portraitURL": "https://enka.network/ui/UI_AvatarIcon_Side_Odette.png",
     "rarity": 5,
-    "region": "科洛列夫茨基剧团",
+    "region": "至冬",
     "weaponType": "单手剑"
   },
   {
@@ -90,7 +90,7 @@
     "name": "薇斯纳",
     "portraitURL": "https://enka.network/ui/UI_AvatarIcon_Side_Vesna.png",
     "rarity": 5,
-    "region": "冬契军",
+    "region": "至冬",
     "weaponType": "单手剑"
   },
   {
@@ -137,7 +137,52 @@
     "name": "沃雅妮莎",
     "portraitURL": "https://enka.network/ui/UI_AvatarIcon_Side_Vodyanitsa.png",
     "rarity": 5,
-    "region": "科洛列夫茨基剧团",
+    "region": "至冬",
+    "weaponType": "法器"
+  },
+  {
+    "cultivation": {
+      "ascensionGemNames": [
+        "最胜紫晶碎屑",
+        "最胜紫晶断片",
+        "最胜紫晶块",
+        "最胜紫晶"
+      ],
+      "bossMaterialName": "破碎的稳定锚",
+      "commonMaterialNames": [
+        "嵌合种",
+        "并生嵌合胞",
+        "源生嵌合体"
+      ],
+      "localSpecialtyName": "析晶褶伞",
+      "talentBookNames": [
+        "「慈爱」的教导",
+        "「慈爱」的指引",
+        "「慈爱」的哲学"
+      ],
+      "weeklyBossMaterialName": "贤医的假面"
+    },
+    "element": "雷",
+    "id": 10000136,
+    "materials": [
+      "最胜紫晶碎屑",
+      "析晶褶伞",
+      "嵌合种",
+      "最胜紫晶断片",
+      "破碎的稳定锚",
+      "并生嵌合胞",
+      "最胜紫晶块",
+      "源生嵌合体",
+      "最胜紫晶",
+      "「慈爱」的哲学",
+      "贤医的假面",
+      "智识之冕",
+      "「慈爱」的教导",
+      "「慈爱」的指引"
+    ],
+    "name": "米提亚",
+    "rarity": 5,
+    "region": "至冬",
     "weaponType": "法器"
   },
   {
@@ -184,7 +229,7 @@
     "name": "桑多涅",
     "portraitURL": "https://enka.network/ui/UI_AvatarIcon_Side_MarionetteNew.png",
     "rarity": 5,
-    "region": "愚人众",
+    "region": "至冬",
     "weaponType": "双手剑"
   },
   {
@@ -3384,6 +3429,51 @@
     "rarity": 4,
     "region": "至冬",
     "weaponType": "长柄武器"
+  },
+  {
+    "cultivation": {
+      "ascensionGemNames": [
+        "最胜紫晶碎屑",
+        "最胜紫晶断片",
+        "最胜紫晶块",
+        "最胜紫晶"
+      ],
+      "bossMaterialName": "游空之物的断尾",
+      "commonMaterialNames": [
+        "幻造萤屑",
+        "幻造裂晶",
+        "幻造晶鳞石"
+      ],
+      "localSpecialtyName": "妖精绿艾",
+      "talentBookNames": [
+        "「荣光」的教导",
+        "「荣光」的指引",
+        "「荣光」的哲学"
+      ],
+      "weeklyBossMaterialName": "赝作的树脂"
+    },
+    "element": "雷",
+    "id": 10000137,
+    "materials": [
+      "最胜紫晶碎屑",
+      "妖精绿艾",
+      "幻造萤屑",
+      "最胜紫晶断片",
+      "游空之物的断尾",
+      "幻造裂晶",
+      "最胜紫晶块",
+      "幻造晶鳞石",
+      "最胜紫晶",
+      "「荣光」的哲学",
+      "赝作的树脂",
+      "智识之冕",
+      "「荣光」的教导",
+      "「荣光」的指引"
+    ],
+    "name": "瓦列里",
+    "rarity": 4,
+    "region": "至冬",
+    "weaponType": "单手剑"
   },
   {
     "cultivation": {

@@ -240,6 +240,26 @@
     "type": "弓"
   },
   {
+    "iconURL": "https://enka.network/ui/UI_EquipIcon_Catalyst_Chernaya.png",
+    "id": 14525,
+    "materials": [
+      "凛雪帝皇的复生",
+      "雪结片心",
+      "幻造萤屑",
+      "凛雪帝皇的庆仪",
+      "雪结镜心",
+      "幻造裂晶",
+      "凛雪帝皇的悲恤",
+      "雪结无明心",
+      "幻造晶鳞石",
+      "凛雪帝皇的辞决"
+    ],
+    "name": "秘星典谕",
+    "rarity": 5,
+    "stat": "暴击伤害",
+    "type": "法器"
+  },
+  {
     "iconURL": "https://enka.network/ui/UI_EquipIcon_Catalyst_Bludnye.png",
     "id": 14524,
     "materials": [

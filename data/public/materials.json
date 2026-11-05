@@ -1275,24 +1275,38 @@
   },
   {
     "category": "至冬区域特产",
+    "iconURL": "https://enka.network/ui/UI_ItemIcon_101273.png",
+    "id": 101273,
+    "name": "妖精绿艾",
+    "source": "推荐：特普洛绿洲采集\n尘歌壶种植\n前往采集"
+  },
+  {
+    "category": "至冬区域特产",
+    "iconURL": "https://enka.network/ui/UI_ItemIcon_101274.png",
+    "id": 101274,
+    "name": "析晶褶伞",
+    "source": "推荐：新基捷城市区采集\n尘歌壶种植\n前往采集"
+  },
+  {
+    "category": "至冬区域特产",
     "iconURL": "https://enka.network/ui/UI_ItemIcon_101275.png",
     "id": 101275,
     "name": "霜仙花",
-    "source": "推荐：至冬堡附近采集\n推荐：白桦雪葬地采集\n前往采集"
+    "source": "推荐：至冬堡附近采集\n推荐：白桦雪葬地采集\n尘歌壶种植\n前往采集"
   },
   {
     "category": "至冬区域特产",
     "iconURL": "https://enka.network/ui/UI_ItemIcon_101276.png",
     "id": 101276,
     "name": "植绒草",
-    "source": "推荐：霜殛寒峰采集\n前往采集"
+    "source": "推荐：霜殛寒峰采集\n尘歌壶种植\n前往采集"
   },
   {
     "category": "至冬区域特产",
     "iconURL": "https://enka.network/ui/UI_ItemIcon_101277.png",
     "id": 101277,
     "name": "金蕨",
-    "source": "推荐：焰羽谷采集\n推荐：曙光车站附近采集\n前往采集"
+    "source": "推荐：焰羽谷采集\n推荐：曙光车站附近采集\n尘歌壶种植\n前往采集"
   },
   {
     "category": "食材",
@@ -1328,6 +1342,13 @@
     "id": 101282,
     "name": "幽光萤石",
     "source": "推荐：至冬采集\n推荐：影域及附近区域采集"
+  },
+  {
+    "category": "食材",
+    "iconURL": "https://enka.network/ui/UI_ItemIcon_101285.png",
+    "id": 101285,
+    "name": "笼酸浆",
+    "source": "推荐：特普洛绿洲采集"
   },
   {
     "category": "素材",
@@ -2405,14 +2426,14 @@
     "iconURL": "https://enka.network/ui/UI_ItemIcon_105005.png",
     "id": 105005,
     "name": "祝圣之霜",
-    "source": "「圣言自明机」萃取获取\n「幻想真境剧诗」星章奖励\n「砺行修远」获取\n纳塔「煅石之轮」供奉获取\n纳塔「部族秘藏之所」获取\n挪德卡莱「聚所共建」获取\n「珍珠纪行」获取"
+    "source": "「圣言自明机」萃取获取\n「幻想真境剧诗」星章奖励\n「砺行修远」获取\n纳塔、挪德卡莱等地区探索获取\n「珍珠纪行」获取"
   },
   {
     "category": "消耗品",
     "iconURL": "https://enka.network/ui/UI_ItemIcon_TrainingIteration.png",
     "id": 105006,
     "name": "启圣之尘",
-    "source": "「幽境危战」危战嘉奖\n「幽境危战」挑战奖励\n「砺行修远」获取\n挪德卡莱「月灵盈藏之地」获取\n「珍珠纪行」和「珍珠之歌」获取"
+    "source": "「幽境危战」危战嘉奖\n「幽境危战」挑战奖励\n「砺行修远」获取\n挪德卡莱、至冬等地区探索获取\n「珍珠纪行」和「珍珠之歌」获取"
   },
   {
     "category": "冒险道具",
@@ -3899,6 +3920,27 @@
     "source": "60级以上荒野树妖掉落\n星尘兑换：兑换后合成\n占位-可合成数量:{0}"
   },
   {
+    "category": "角色与武器培养素材",
+    "iconURL": "https://enka.network/ui/UI_ItemIcon_112158.png",
+    "id": 112158,
+    "name": "雪结片心",
+    "source": "无智的凝冰体掉落\n星尘兑换"
+  },
+  {
+    "category": "角色与武器培养素材",
+    "iconURL": "https://enka.network/ui/UI_ItemIcon_112159.png",
+    "id": 112159,
+    "name": "雪结镜心",
+    "source": "40级以上无智的凝冰体掉落\n星尘兑换\n占位-可合成数量:{0}"
+  },
+  {
+    "category": "角色与武器培养素材",
+    "iconURL": "https://enka.network/ui/UI_ItemIcon_112160.png",
+    "id": 112160,
+    "name": "雪结无明心",
+    "source": "60级以上无智的凝冰体掉落\n星尘兑换：兑换后合成\n占位-可合成数量:{0}"
+  },
+  {
     "category": "角色培养素材",
     "iconURL": "https://enka.network/ui/UI_ItemIcon_113001.png",
     "id": 113001,
@@ -4541,6 +4583,13 @@
     "id": 113092,
     "name": "游离者的裂甲",
     "source": "30级以上游雪的护刃掉落"
+  },
+  {
+    "category": "角色培养素材",
+    "iconURL": "https://enka.network/ui/UI_ItemIcon_113093.png",
+    "id": 113093,
+    "name": "破碎的稳定锚",
+    "source": "30级以上浪涛锚定者掉落"
   },
   {
     "category": "武器突破素材",
@@ -5682,6 +5731,27 @@
     "id": 121674,
     "name": "锋曳星迹·蕴辉空印",
     "source": "奇妙的印记，可使影域中自身战斗装束的披风发生表现上的变化，已发挥效用…\n\n「流星的尾迹与枪弹的轨迹，或许有着几分相似之处。」"
+  },
+  {
+    "category": "贵重物品",
+    "iconURL": "https://enka.network/ui/UI_ItemIcon_121737.png",
+    "id": 121738,
+    "name": "锋曳星迹·炽芒空印",
+    "source": "奇妙的印记，可使影域中自身战斗装束的披风得到表现上的显著强化，已发挥效用……\n\n「流星的尾迹与枪弹的轨迹，或许有着几分相似之处。」"
+  },
+  {
+    "category": "冒险道具",
+    "iconURL": "https://enka.network/ui/UI_ItemIcon_121739.png",
+    "id": 121739,
+    "name": "特普洛绿洲的残香之引",
+    "source": "特普洛绿洲探索奖励"
+  },
+  {
+    "category": "冒险道具",
+    "iconURL": "https://enka.network/ui/UI_ItemIcon_121740.png",
+    "id": 121740,
+    "name": "新基捷城的残香之引",
+    "source": "新基捷城探索奖励"
   },
   {
     "category": "鱼",
