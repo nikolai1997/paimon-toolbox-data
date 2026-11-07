@@ -5383,39 +5383,53 @@
   },
   {
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/29/20149426001cebe49306d302759c6583_4650607404276568474_transformed.png",
-    "from": "2026-11-02T12:00:00+08:00",
+    "from": "2026-11-04T06:00:00+08:00",
     "name": "万序衍盈",
     "to": "2026-11-24T17:59:00+08:00",
     "type": 301,
     "upOrangeList": [
       10000136
     ],
-    "upPurpleList": [],
-    "version": ""
+    "upPurpleList": [
+      10000045,
+      10000088,
+      10000137
+    ],
+    "version": "7.2"
   },
   {
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/22/2172395fdd3f889555cded68cca35375_7593406950524986009_transformed.png",
-    "from": "2026-11-02T12:00:00+08:00",
+    "from": "2026-11-04T06:00:00+08:00",
     "name": "众水的颂诗",
     "to": "2026-11-24T17:59:00+08:00",
     "type": 400,
     "upOrangeList": [
       10000089
     ],
-    "upPurpleList": [],
-    "version": ""
+    "upPurpleList": [
+      10000045,
+      10000088,
+      10000137
+    ],
+    "version": "7.2"
   },
   {
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/22/1c310d17afae82dd7bb7372cbeaed743_4075456262757058792_transformed.png",
-    "from": "2026-11-02T12:00:00+08:00",
+    "from": "2026-11-04T06:00:00+08:00",
     "name": "神铸赋形",
     "to": "2026-11-24T17:59:00+08:00",
     "type": 302,
     "upOrangeList": [
-      14525,
-      11513
+      11513,
+      14525
     ],
-    "upPurpleList": [],
-    "version": ""
+    "upPurpleList": [
+      11427,
+      12405,
+      13427,
+      14434,
+      15405
+    ],
+    "version": "7.2"
   }
 ]
