@@ -41,16 +41,6 @@
       "type": "游戏公告"
     },
     {
-      "banner": null,
-      "contentURL": null,
-      "endTime": "2026-11-06 23:59:59",
-      "id": "22009",
-      "startTime": "2026-10-31 12:00:00",
-      "subtitle": "极光派对系列开售 2027年记事台历上架",
-      "title": "极光派对系列开售 2027年记事台历上架",
-      "type": "游戏公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/announcement/2022/08/17/327eae0272f12b7104cfa472cfee0568_3991050071173177124.jpg",
       "contentURL": null,
       "endTime": "2027-12-31 00:00:00",
@@ -109,6 +99,16 @@
       "subtitle": "公平运营声明",
       "title": "《原神》公平运营声明",
       "type": "游戏公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/10/23/d030bb81196ef3fff410d9f9c4d6120d_5245917935282258365_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-12-15 03:59:59",
+      "id": "21168",
+      "startTime": "2026-11-09 12:00:00",
+      "subtitle": "「幽境危战」",
+      "title": "「幽境危战」活动：紊乱地脉挑战",
+      "type": "活动公告"
     },
     {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/29/20149426001cebe49306d302759c6583_4650607404276568474_transformed.png",
@@ -302,5 +302,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-11-07T16:32:59Z"
+  "updatedAt": "2026-11-09T06:37:14Z"
 }

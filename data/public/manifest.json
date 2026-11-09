@@ -3,7 +3,7 @@
     {
       "kind": "metadata",
       "path": "metadata.json",
-      "sha256": "cb4064af641a22e247eb237b6f0b877c6a97a8282705d56e6748703054aa5e1c"
+      "sha256": "11cde1d8b56c0d135319514c5a7723d2357da74955016006aa6b1186ea28eadf"
     },
     {
       "kind": "characters",
@@ -28,19 +28,19 @@
     {
       "kind": "config",
       "path": "config.json",
-      "sha256": "ca0017e333ff40f573a8baeb26ed89a71f2cb496c87be1c74dc625a0316d2426"
+      "sha256": "f13fcf9cea55bcd598e264420422b98b1a5821b9059d45cdfa679dc0210aa6aa"
     },
     {
       "kind": "latest",
       "path": "latest.json",
-      "sha256": "35beaa0c18cd913b1671e4e9391d40e303be0ba48d70bd3fc84d0ee7c632433a"
+      "sha256": "debb46b20ba3b09f5d4c9f9cc9affcba5ad878e35a634c7475f4327357abb7a4"
     },
     {
       "kind": "announcements",
       "path": "announcements.json",
-      "sha256": "b5385b4cd1d75d09fa08040cba8a89eb82df2b018d98447a07033ec4ed195b62"
+      "sha256": "aee4174174348751c12388a686d0a2a53e2cdd1ff9ddcf8f8527a84c6a9ce5c9"
     }
   ],
-  "generatedAt": "2026-11-07T16:32:59Z",
+  "generatedAt": "2026-11-09T06:37:14Z",
   "schemaVersion": 1
 }
