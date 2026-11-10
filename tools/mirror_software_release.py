@@ -9,6 +9,7 @@ import os
 from pathlib import Path
 import re
 import tempfile
+import time
 import urllib.parse
 import urllib.request
 
@@ -39,10 +40,12 @@ class WebDAV:
             raise ValueError("Invalid WebDAV base URL")
         self.authorization = "Basic " + base64.b64encode(f"{username}:{password}".encode()).decode()
 
-    def send(self, method: str, name: str = "", body=None, size: int | None = None) -> tuple[int, bytes]:
-        connection = http.client.HTTPSConnection(self.url.hostname, self.url.port, timeout=90)
+    def send(self, method: str, name: str = "", body=None, size: int | None = None,
+             extra_headers: dict | None = None) -> tuple[int, bytes]:
+        connection = http.client.HTTPSConnection(self.url.hostname, self.url.port, timeout=180)
         path = self.url.path + ("/" + urllib.parse.quote(name, safe="") if name else "")
         headers = {"Authorization": self.authorization}
+        headers.update(extra_headers or {})
         if size is not None:
             headers["Content-Length"] = str(size)
         try:
@@ -54,10 +57,32 @@ class WebDAV:
             connection.close()
 
     def upload(self, path: Path, name: str) -> None:
-        with path.open("rb") as body:
-            status, _ = self.send("PUT", name, body, path.stat().st_size)
-        if status not in (200, 201, 204):
-            raise RuntimeError(f"WebDAV upload failed: HTTP {status}")
+        for attempt in range(3):
+            try:
+                with path.open("rb") as body:
+                    status, _ = self.send("PUT", name, body, path.stat().st_size)
+            except (OSError, http.client.HTTPException):
+                if attempt == 2:
+                    raise RuntimeError("WebDAV upload failed after network retries") from None
+            else:
+                if status in (200, 201, 204):
+                    return
+                if status not in (408, 429, 500, 502, 503, 504) or attempt == 2:
+                    raise RuntimeError(f"WebDAV upload failed: HTTP {status}")
+            time.sleep(5 * (attempt + 1))
+
+    def upload_alias(self, path: Path, source_name: str, alias_name: str) -> None:
+        destination = urllib.parse.urlunsplit(self.url) + "/" + urllib.parse.quote(alias_name, safe="")
+        try:
+            status, _ = self.send("COPY", source_name,
+                                  extra_headers={"Destination": destination, "Overwrite": "T"})
+            if status in (201, 204):
+                return
+            if status not in (405, 501):
+                raise RuntimeError(f"WebDAV copy failed: HTTP {status}")
+        except (OSError, http.client.HTTPException):
+            pass
+        self.upload(path, alias_name)
 
 
 def download_asset(asset: dict, destination: Path) -> None:
@@ -113,7 +138,7 @@ def main() -> None:
         archive = root / package["name"]
         download_asset(package, archive)
         dav.upload(archive, package["name"])
-        dav.upload(archive, "PaimonToolbox-latest.dmg")
+        dav.upload_alias(archive, package["name"], "PaimonToolbox-latest.dmg")
         if feed:
             appcast = root / "appcast.xml"
             download_asset(feed, appcast)
