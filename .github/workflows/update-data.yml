@@ -107,6 +107,12 @@ jobs:
             python3 -c 'import sys, xml.etree.ElementTree as ET; remote=sys.argv[1]; prop=ET.parse(sys.argv[2]).getroot().find(".//{DAV:}prop"); get=lambda tag: ((prop.find("{DAV:}"+tag).text or "").strip() if prop is not None and prop.find("{DAV:}"+tag) is not None else ""); print("Verified Jianguoyun package:", remote, "size="+get("getcontentlength"), "modified="+get("getlastmodified")); sys.exit(0 if prop is not None else 1)' "$remote_name" "$propfind_response"
           done
 
+          python3 tools/cleanup_jianguoyun_data.py \
+            --latest-package-name "$latest_package_name" \
+            --expected-size "$(stat -c %s "$latest_package")" \
+            --keep 7 \
+            --apply
+
       - name: Configure Pages
         if: steps.changes.outputs.public_changed == 'true'
         uses: actions/configure-pages@v5
@@ -120,3 +126,4 @@ jobs:
       - name: Deploy Pages
         if: steps.changes.outputs.public_changed == 'true'
         uses: actions/deploy-pages@v4
+
