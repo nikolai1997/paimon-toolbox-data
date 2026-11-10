@@ -7,6 +7,7 @@ from datetime import date
 import http.client
 import os
 import re
+import time
 import urllib.parse
 import xml.etree.ElementTree as ET
 
@@ -92,17 +93,25 @@ class WebDAV:
     def request(self, method: str, name: str = "") -> tuple[int, bytes]:
         if name and package_date(name) is None:
             raise ValueError("Only dated data pack files may be deleted")
-        connection = http.client.HTTPSConnection(self.url.hostname, self.url.port, timeout=60)
         path = self.url.path + ("/" + urllib.parse.quote(name, safe="") if name else "/")
         headers = {"Authorization": self.authorization}
         if method == "PROPFIND":
             headers["Depth"] = "1"
-        try:
-            connection.request(method, path, headers=headers)
-            response = connection.getresponse()
-            return response.status, response.read(2_000_001)
-        finally:
-            connection.close()
+        for attempt in range(3):
+            connection = http.client.HTTPSConnection(self.url.hostname, self.url.port, timeout=60)
+            try:
+                connection.request(method, path, headers=headers)
+                response = connection.getresponse()
+                content = response.read(2_000_001)
+                if response.status not in (408, 429, 500, 502, 503, 504) or attempt == 2:
+                    return response.status, content
+            except (OSError, http.client.HTTPException):
+                if attempt == 2:
+                    raise RuntimeError("WebDAV retention request failed after network retries") from None
+            finally:
+                connection.close()
+            time.sleep(5 * (attempt + 1))
+        raise RuntimeError("WebDAV retention request did not complete")
 
 
 def cleanup(dav: WebDAV, newest: str, expected_size: int, keep: int, apply: bool) -> list[str]:
@@ -120,6 +129,7 @@ def cleanup(dav: WebDAV, newest: str, expected_size: int, keep: int, apply: bool
         if status not in (200, 204, 404):
             raise RuntimeError(f"Cannot remove old data pack: HTTP {status}")
         print("Removed old data pack:", name)
+        time.sleep(0.5)
     status, content = dav.request("PROPFIND")
     if status != 207:
         raise RuntimeError("Cannot verify data pack retention")
