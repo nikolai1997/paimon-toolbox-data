@@ -31,6 +31,16 @@
       "type": "游戏公告"
     },
     {
+      "banner": null,
+      "contentURL": null,
+      "endTime": "2026-11-18 23:59:59",
+      "id": "22036",
+      "startTime": "2026-11-10 12:00:00",
+      "subtitle": "菲林斯印象服开售 纳西妲粘土人上架",
+      "title": "菲林斯印象服开售 纳西妲粘土人上架",
+      "type": "游戏公告"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2023/01/31/ab26bd549f42e9994d6946ae0f286b2e_6457522219866312059.jpg",
       "contentURL": null,
       "endTime": "2026-12-01 12:00:00",
@@ -302,5 +312,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-11-09T06:37:14Z"
+  "updatedAt": "2026-11-10T09:53:59Z"
 }
