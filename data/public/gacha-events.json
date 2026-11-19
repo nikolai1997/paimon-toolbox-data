@@ -5431,5 +5431,52 @@
       15405
     ],
     "version": "7.2"
+  },
+  {
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/10/13df3bef523ecca69e3c435d060ceaef_6770791872935227474_transformed.png",
+    "from": "2026-11-19T16:00:00+08:00",
+    "name": "华黍由仪",
+    "to": "2026-12-15T14:59:59+08:00",
+    "type": 301,
+    "upOrangeList": [
+      10000126
+    ],
+    "upPurpleList": [],
+    "version": ""
+  },
+  {
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/10/4256ccd39bdc05a45022d9c6d296b200_4719553220557750630_transformed.png",
+    "from": "2026-11-19T16:00:00+08:00",
+    "name": "呀吼吼博物志",
+    "to": "2026-12-15T14:59:59+08:00",
+    "type": 400,
+    "upOrangeList": [
+      10000130
+    ],
+    "upPurpleList": [],
+    "version": ""
+  },
+  {
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/10/cb579498ba97876458fed0e048389b15_7578368260038034536_transformed.png",
+    "from": "2026-11-19T16:00:00+08:00",
+    "name": "神铸赋形",
+    "to": "2026-12-15T14:59:59+08:00",
+    "type": 302,
+    "upOrangeList": [
+      11519,
+      15516
+    ],
+    "upPurpleList": [],
+    "version": ""
+  },
+  {
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/10/f08a162284444945589b5c867c6291b9_7233332536788565064_transformed.png",
+    "from": "2026-11-19T16:00:00+08:00",
+    "name": "炎天铸名",
+    "to": "2026-12-15T14:59:59+08:00",
+    "type": 500,
+    "upOrangeList": [],
+    "upPurpleList": [],
+    "version": ""
   }
 ]

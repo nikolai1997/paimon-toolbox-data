@@ -31,16 +31,6 @@
       "type": "游戏公告"
     },
     {
-      "banner": null,
-      "contentURL": null,
-      "endTime": "2026-11-18 23:59:59",
-      "id": "22036",
-      "startTime": "2026-11-10 12:00:00",
-      "subtitle": "菲林斯印象服开售 纳西妲粘土人上架",
-      "title": "菲林斯印象服开售 纳西妲粘土人上架",
-      "type": "游戏公告"
-    },
-    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2023/01/31/ab26bd549f42e9994d6946ae0f286b2e_6457522219866312059.jpg",
       "contentURL": null,
       "endTime": "2026-12-01 12:00:00",
@@ -109,6 +99,56 @@
       "subtitle": "公平运营声明",
       "title": "《原神》公平运营声明",
       "type": "游戏公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/10/13df3bef523ecca69e3c435d060ceaef_6770791872935227474_transformed.png",
+      "contentURL": null,
+      "endTime": "2026-12-15 14:59:59",
+      "id": "21980",
+      "startTime": "2026-11-19 16:00:00",
+      "subtitle": "「华黍由仪」祈愿",
+      "title": "「华黍由仪」祈愿：「驹隙隐泉·兹白(岩)」概率UP！",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/10/4256ccd39bdc05a45022d9c6d296b200_4719553220557750630_transformed.png",
+      "contentURL": null,
+      "endTime": "2026-12-15 14:59:59",
+      "id": "21981",
+      "startTime": "2026-11-19 16:00:00",
+      "subtitle": "「呀吼吼博物志」祈愿",
+      "title": "「呀吼吼博物志」祈愿：「博闻异旅·莉奈娅(岩)」概率UP！",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/10/cb579498ba97876458fed0e048389b15_7578368260038034536_transformed.png",
+      "contentURL": null,
+      "endTime": "2026-12-15 14:59:59",
+      "id": "21982",
+      "startTime": "2026-11-19 16:00:00",
+      "subtitle": "「神铸赋形」祈愿",
+      "title": "「神铸赋形」祈愿：「单手剑·朏魄含光」「弓·霜结的誓金枝」概率UP！",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/10/f08a162284444945589b5c867c6291b9_7233332536788565064_transformed.png",
+      "contentURL": null,
+      "endTime": "2026-12-15 14:59:59",
+      "id": "21983",
+      "startTime": "2026-11-19 16:00:00",
+      "subtitle": "「炎天铸名」祈愿",
+      "title": "「炎天铸名」祈愿：集录祈愿开启！",
+      "type": "活动公告"
+    },
+    {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2024/08/15/2c3f0ca243a83f671d8d2b108975ebae_7938319715510221941.jpg",
+      "contentURL": null,
+      "endTime": "2026-12-07 03:59:59",
+      "id": "20663",
+      "startTime": "2026-11-19 12:00:00",
+      "subtitle": "「七圣召唤」热斗模式",
+      "title": "「七圣召唤」热斗模式：奇策竞驰",
+      "type": "活动公告"
     },
     {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/22/bdbaea51f1cf359270c339c2e8de90ba_336241796675845975_transformed.png",
@@ -188,16 +228,6 @@
       "startTime": "2026-11-02 12:00:00",
       "subtitle": "「晶石如林生长之地」",
       "title": "「晶石如林生长之地」时限内完成探索任务，可额外获得原石*400奖励",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/22/a90b75f716c911c46537123a923cd93f_6803434933391322474_transformed.png",
-      "contentURL": null,
-      "endTime": "2026-11-18 23:59:59",
-      "id": "21973",
-      "startTime": "2026-11-02 12:00:00",
-      "subtitle": "「冒险助力礼包」",
-      "title": "「冒险助力礼包」第53期限时上架",
       "type": "活动公告"
     },
     {
@@ -322,5 +352,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-11-18T04:25:24Z"
+  "updatedAt": "2026-11-19T13:16:46Z"
 }
