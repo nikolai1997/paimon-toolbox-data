@@ -101,6 +101,16 @@
       "type": "游戏公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/10/056f4221b3d12025a1bf2529baf6787b_2041703663922999745_transformed.png",
+      "contentURL": null,
+      "endTime": "2026-12-07 03:59:59",
+      "id": "21979",
+      "startTime": "2026-11-25 12:00:00",
+      "subtitle": "「厉影定格录」",
+      "title": "「厉影定格录」活动：留影挑战",
+      "type": "活动公告"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/10/13df3bef523ecca69e3c435d060ceaef_6770791872935227474_transformed.png",
       "contentURL": null,
       "endTime": "2026-12-15 14:59:59",
@@ -168,36 +178,6 @@
       "startTime": "2026-11-09 12:00:00",
       "subtitle": "「幽境危战」",
       "title": "「幽境危战」活动：紊乱地脉挑战",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/29/20149426001cebe49306d302759c6583_4650607404276568474_transformed.png",
-      "contentURL": null,
-      "endTime": "2026-11-24 17:59:00",
-      "id": "21975",
-      "startTime": "2026-11-02 12:00:00",
-      "subtitle": "「万序衍盈」祈愿",
-      "title": "「万序衍盈」祈愿：「列律名虚·米提亚(雷)」概率UP！",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/22/2172395fdd3f889555cded68cca35375_7593406950524986009_transformed.png",
-      "contentURL": null,
-      "endTime": "2026-11-24 17:59:00",
-      "id": "21976",
-      "startTime": "2026-11-02 12:00:00",
-      "subtitle": "「众水的颂诗」祈愿",
-      "title": "「众水的颂诗」祈愿：「不休独舞·芙宁娜(水)」概率UP！",
-      "type": "活动公告"
-    },
-    {
-      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/22/1c310d17afae82dd7bb7372cbeaed743_4075456262757058792_transformed.png",
-      "contentURL": null,
-      "endTime": "2026-11-24 17:59:00",
-      "id": "21977",
-      "startTime": "2026-11-02 12:00:00",
-      "subtitle": "「神铸赋形」祈愿",
-      "title": "「神铸赋形」祈愿：「法器·秘星典谕」「单手剑·静水流涌之辉」概率UP！",
       "type": "活动公告"
     },
     {
@@ -352,5 +332,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-11-19T13:16:46Z"
+  "updatedAt": "2026-11-25T04:17:21Z"
 }
