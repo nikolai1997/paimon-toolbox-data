@@ -271,6 +271,16 @@
       "type": "活动公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/20/ecf5c1670577e3a0907affee9a73a7e7_7784199066338887675_transformed.png",
+      "contentURL": null,
+      "endTime": "2026-12-08 03:59:59",
+      "id": "22058",
+      "startTime": "2026-11-27 12:00:00",
+      "subtitle": "「奇域拾光季」——《原神》网页活动上线！",
+      "title": "「奇域拾光季」网页活动正式开启，参与活动领取限时奖励！",
+      "type": "千星奇域"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/26/0d03aa0ea4f39bd2d98456c6c5e4c6de_8154648004225176302_transformed.jpg",
       "contentURL": null,
       "endTime": "2026-12-16 07:00:00",
@@ -332,5 +342,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-11-25T04:17:21Z"
+  "updatedAt": "2026-11-27T10:56:33Z"
 }
