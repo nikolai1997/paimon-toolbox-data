@@ -271,6 +271,16 @@
       "type": "活动公告"
     },
     {
+      "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/10/26/b863d3bc37e5a8fa0c6efaa5408c8b58_5290129021163332918_transformed.jpg",
+      "contentURL": null,
+      "endTime": "2026-12-14 03:59:59",
+      "id": "21992",
+      "startTime": "2026-11-28 12:00:00",
+      "subtitle": "「游赏耀星·漫兴」",
+      "title": "「游赏耀星·漫兴」参与获得缤纷惊喜礼盒代币「奇丽凝晶」",
+      "type": "千星奇域"
+    },
+    {
       "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2026/11/20/ecf5c1670577e3a0907affee9a73a7e7_7784199066338887675_transformed.png",
       "contentURL": null,
       "endTime": "2026-12-08 03:59:59",
@@ -342,5 +352,5 @@
     }
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-11-27T10:56:33Z"
+  "updatedAt": "2026-11-28T11:51:17Z"
 }
